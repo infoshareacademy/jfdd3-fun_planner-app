@@ -1,45 +1,53 @@
 body {
     font-family: 'Ubuntu', sans-serif;
     font-weight: 400;
-    font-size: 1.3em;
+    font-size: 1.5em;
+    padding-top: 70px;
 }
 
-body > .container {
-    padding: 80px 15px 0;
-}
-.container .text-muted {
-    margin: 20px 0;
+/*body > .container-fluid {*/
+    /*padding: 80px 15px 0;*/
+/*}*/
+/*.container-fluid .text-muted {*/
+    /*margin: 20px 0;*/
+/*}*/
+
+/*nav  a {*/
+    /*font-size: 1.2em;*/
+    /*font-weight: 400;*/
+    /*padding: 49px;*/
+    /*height: 60px;*/
+/*}*/
+.navbar-default {
+    background-color: #fff;
+    height: 60px;
 }
 
-a.navigation {
-    font-weight: 700;
-    padding: 49px;
+.navbar-right {
+    margin-right: 2px;
+}
 
-    height: 85px;
+.page-header{
+    padding-bottom: 50px;
 }
 
 span.logo-planner {
     font-family: 'Oswald', sans-serif;
     color: #c3c3c3;
     font-weight: 400;
-    font-size: 50px;
+    font-size: 32px;
 }
 
 span.logo-fun {
     font-family: 'Oswald', sans-serif;
     color: #c3c3c3;
     font-weight: 700;
-    font-size: 45px;
+    font-size: 30px;
 }
 
 span.logo-ikon {
-    font-size: 50px;
+    font-size: 30px;
     color: #8cc63f;
-}
-
-.navbar-default {
-    background-color: #fff;
-    height: 86px;
 }
 
 .glyphicon-star-empty {
@@ -64,13 +72,31 @@ span.logo-ikon {
 }
 
 .list-box {
-    border: solid 1px #b9b9b9;
+    border: solid 1px #e1e1e1;
     padding: 10px;
-    min-height: 300px;
+    min-height: 320px;
 }
 
 .ui-sortable-helper {
     background-color: #f0f0f0;
 }
+
+.pad {
+    padding: 10px 80px;
+}
+
+.calendar-column {
+    float: left;
+    display: inline-block;
+    width: 20%;
+    /*position: relative;*/
+    border: solid 1px #e1e1e1;
+    padding: 10px;
+    min-height: 300px;
+}
+.clear {
+    clear: both;
+}
+
 
 

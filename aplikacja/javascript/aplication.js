@@ -2,7 +2,11 @@
 
 $(document).ready(function () {
 
-    var formatter = new Intl.DateTimeFormat('pl');
+    var formatter = new Intl.DateTimeFormat('pl', {
+        day: '2-digit',
+        month: '2-digit',
+        year: 'numeric'
+    });
 
     var cityEvents = [
         {name: 'Dream Club', address: 'Sopot, Bohaterów Monte Cassino 53',
@@ -38,31 +42,19 @@ $(document).ready(function () {
 
     function randomValue (endOfrange) {
 
-        return (Math.round(Math.random() * (endOfrange -1)) + 1);
+        return (Math.round(Math.random() * (endOfrange -1)));
 
     }
 
     function createDate () {
 
-        var day = randomValue(31);
-        var month = randomValue(12);
+        var startDate = new Date(2016, 0, 0).getTime();
+        var endDate = new Date(2017, 0, 0).getTime();
 
-        //if (day < 10) {
-        //    day =  ('0' + day);
-        //} else {
-        //    day.toString();
-        //}
-        //
-        //if (month < 10) {
-        //    month = ('0' + month);
-        //} else {
-        //    month.toString();
-        //}
+        return new Date(startDate + Math.random() * (endDate - startDate));
 
-        return formatter.format(new Date(2016, month, day));
     }
-    console.log(createDate());
-    console.log(Date.parse(createDate()));
+
     function stars (size) {
 
         var stars = [];
@@ -87,24 +79,23 @@ $(document).ready(function () {
         var randomCityEventTable = [];
 
         for(var i = 0; i < tableSize; i++) {
-
+            var dddd = createDate();
             var possibleValues = Math.round(Math.random() * ((cityEvents.length) - 1));
 
             randomCityEventTable.push({
                 name: cityEvents[possibleValues].name,
                 address: cityEvents[possibleValues].address,
-                info: cityEvents[possibleValues].info,
-                date: createDate(),
+                // info: cityEvents[possibleValues].info,
+                date: dddd,
+                datepl: formatter.format(new Date(dddd)),
                 stars: cityEvents[possibleValues].stars,
                 foto: cityEvents[possibleValues].foto
             });
         }
 
+        return randomCityEventTable.sort(function(a, b) {
 
-        //return randomCityEventTable;
-        return randomCityEventTable.sort(function (a, b) {
-
-            return (Date.parse(a.date)) - (Date.parse(b.date));
+            return Date.parse(a.date) - Date.parse(b.date);
 
         });
 
@@ -116,14 +107,14 @@ $(document).ready(function () {
 
         $('.events').append($ul);
 
-        randomCityEvent(100).forEach(function (i) {
+        randomCityEvent(30).forEach(function (i) {
 
             $ul.append('<li class="media list-element"><div class="media-body"><h4 class="media-heading">'
                     + i.name +'<br/><small>'
                     + i.address +'</small></h4>'
                     + i.info +'<div class="star">'
                     + i.stars +'</div></div><div class="media-right"><h4 class="media-heading">'
-                    + i.date +'</h4><a href="#"><img class="media-object" src="images/'
+                    + i.datepl +'</h4><a href="#"><img class="media-object" src="images/'
                     + i.foto +'.jpg" alt=""></a></div></li>'
 
             );
@@ -136,12 +127,14 @@ $(document).ready(function () {
     function sortCityEvents () {
 
         $( '.media-list' ).sortable({
-            connectWith: '.media-list',
+            connectWith: '.calendar-column',
             containment: '.row',
             cursor: 'move'
 
         }).disableSelection();
     }
+
+
 
     showRandomCityEvents ();
 

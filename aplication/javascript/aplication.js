@@ -95,7 +95,7 @@ $(document).ready(function () {
 
         return randomCityEventTable.sort(function(a, b) {
 
-            return Date.parse(a.datepl) - Date.parse(b.datepl);
+            return Date.parse(a.date) - Date.parse(b.date);
 
         });
 

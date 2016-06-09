@@ -103,7 +103,7 @@ span.logo-ikon {
 
 /*footer*/
 .footer {
-    font-size: 80%;
+    font-size: 90%;
     text-align: center;
     margin: 0 0 20px 0;
 }
@@ -133,5 +133,5 @@ span.logo-ikon {
 .logo-scrumboys {
     width: auto;
     height: 30px;
-    vertical-align: -5px;
+    vertical-align: -3px;
 }

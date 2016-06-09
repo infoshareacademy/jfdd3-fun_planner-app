@@ -109,9 +109,11 @@ span.logo-ikon {
 }
 
 .fb-twit {
-    width: 150px;
+    width:150px;
     margin: auto;
-    padding: 40px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+
 }
 
 .fb-twit i {

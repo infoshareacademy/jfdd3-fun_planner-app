@@ -48,7 +48,7 @@ $(document).ready(function () {
 
     function createDate () {
 
-        var startDate = new Date(2016, 0, 0).getTime();
+        var startDate = new Date().getTime();
         var endDate = new Date(2017, 0, 0).getTime();
 
         return new Date(startDate + Math.random() * (endDate - startDate));
@@ -120,10 +120,18 @@ $(document).ready(function () {
             );
 
         });
-
         sortCityEvents();
     }
 
+    function createCalendarTabs () {
+
+        var lenght = randomCityEvent(30).length;
+
+
+
+        return lenght;
+    }
+    console.log (createCalendarTabs());
     function sortCityEvents () {
 
         $( '.media-list' ).sortable({

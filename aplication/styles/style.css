@@ -101,4 +101,35 @@ span.logo-ikon {
 .q{}
 
 
+/*footer*/
+.footer {
+    font-size: 80%;
+    text-align: center;
+    margin: 0 0 20px 0;
+}
 
+.fb-twit {
+    width: 150px;
+    margin: auto;
+    padding: 40px;
+}
+
+.fb-twit i {
+    font-size: 60px;
+    color: #8cc63f;
+    margin-right: 10px;
+}
+
+.fa-facebook {
+    float: left;
+}
+
+.fa-twitter {
+    float: right;
+}
+
+.logo-scrumboys {
+    width: auto;
+    height: 30px;
+    vertical-align: -5px;
+}

@@ -1,7 +1,7 @@
 'use strict';
 
 
-    $(document).ready(function () {
+$(document).ready(function () {
 
     var formatter = new Intl.DateTimeFormat('pl', {
         day: '2-digit',

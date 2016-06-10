@@ -73,32 +73,49 @@ span.logo-ikon {
 
 .list-box {
     border: solid 1px #e1e1e1;
-    padding: 10px;
     min-height: 320px;
+    overflow: hidden;
 }
 
 .ui-sortable-helper {
     background-color: #f0f0f0;
 }
 
-.calendar-box {
-    padding: 10px 80px;
+#week-columns {
+    overflow: hidden;
 }
 
 .calendar-column {
     text-align: center;
     float: left;
-    display: inline-block;
-    width: 20%;
-    /*position: relative;*/
+    display: inline;
+    width: 18%;
     border: solid 1px #e1e1e1;
     padding: 5px;
-    min-height: 300px;
+    min-height: 320px;
+    font-size: 1.5vw;
+    /*overflow: hidden;*/
 }
+.navigation {
+    min-height: 320px;
+    width: 5%;
+}
+.left {
+    float: left;
+    background-color: red;
+}
+.right {
+    float: right;
+    background-color: green;
+}
+
 .clear {
     clear: both;
 }
-.q{}
+
+
+
+
 
 
 /*footer*/
@@ -107,5 +124,31 @@ span.logo-ikon {
     text-align: center;
     margin: 0 0 20px 0;
 }
-.navigation
 
+.fb-twit {
+    width:150px;
+    margin: auto;
+    padding-bottom: 15px;
+    padding-top: 15px;
+
+}
+
+.fb-twit i {
+    font-size: 60px;
+    color: #8cc63f;
+    margin-right: 10px;
+}
+
+.fa-facebook {
+    float: left;
+}
+
+.fa-twitter {
+    float: right;
+}
+
+.logo-scrumboys {
+    width: auto;
+    height: 30px;
+    vertical-align: -3px;
+}

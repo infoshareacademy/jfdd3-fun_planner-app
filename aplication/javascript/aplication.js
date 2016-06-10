@@ -12,8 +12,6 @@ $(document).ready(function () {
         weekday: 'long'
     });
 
-
-
     var cityEvents = [
         {name: 'Dream Club', address: 'Sopot, Bohaterów Monte Cassino 53',
             info: 'Suspendisse sed consectetur quam. Duis vel nulla sit amet neque suscipit faucibus. Nullam ut odio tempor, lacinia arcu vitae, efficitur mauris. Vivamus.',
@@ -134,77 +132,43 @@ $(document).ready(function () {
             });
         }
 
-        //return calendar;
-
-        console.log(tableCalendar);
-
-        //var calendar = [];
-        //var tableCalendar = randomCityEvent(10);
-        //var $node = $('.calendar-window');
-        //
-        //function addDate(days) {
-        //    return formatter.format(new Date().setDate(new Date().getDate()+days));
-        //}
-        //function addDays(days) {
-        //    return formatterDay.format(new Date().setDate(new Date().getDay()+days-2));
-        //}
-        //
-        //for (var i = 0; i < tableCalendar.length; i++) {
-        //    var ccc = addDate(i);
-        //    var xxx = [];
-        //
-        //    $node.append('<div class="hidden-xs col-sm-12 col-md-2 calendar-column"><h3><strong>' +
-        //        addDays(i) + '</strong></h3><h4>'+
-        //        addDate(i) +'</h4><div class="events"></div></div>');
-        //
-        //     tableCalendar.forEach(function (date) {
-        //        if (date.datePl === ccc) {
-        //            xxx.push(date);
-        //        }
-        //
-        //    });
-        //
-        //    showRandomCityEvents (xxx);
-        //    console.log(xxx);
-        //
-        //}
-
-
-
-
-         //tableCalendar.forEach(function (item) {
-         //    $node.append('<div class="hidden-xs col-sm-12 col-md-2 calendar-column"><h3><strong>' +
-         //        addDate(item) + '</strong></h3><h4>'+
-         //        addDays(item) +'</h4><div class=""></div></div>');
-         //
-         //    console.log(addDays(item));
-         //});
-        //$node.append('<div class="clear"></div>');
-    }
-
-    function calendarTabsWindow () {
+        return tableCalendar;
 
     }
 
-    function showRandomCityEvents (table) {
+    function showRandomCityEvents (element) {
 
-        var $ul = $('<ul class="media-list list-box">');
+        var table = calendarTabs();
+        console.log(table);
+        var calEvent = ' ';
+        var $ul = '<ul class="media-list">';
+        var $divEvent = $('.calendar-event');
+        var $divCalendar =  $('.calendar-window');
 
-        $('.events').append($ul);
+        $divCalendar.append('<div class="hidden-xs col-sm-12 col-md-2 calendar-column"><h3><strong>' +
+            table[element].calWeekday + '</strong></h3><h4>'+
+            table[element].calDate +'</h4><div class="calendar-event">'+ calEvent +'</div></div>');
 
-        table.forEach(function (i) {
+        if (table[element].calEvent.length > 0) {
+            calEvent = $('.calendar-event').append($ul);
 
-            $ul.append('<li class="media list-element"><div class="media-body"><h4 class="media-heading">'
-                    + i.name +'<br/><small>'
-                    + i.address +'</small></h4>'
-                    + i.info +'<div class="star">'
-                    + i.stars +'</div></div><div class="media-right"><h4 class="media-heading">'
-                    + i.datePl +'</h4><a href="#"><img class="media-object" src="images/'
-                    + i.foto +'.jpg" alt=""></a></div></li>'
+            for (var index in table[element].calEvent) {
+                console.log('yes');
 
-            );
+                $('.media-list').last().append('<li class="media list-element"><div class="media-body"><h4 class="media-heading">'
+                    + table[element].calEvent[index].name +'<br/><small>'
+                    + table[element].calEvent[index].address +'</small></h4>'
+                    + table[element].calEvent[index].info +'<div class="star">'
+                    + table[element].calEvent[index].stars +'</div></div><div class="media-right"><h4 class="media-heading">'
+                    + table[element].calEvent[index].datePl +'</h4><a href="#"><img class="media-object" src="images/'
+                    + table[element].calEvent[index].foto +'.jpg" alt=""></a></div></li>'
+                );
 
-        });
+            }
+
+            //$divCalendar.append('<div class="clear"></div>');
+        }
+
         sortCityEvents();
     }
 
@@ -217,10 +181,21 @@ $(document).ready(function () {
 
         }).disableSelection();
     }
-
-
-
-    //showRandomCityEvents ();
-    calendarTabs ();
+//function show () {
+//    var $divCalendar =  $('.calendar-window');
+//    var tablica =
+//
+//    for (var i = 0; i < tablica.length; i++) {
+//        $divCalendar.append(showRandomCityEvents(tablica, i));
+//    }
+//    $divCalendar.append('<div class="clear"></div>');
+//}
+//
+//    show ();
+    showRandomCityEvents(3);
+    showRandomCityEvents(4);
+    showRandomCityEvents(5);
+    showRandomCityEvents(6);
+    showRandomCityEvents(7);
 
 });

@@ -81,12 +81,13 @@ span.logo-ikon {
     background-color: #f0f0f0;
 }
 
-.calendar-box {
+.calendar-window {
     padding: 10px 80px;
 }
 
 .calendar-column {
     text-align: center;
+    text-transform: uppercase;
     float: left;
     display: inline-block;
     width: 20%;

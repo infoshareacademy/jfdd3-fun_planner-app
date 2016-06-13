@@ -154,7 +154,6 @@ $(document).ready(function () {
             randomCityEventTable.push({
                 name: cityEvents[possibleValues].name,
                 address: cityEvents[possibleValues].address,
-                // info: cityEvents[possibleValues].info,
                 date: dddd,
                 datepl: formatter.format(new Date(dddd)),
                 stars: cityEvents[possibleValues].stars,

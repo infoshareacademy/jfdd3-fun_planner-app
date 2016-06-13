@@ -6,17 +6,17 @@ body {
 }
 
 /*body > .container-fluid {*/
-    /*padding: 80px 15px 0;*/
+/*padding: 80px 15px 0;*/
 /*}*/
 /*.container-fluid .text-muted {*/
-    /*margin: 20px 0;*/
+/*margin: 20px 0;*/
 /*}*/
 
 /*nav  a {*/
-    /*font-size: 1.2em;*/
-    /*font-weight: 400;*/
-    /*padding: 49px;*/
-    /*height: 60px;*/
+/*font-size: 1.2em;*/
+/*font-weight: 400;*/
+/*padding: 49px;*/
+/*height: 60px;*/
 /*}*/
 .navbar-default {
     background-color: #fff;
@@ -27,7 +27,7 @@ body {
     margin-right: 2px;
 }
 
-.page-header{
+.page-header {
     padding-bottom: 50px;
 }
 
@@ -74,7 +74,6 @@ span.logo-ikon {
 .list-box {
     border: solid 1px #e1e1e1;
     min-height: 320px;
-    max-height: 320px;
     overflow: hidden;
 }
 
@@ -86,6 +85,7 @@ span.logo-ikon {
     overflow: hidden;
     width: 90%;
     float: left;
+    max-height: 320px;
 }
 
 .calendar-column {
@@ -99,14 +99,17 @@ span.logo-ikon {
     font-size: 1.5vw;
     /*overflow: hidden;*/
 }
+
 .navigation {
     min-height: 320px;
     width: 5%;
 }
+
 .left {
     float: left;
     background-color: red;
 }
+
 .right {
     float: right;
     background-color: green;
@@ -116,11 +119,6 @@ span.logo-ikon {
     clear: both;
 }
 
-
-
-
-
-
 /*footer*/
 .footer {
     font-size: 90%;
@@ -129,7 +127,7 @@ span.logo-ikon {
 }
 
 .fb-twit {
-    width:150px;
+    width: 150px;
     margin: auto;
     padding-bottom: 15px;
     padding-top: 15px;

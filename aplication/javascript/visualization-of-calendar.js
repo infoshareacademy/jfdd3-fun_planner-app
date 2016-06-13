@@ -3,13 +3,13 @@
 var $buttonLeft = $('#navi-left');
 var $buttonRight = $('#navi-right');
 
-function updateColumnsID() {
-    var $weekDays = $('.calendar-column');
-    $weekDays.each(function (i, el) {
-        var day = i + 1;
-        $(el).attr('id', 'day' + day);
-    })
-}
+//function updateColumnsID() {
+//    var $weekDays = $('.calendar-column');
+//    $weekDays.each(function (i, el) {
+//        var day = i + 1;
+//        $(el).attr('id', 'day' + day);
+//    })
+//}
 
 function addColumn(side, add, remove) {
     if (side === 'left') {
@@ -17,7 +17,7 @@ function addColumn(side, add, remove) {
     } else {
         $('#week-columns').append(add);
     }
-    add.animate({'width': '20%'});
+    add.animate({'margin-left': '-20%'});
     remove.animate({'width': '0%'}, 400, 'swing', function () {
         remove.remove();
         updateColumnsID();
@@ -25,15 +25,26 @@ function addColumn(side, add, remove) {
 }
 
 $buttonLeft.click(function () {
-    var $newColumn = $('<div class= "calendar-column">').css('width', '0%'),
-        $oldColumn = $('#day5');
+    var $newColumn = $('<div class= "calendar-column">'),
+        $oldColumn = $('.calendar-column').not('.pending').last().addClass('pending');
 
-    addColumn('left', $newColumn, $oldColumn);
+    $('#week-columns').prepend($newColumn).css ('margin-left', '-14.4%');
+
+    $('#week-columns').animate({'margin-left': '0%'},400, 'swing', function(){
+        $oldColumn.remove();
+    })
+
 });
 
 $buttonRight.click(function () {
     var $newColumn = $('<div class= "calendar-column">'),
-        $oldColumn = $('#day1');
+        $oldColumn = $('.calendar-column').not('.pending').first().addClass('pending');
 
-    addColumn('right', $newColumn, $oldColumn);
+    $('#week-columns').append($newColumn).css ('margin-left', '0%');
+    $('#week-columns').animate({'margin-left': '-14.4%'},400, 'swing', function(){
+        $oldColumn.remove();
+        //updateColumnsID();
+
+        $('#week-columns').css ('margin-left', '0%');
+    })
 });

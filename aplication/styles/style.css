@@ -75,6 +75,7 @@ span.logo-ikon {
     border: solid 1px #e1e1e1;
     min-height: 320px;
     overflow: hidden;
+    position: relative;
 }
 
 .ui-sortable-helper {
@@ -97,12 +98,14 @@ span.logo-ikon {
     padding: 5px;
     min-height: 320px;
     font-size: 1.5vw;
-    /*overflow: hidden;*/
+
 }
 
 .navigation {
     min-height: 320px;
     width: 5%;
+    z-index: 1000;
+    position: relative;
 }
 
 .left {

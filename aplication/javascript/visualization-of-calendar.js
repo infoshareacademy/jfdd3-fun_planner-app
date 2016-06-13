@@ -1,50 +1,32 @@
 "use strict";
 
-var $buttonLeft = $('#navi-left');
-var $buttonRight = $('#navi-right');
-
-//function updateColumnsID() {
-//    var $weekDays = $('.calendar-column');
-//    $weekDays.each(function (i, el) {
-//        var day = i + 1;
-//        $(el).attr('id', 'day' + day);
-//    })
-//}
-
-function addColumn(side, add, remove) {
-    if (side === 'left') {
-        $('#week-columns').prepend(add);
-    } else {
-        $('#week-columns').append(add);
-    }
-    add.animate({'margin-left': '-20%'});
-    remove.animate({'width': '0%'}, 400, 'swing', function () {
-        remove.remove();
-        updateColumnsID();
-    });
-}
+var $buttonLeft = $('#navi-left'),
+    $buttonRight = $('#navi-right'),
+    $parentDiv = $('#week-columns'),
+    first = 0,
+    last = 4;
 
 $buttonLeft.click(function () {
-    var $newColumn = $('<div class= "calendar-column">'),
-        $oldColumn = $('.calendar-column').not('.pending').last().addClass('pending');
+    if (first) {
+        var $newColumn = $('<div class= "calendar-column">').attr('id', --first),
+            $oldColumn = $('.calendar-column').not('.pending').last().addClass('pending');
 
-    $('#week-columns').prepend($newColumn).css ('margin-left', '-14.4%');
-
-    $('#week-columns').animate({'margin-left': '0%'},400, 'swing', function(){
-        $oldColumn.remove();
-    })
-
+        last -= 1;
+        $parentDiv.prepend($newColumn).css('margin-left', '-17%');
+        $parentDiv.animate({'margin-left': '0%'}, 400, 'swing', function () {
+            $oldColumn.remove();
+        })
+    }
 });
 
 $buttonRight.click(function () {
-    var $newColumn = $('<div class= "calendar-column">'),
+    var $newColumn = $('<div class= "calendar-column">').attr('id', ++last),
         $oldColumn = $('.calendar-column').not('.pending').first().addClass('pending');
 
-    $('#week-columns').append($newColumn).css ('margin-left', '0%');
-    $('#week-columns').animate({'margin-left': '-14.4%'},400, 'swing', function(){
+    first += 1;
+    $parentDiv.append($newColumn).css('margin-left', '0%');
+    $parentDiv.animate({'margin-left': '-17%'}, 400, 'swing', function () {
         $oldColumn.remove();
-        //updateColumnsID();
-
-        $('#week-columns').css ('margin-left', '0%');
+        $parentDiv.css('margin-left', '0%');
     })
 });

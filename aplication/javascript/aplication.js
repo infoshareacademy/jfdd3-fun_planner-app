@@ -139,7 +139,7 @@ $(document).ready(function () {
     function showRandomCityEvents (element) {
 
         var table = calendarTabs();
-        console.log(table);
+        // console.log(table);
         var calEvent = ' ';
         var $ul = '<ul class="media-list">';
         var $divEvent = $('.calendar-event');
@@ -153,7 +153,7 @@ $(document).ready(function () {
             calEvent = $('.calendar-event').append($ul);
 
             for (var index in table[element].calEvent) {
-                console.log('yes');
+                // console.log('yes');
 
                 $('.media-list').last().append('<li class="media list-element"><div class="media-body"><h4 class="media-heading">'
                     + table[element].calEvent[index].name +'<br/><small>'

@@ -74,6 +74,7 @@ span.logo-ikon {
 .list-box {
     border: solid 1px #e1e1e1;
     min-height: 320px;
+    max-height: 320px;
     overflow: hidden;
 }
 
@@ -83,13 +84,15 @@ span.logo-ikon {
 
 #week-columns {
     overflow: hidden;
+    width: 90%;
+    float: left;
 }
 
 .calendar-column {
     text-align: center;
     float: left;
     display: inline;
-    width: 18%;
+    width: 20%;
     border: solid 1px #e1e1e1;
     padding: 5px;
     min-height: 320px;

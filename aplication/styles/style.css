@@ -73,33 +73,52 @@ span.logo-ikon {
 
 .list-box {
     border: solid 1px #e1e1e1;
-    padding: 10px;
     min-height: 320px;
+    overflow: hidden;
 }
 
 .ui-sortable-helper {
     background-color: #f0f0f0;
 }
 
-.calendar-window {
-    padding: 10px 80px;
+#week-columns {
+    overflow: hidden;
+    width: 90%;
+    float: left;
+    max-height: 320px;
 }
 
 .calendar-column {
     text-align: center;
-    text-transform: uppercase;
     float: left;
-    display: inline-block;
+    display: inline;
     width: 20%;
-    /*position: relative;*/
     border: solid 1px #e1e1e1;
     padding: 5px;
-    min-height: 300px;
+    min-height: 320px;
+    font-size: 1.5vw;
+    /*overflow: hidden;*/
 }
+.navigation {
+    min-height: 320px;
+    width: 5%;
+}
+.left {
+    float: left;
+    background-color: red;
+}
+.right {
+    float: right;
+    background-color: green;
+}
+
 .clear {
     clear: both;
 }
-.q{}
+
+
+
+
 
 
 /*footer*/

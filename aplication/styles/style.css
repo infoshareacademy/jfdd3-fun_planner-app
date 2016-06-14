@@ -102,7 +102,7 @@ span.logo-ikon {
 }
 
 .navigation {
-    min-height: 160px;
+    min-height: 320px;
     width: 5%;
     z-index: 1000;
     position: relative;
@@ -110,16 +110,17 @@ span.logo-ikon {
 
 .left-navi{
     float: left;
-    margin-top: 115px;
-    padding-left: 10px;
+
     width: 5%;
+    height: 320px;
 }
 .right-navi {
     float:right;
-    margin-top: 115px;
-    padding-right: 11px;
+    height: 320px;
+
 
 }
+
 .clear {
     clear: both;
 }

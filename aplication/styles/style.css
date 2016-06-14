@@ -102,22 +102,18 @@ span.logo-ikon {
 }
 
 .navigation {
-    min-height: 320px;
+    min-height: 160px;
     width: 5%;
     z-index: 1000;
     position: relative;
 }
 
-.left {
+.left-navi{
     float: left;
-    background-color: red;
 }
-
-.right {
-    float: right;
-    background-color: green;
+.right-navi {
+    float:right;
 }
-
 .clear {
     clear: both;
 }

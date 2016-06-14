@@ -192,10 +192,10 @@ $(document).ready(function () {
 //}
 //
 //    show ();
+    showRandomCityEvents(0);
+    showRandomCityEvents(1);
+    showRandomCityEvents(2);
     showRandomCityEvents(3);
     showRandomCityEvents(4);
-    showRandomCityEvents(5);
-    showRandomCityEvents(6);
-    showRandomCityEvents(7);
 
 });

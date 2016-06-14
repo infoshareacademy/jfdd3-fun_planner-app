@@ -110,9 +110,11 @@ span.logo-ikon {
 
 .left-navi{
     float: left;
+    margin-top: 115px;
 }
 .right-navi {
     float:right;
+    margin-top: 115px;
 }
 .clear {
     clear: both;

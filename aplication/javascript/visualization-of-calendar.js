@@ -2,7 +2,7 @@
 
 var $buttonLeftSingle = $('#navi-left-single'),
     $buttonRightSingle = $('#navi-right-single'),
-    $parentDiv = $('#week-columns'),
+    $parentDiv = $('#cols-wrapper'),
     $buttonLeftFifth = $('#navi-left-fifth'),
     $buttonRightFifth = $('#navi-right-fifth'),
     first = 0,

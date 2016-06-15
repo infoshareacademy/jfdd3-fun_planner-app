@@ -161,6 +161,25 @@ span.logo-ikon {
     clear: both;
 }
 
+.calendar-position {
+    float: right;
+    margin-right: 3%;
+}
+
+.agenda {
+
+    float: left;
+    position: absolute;
+    width: 20%;
+    text-align: center;
+    border: solid 1px #e1e1e1;
+    padding: 5px;
+    min-height: 320px;
+    font-size: 1.5vw;
+    margin-left: 3%;
+
+}
+
 /*footer*/
 .footer {
     font-size: 90%;

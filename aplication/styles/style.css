@@ -124,10 +124,11 @@ span.logo-ikon {
     height: 320px;
     width: 5%;
 
-
 }
 .btn-default {
- border: none
+    border: none;
+    display: block;
+
 }
 
 .glyphicon-arrow-left    {

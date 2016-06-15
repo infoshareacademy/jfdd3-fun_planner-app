@@ -110,15 +110,35 @@ span.logo-ikon {
 
 .left-navi{
     float: left;
-
     width: 5%;
     height: 320px;
 }
 .right-navi {
     float:right;
     height: 320px;
+    width: 5%;
 
 
+}
+.btn-default {
+ border: none
+}
+
+.glyphicon-arrow-left    {
+    font-size:200%;
+    color: #8cc63f;
+}
+.glyphicon-backward {
+    font-size:200%;
+    color: #8cc63f;
+}
+.glyphicon-arrow-right {
+    font-size:200%;
+    color: #8cc63f;
+}
+.glyphicon-forward {
+    font-size:200%;
+    color: #8cc63f;
 }
 
 .clear {

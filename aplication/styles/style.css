@@ -98,6 +98,15 @@ span.logo-ikon {
     width: 200%;
 }
 
+.media-body {
+    /*display: none;*/
+}
+
+.list-element:hover {
+    cursor: pointer;
+
+}
+
 .calendar-column {
     text-align: center;
     float: left;

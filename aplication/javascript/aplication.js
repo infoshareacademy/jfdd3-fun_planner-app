@@ -1,7 +1,5 @@
 'use strict';
 
-$(document).ready(function () {
-
     var formatter = new Intl.DateTimeFormat('pl', {
         day: '2-digit',
         month: '2-digit',
@@ -136,29 +134,25 @@ $(document).ready(function () {
 
     }
 
+    var finalCalendarEventsTable = calendarTabs();
+
     function showRandomCityEvents (element) {
 
-        var table = calendarTabs();
-        // console.log(table);
-        var calEvent = ' ';
-        var $ul = '<ul class="media-list">';
-        var $divEvent = $('.calendar-event');
-        var $divCalendar =  $('.calendar-window');
+        var table = finalCalendarEventsTable;
+        var $divCalendar =  $('#' + element);
 
-        $divCalendar.append('<div class="hidden-xs col-sm-12 col-md-2 calendar-column"><h3><strong>' +
+        $divCalendar.append('<div><h3><strong class="weekday">' +
             table[element].calWeekday + '</strong></h3><h4>'+
-            table[element].calDate +'</h4><div class="calendar-event">'+ calEvent +'</div></div>');
+            table[element].calDate +'</h4><div class="calendar-event"><ul id="ul' + element + '" class="media-list"></ul></div></div>');
 
         if (table[element].calEvent.length > 0) {
-            calEvent = $('.calendar-event').append($ul);
 
             for (var index in table[element].calEvent) {
                 // console.log('yes');
 
-                $('.media-list').last().append('<li class="media list-element"><div class="media-body"><h4 class="media-heading">'
+                $('#ul' + element).append('<li class="media list-element"><div class="media-body"><h4 class="media-heading">'
                     + table[element].calEvent[index].name +'<br/><small>'
-                    + table[element].calEvent[index].address +'</small></h4>'
-                    + table[element].calEvent[index].info +'<div class="star">'
+                    + table[element].calEvent[index].address +'</small></h4><div class="star">'
                     + table[element].calEvent[index].stars +'</div></div><div class="media-right"><h4 class="media-heading">'
                     + table[element].calEvent[index].datePl +'</h4><a href="#"><img class="media-object" src="images/'
                     + table[element].calEvent[index].foto +'.jpg" alt=""></a></div></li>'
@@ -181,21 +175,3 @@ $(document).ready(function () {
 
         }).disableSelection();
     }
-//function show () {
-//    var $divCalendar =  $('.calendar-window');
-//    var tablica =
-//
-//    for (var i = 0; i < tablica.length; i++) {
-//        $divCalendar.append(showRandomCityEvents(tablica, i));
-//    }
-//    $divCalendar.append('<div class="clear"></div>');
-//}
-//
-//    show ();
-    showRandomCityEvents(0);
-    showRandomCityEvents(1);
-    showRandomCityEvents(2);
-    showRandomCityEvents(3);
-    showRandomCityEvents(4);
-
-});

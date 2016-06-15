@@ -57,13 +57,19 @@ span.logo-ikon {
 
 .star {
     padding-top: 10px;
+    font-size: 0.8em;
 }
 
 .star-fill {
     color: #ffa400;
 }
 
+.weekday {
+    text-transform: uppercase;
+}
+
 .list-element {
+    text-align: left;
     background-color: #fafafa;
     border: solid 1px #8cc63f;
     margin: 10px 0;

@@ -17,7 +17,7 @@ function left(time, multi) {
 
                 last -= 1;
                 $parentDiv.prepend($newColumn).css('margin-left', -17 * (i+1) + '%');
-
+                showRandomCityEvents (first);
             }())
 
         }
@@ -37,7 +37,7 @@ function right(time, multi) {
 
             first += 1;
             $parentDiv.append($newColumn).css('margin-left', '0%');
-
+            showRandomCityEvents (last);
         }())
     }
 

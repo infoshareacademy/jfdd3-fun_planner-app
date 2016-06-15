@@ -188,7 +188,13 @@ span.logo-ikon {
     margin-left: 3%;
 
 }
-
+#map {
+    width:40%;
+    height: 320px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 20px;
+}
 /*footer*/
 .footer {
     font-size: 90%;

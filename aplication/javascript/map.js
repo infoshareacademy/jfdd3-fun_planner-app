@@ -6,16 +6,16 @@
 
     function initMap () {
     var locations = [
-        ['Bondi Beach', -33.890542, 151.274856, 4],
-        ['Coogee Beach', -33.923036, 151.259052, 5],
-        ['Cronulla Beach', -34.028249, 151.157507, 3],
-        ['Manly Beach', -33.80010128657071, 151.28747820854187, 2],
-        ['Maroubra Beach', -33.950198, 151.259302, 1]
+        ['Sfinks700', 54.44995979999999, 18.566682899999932, 4],
+        ['Dream Club', 54.4443093, 18.566634399999998, 2],
+        ['3 Siostry', 54.4458772, 18.568411200000014, 3],
+        ['Klub Parlament', 54.3513459, 18.648819499999945, 1],
+        ['Pokład Gdynia', 54.518483, 18.551434900000004, 5]
     ];
 
     var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 10,
-        center: new google.maps.LatLng(-33.92, 151.25),
+        center: new google.maps.LatLng(54.44, 18.56),
         mapTypeId: google.maps.MapTypeId.ROADMAP
     });
 

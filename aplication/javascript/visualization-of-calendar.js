@@ -16,7 +16,7 @@ function left(time, multi) {
                      $('.calendar-column').not('.pending').last().addClass('pending');
 
                 last -= 1;
-                $parentDiv.prepend($newColumn).css('margin-left', -17 * (i+1) + '%');
+                $parentDiv.prepend($newColumn).css('margin-left', -20 * (i+1) + '%');
                 showRandomCityEvents (first);
             }())
 
@@ -41,7 +41,7 @@ function right(time, multi) {
         }())
     }
 
-    $parentDiv.animate({'margin-left': -17 * multi + '%'}, time, 'swing', function () {
+    $parentDiv.animate({'margin-left': -20 * multi + '%'}, time, 'swing', function () {
        $('.pending').remove();
         $parentDiv.css('margin-left', '0%');
     })

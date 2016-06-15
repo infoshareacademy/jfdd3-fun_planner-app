@@ -95,6 +95,15 @@ span.logo-ikon {
     max-height: 320px;
 }
 
+.media-body {
+    /*display: none;*/
+}
+
+.list-element:hover {
+    cursor: pointer;
+
+}
+
 .calendar-column {
     text-align: center;
     float: left;

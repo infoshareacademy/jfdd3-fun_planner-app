@@ -8,6 +8,15 @@ var $buttonLeftSingle = $('#navi-left-single'),
     first = 0,
     last = 4;
 
+
+(function start() {
+    for (var i = 0; i < 5; i++) {
+        var $newColumn = $('<div class= "calendar-column">').attr('id', i);
+        $parentDiv.append($newColumn);
+        showRandomCityEvents (i);
+    }
+})();
+//start();
 function left(time, multi) {
     for (var i = 0; i < multi; i += 1) {
         if (first ) {

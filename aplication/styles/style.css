@@ -2,45 +2,29 @@ body {
     font-family: 'Ubuntu', sans-serif;
     font-weight: 400;
     font-size: 1.5em;
-    padding-top: 70px;
 }
 
-/*body > .container-fluid {*/
-/*padding: 80px 15px 0;*/
-/*}*/
-/*.container-fluid .text-muted {*/
-/*margin: 20px 0;*/
-/*}*/
-
-/*nav  a {*/
-/*font-size: 1.2em;*/
-/*font-weight: 400;*/
-/*padding: 49px;*/
-/*height: 60px;*/
-/*}*/
 .navbar-default {
-    background-color: #fff;
+    background-color: #878787;
     height: 60px;
+    position: relative;
 }
 
-.navbar-right {
-    margin-right: 2px;
-}
-
-.page-header {
-    padding-bottom: 50px;
+.logo-container {
+    position: absolute;
+    margin-left: 15%;
 }
 
 span.logo-planner {
     font-family: 'Oswald', sans-serif;
-    color: #c3c3c3;
+    color: white;
     font-weight: 400;
     font-size: 32px;
 }
 
 span.logo-fun {
     font-family: 'Oswald', sans-serif;
-    color: #c3c3c3;
+    color: white;
     font-weight: 700;
     font-size: 30px;
 }
@@ -192,11 +176,12 @@ span.logo-ikon {
     margin-left: auto;
     margin-top: 20px;
 }
-/*footer*/
+
 .footer {
     font-size: 90%;
     text-align: center;
     margin: 0 0 20px 0;
+
 }
 
 .fb-twit {

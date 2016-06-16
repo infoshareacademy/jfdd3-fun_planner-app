@@ -23,156 +23,105 @@
 
 <body>
 
-<nav class="navbar navbar-default navbar-fixed-top">
+    <header>
 
-    <div class="container-fluid">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">
+                        <div class="logo-container">
 
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
+                                <span class="logo-fun">
+                                    FUN
+                                </span>
+                                <span class="logo-ikon">
+                                    <i class="fa fa-random" aria-hidden="true"></i>
+                                </span>
+                                <span class="logo-planner">
+                                    planner
+                                </span>
 
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-
-            <a class="navbar-brand" href="#">
-
-                <div>
-
-                        <span class="logo-fun">
-                            FUN
-                        </span>
-                        <span class="logo-ikon">
-                            <i class="fa fa-random" aria-hidden="true"></i>
-                        </span>
-                        <span class="logo-planner">
-                            planner
-                        </span>
-
+                        </div>
+                    </a>
                 </div>
+            </div>
+        </nav>
 
-            </a>
+    </header>
 
-        </div>
+    <main>
+        <div class="container-fluid">
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">Link</a></li>
-                <li><a href="#">Link</a></li>
-                <li><a href="#">Link</a></li>
-                <li><a href="#">Link</a></li>
-                <li><a href="#">Link</a></li>
-                <li>
-                    <button type="button" class="btn btn-success navbar-btn">
-                        Sign in
-                    </button>
-                </li>
-            </ul>
-
-        </div><!-- /.navbar-collapse -->
-
-    </div><!-- /.container-fluid -->
-
-</nav>
-
-<div class="container-fluid">
-
-    <div class="page-header text-center">
-
-        <h1>Example page header
-            <small>
-                Subtext for header
-            </small>
-        </h1>
-
-        <p class="lead">
-            Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non
-            commodo luctus.
-        </p>
-
-        <p>
-            <a class="btn btn-success btn-lg" href="#" role="button">
-                Learn more</a>
-        </p>
-
-    </div>
-
-</div>
-
-<div class="container-fluid">
-
-    <div class="row">
+            <div class="row">
 
 <div id='agenda' class="agenda">
 
-    AGENDA
-</div>
-        <div class="col-xs-12 col-sm-8 calendar-position">
-
-            <div class="list-box">
-                <div class="left-navi">
-                    <button id="navi-left-single" type="button" class="btn btn-default" aria-label="Left Align" style="margin-top:115px">
-                        <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>
-                    </button>
-                    <button id="navi-left-fifth" type="button" class="btn btn-default" aria-label="Left Align">
-                        <span class="glyphicon glyphicon-backward" aria-hidden="true"></span>
-                    </button>
+                    AGENDA
                 </div>
-                <div id="week-columns">
-                    <div id="cols-wrapper">
+                <div class="col-xs-12 col-sm-8 calendar-position">
 
+                    <div class="list-box">
+                        <div class="left-navi">
+                            <button id="navi-left-single" type="button" class="btn btn-default" aria-label="Left Align"
+                                    style="margin-top:115px">
+                                <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>
+                            </button>
+                            <button id="navi-left-fifth" type="button" class="btn btn-default" aria-label="Left Align">
+                                <span class="glyphicon glyphicon-backward" aria-hidden="true"></span>
+                            </button>
+                        </div>
+                        <div id="week-columns">
+                            <div id="cols-wrapper">
+
+                            </div>
+                        </div>
+                        <div class="right-navi">
+                            <button id="navi-right-single" type="button" class="btn btn-default" aria-label="Left Align"
+                                    style="margin-top:115px">
+                                <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
+                            </button>
+                            <button id="navi-right-fifth" type="button" class="btn btn-default" aria-label="Left Align">
+                                <span class="glyphicon glyphicon-forward" aria-hidden="true"></span>
+                            </button>
+
+                        </div>
                     </div>
-                </div>
-                <div class="right-navi">
-                    <button id="navi-right-single" type="button" class="btn btn-default" aria-label="Left Align" style="margin-top:115px">
-                        <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
-                    </button>
-                    <button id="navi-right-fifth" type="button" class="btn btn-default" aria-label="Left Align">
-                        <span class="glyphicon glyphicon-forward" aria-hidden="true"></span>
-                    </button>
 
                 </div>
+
             </div>
 
         </div>
 
-    </div>
+        <div id="map">
 
-</div>
+        </div>
 
-<div id="map">
+    </main>
 
-</div>
+    <footer id="footer">
 
+        <div class="fb-twit">
 
-<footer id="footer">
+            <a href="http://www.facebook.com/infoshareacademy" target="_blank">
+                <i class="fa fa-facebook-official" aria-hidden="true"></i>
+            </a>
 
-    <div class="fb-twit">
+            <a href="http://www.twitter.com/funplannergdansk" target="_blank">
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+            </a>
 
-        <a href="http://www.facebook.com/infoshareacademy" target="_blank">
-            <i class="fa fa-facebook-official" aria-hidden="true"></i>
-        </a>
+        </div>
 
-        <a href="http://www.twitter.com/funplannergdansk" target="_blank">
-            <i class="fa fa-twitter" aria-hidden="true"></i>
-        </a>
-
-    </div>
-
-    <p class="footer">
-        Copyright © ScrumBoys <img class="logo-scrumboys" src="images/logo_funplanner.png" alt="ScrumBoys logo">
-        2016.
-        All rights reserved.<br>
-        Data aktualizacji: 11 czerwca 2016
-    </p>
+        <p class="footer">
+            Copyright © ScrumBoys <img class="logo-scrumboys" src="images/logo_funplanner.png" alt="ScrumBoys logo">
+            2016.
+            All rights reserved.<br>
+            Data aktualizacji: 11 czerwca 2016
+        </p>
 
 
-</footer>
+    </footer>
 
 <script src="libraries/jquery-2.2.4.js"></script>
 <script src="libraries/jquery-ui.js"></script>

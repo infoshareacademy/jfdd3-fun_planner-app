@@ -73,8 +73,10 @@ span.logo-ikon {
     background-color: #fafafa;
     border: solid 1px #8cc63f;
     margin: 10px 0;
-    padding: 10px;
+    padding: 0 10px;
     box-shadow: 0 0 6px #8cc63f;
+    height: 10%;
+    width: 100%;
 }
 
 .list-box {
@@ -92,7 +94,7 @@ span.logo-ikon {
     overflow: hidden;
     width: 90%;
     float: left;
-    /*max-height: 320px;*/
+    max-height: 320px;
 }
 #cols-wrapper {
     width: 200%;
@@ -100,11 +102,6 @@ span.logo-ikon {
 
 .media-body {
     /*display: none;*/
-}
-
-.list-element:hover {
-    cursor: pointer;
-
 }
 
 .calendar-column {

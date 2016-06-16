@@ -141,36 +141,74 @@
         var table = finalCalendarEventsTable;
         var $divCalendar =  $('#' + element);
 
-        $divCalendar.append('<div><h3><strong class="weekday">' +
-            table[element].calWeekday + '</strong></h3><h4>'+
-            table[element].calDate +'</h4><div class="calendar-event"><ul id="ul' + element + '" class="media-list"></ul></div></div>');
+        $divCalendar.append('<div><h4><strong class="weekday">' +
+            table[element].calWeekday + '</strong></h4><h4><small>'+
+            table[element].calDate +'</small></h4></div><div id="eve' + element + '" class="calendar-event"></div>');
 
         if (table[element].calEvent.length > 0) {
 
             for (var index in table[element].calEvent) {
-                // console.log('yes');
 
-                $('#ul' + element).append('<li class="media list-element"><div class="media-body"><h4 class="media-heading">'
-                    + table[element].calEvent[index].name +'<br/><small>'
-                    + table[element].calEvent[index].address +'</small></h4><div class="star">'
-                    + table[element].calEvent[index].stars +'</div></div><div class="media-right"><h4 class="media-heading">'
-                    + table[element].calEvent[index].datePl +'</h4><a href="#"><img class="media-object" src="images/'
-                    + table[element].calEvent[index].foto +'.jpg" alt=""></a></div></li>'
+                $('#eve' + element).append('<div class="media list-element"><h5>'
+                    + table[element].calEvent[index].name + '</h5></div><div id="show">ewregerhehe</div>'
                 );
 
                 $('.list-element').draggable({
                     helper: 'clone',
                     appendTo: '.agenda',
                     connectToSortable: '.agenda',
-                    zIndex: 20
+                    zIndex: 20,
+                    stop: function(event, ui) {
+                        $('#agenda div').css({width: '100%', height:'10%'});
+                    }
+                });
+
+                $('.calendar-event').mouseover(function(event){
+                    $('#show').hide();
                 });
             }
 
-            //$divCalendar.append('<div class="clear"></div>');
+
         }
 
-        // sortCityEvents();
+
     }
+
+    //function showRandomCityEvents (element) {
+    //
+    //    var table = finalCalendarEventsTable;
+    //    var $divCalendar =  $('#' + element);
+    //
+    //    $divCalendar.append('<div><h3><strong class="weekday">' +
+    //        table[element].calWeekday + '</strong></h3><h4>'+
+    //        table[element].calDate +'</h4><div class="calendar-event"><ul id="ul' + element + '" class="media-list"></ul></div></div>');
+    //
+    //    if (table[element].calEvent.length > 0) {
+    //
+    //        for (var index in table[element].calEvent) {
+    //            // console.log('yes');
+    //
+    //            $('#ul' + element).append('<li class="media list-element"><div class="media-body"><h4 class="media-heading">'
+    //                + table[element].calEvent[index].name +'<br/><small>'
+    //                + table[element].calEvent[index].address +'</small></h4><div class="star">'
+    //                + table[element].calEvent[index].stars +'</div></div><div class="media-right"><h4 class="media-heading">'
+    //                + table[element].calEvent[index].datePl +'</h4><a href="#"><img class="media-object" src="images/'
+    //                + table[element].calEvent[index].foto +'.jpg" alt=""></a></div></li>'
+    //            );
+    //
+    //            $('.list-element').draggable({
+    //                helper: 'clone',
+    //                appendTo: '.agenda',
+    //                connectToSortable: '.agenda',
+    //                zIndex: 20
+    //            });
+    //        }
+    //
+    //        //$divCalendar.append('<div class="clear"></div>');
+    //    }
+    //
+    //    // sortCityEvents();
+    //}
 
     // function sortCityEvents () {
     //

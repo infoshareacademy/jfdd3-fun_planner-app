@@ -168,7 +168,7 @@
                     stop: function (event, ui) {
                         $('#agenda div').css({width: '100%', height: '7%'});
                         $('#agenda button').addClass('btn-trash-show');
-                    },
+                    }
 
                 });
 

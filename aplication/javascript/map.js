@@ -14,12 +14,17 @@
     ];
 
     var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 10,
-        center: new google.maps.LatLng(54.44, 18.56),
+        zoom: 11,
+        center: new google.maps.LatLng(54.4444, 18.56444),
+        disableDefaultUI: true,
+        zoomControl: false,
+        scaleControl: true,
         mapTypeId: google.maps.MapTypeId.ROADMAP
     });
 
     var infowindow = new google.maps.InfoWindow();
+
+
 
     var marker, i;
 
@@ -37,3 +42,20 @@
         })(marker, i));
     }
 }
+
+//function initialize() {
+//    var fenway = {lat: 42.345573, lng: -71.098326};
+//    var map = new google.maps.Map(document.getElementById('map'), {
+//        center: fenway,
+//        zoom: 14
+//    });
+//    var panorama = new google.maps.StreetViewPanorama(
+//        document.getElementById('pano'), {
+//            position: fenway,
+//            pov: {
+//                heading: 34,
+//                pitch: 10
+//            }
+//        });
+//    map.setStreetView(panorama);
+//}

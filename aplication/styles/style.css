@@ -4,38 +4,15 @@ body {
     font-size: 1.5em;
 }
 
-/*body > .container-fluid {*/
-/*padding: 80px 15px 0;*/
-/*}*/
-/*.container-fluid .text-muted {*/
-/*margin: 20px 0;*/
-/*}*/
-
-/*nav  a {*/
-/*font-size: 1.2em;*/
-/*font-weight: 400;*/
-/*padding: 49px;*/
-/*height: 60px;*/
-/*}*/
 .navbar-default {
     background-color: #878787;
     height: 60px;
     position: relative;
-
 }
 
 .logo-container {
     position: absolute;
     margin-left: 15%;
-}
-
-.navbar-right {
-    margin-right: 2px;
-}
-
-.page-header {
-    padding-bottom: 50px;
-    margin-left: 20%;
 }
 
 span.logo-planner {
@@ -202,7 +179,7 @@ span.logo-ikon {
     margin-left: auto;
     margin-top: 20px;
 }
-/*footer*/
+
 .footer {
     font-size: 90%;
     text-align: center;

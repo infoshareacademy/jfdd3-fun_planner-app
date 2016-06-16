@@ -158,20 +158,26 @@
                     + table[element].calEvent[index].foto +'.jpg" alt=""></a></div></li>'
                 );
 
+                $('.list-element').draggable({
+                    helper: 'clone',
+                    appendTo: '.agenda',
+                    connectToSortable: '.agenda',
+                    zIndex: 20
+                });
             }
 
             //$divCalendar.append('<div class="clear"></div>');
         }
 
-        sortCityEvents();
+        // sortCityEvents();
     }
 
-    function sortCityEvents () {
-
-        $( '.media-list' ).sortable({
-            connectWith: '.calendar-column',
-            containment: '.row',
-            cursor: 'move'
-
-        }).disableSelection();
-    }
+    // function sortCityEvents () {
+    //
+    //     $( '.media-list' ).sortable({
+    //         connectWith: '.calendar-column',
+    //         containment: '.row',
+    //         cursor: 'move'
+    //
+    //     }).disableSelection();
+    // }

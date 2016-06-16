@@ -131,7 +131,7 @@ span.logo-ikon {
     width: 5%;
     height: 320px;
     position: relative;
-    z-index: 1000;
+    z-index: 10;
     background-color: white;
 }
 .right-navi {
@@ -139,7 +139,7 @@ span.logo-ikon {
     height: 320px;
     width: 5%;
     position: relative;
-    z-index: 1000;
+    z-index: 10;
     background-color: white;
 
 }

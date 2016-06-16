@@ -141,7 +141,7 @@
         var table = finalCalendarEventsTable;
         var $divCalendar =  $('#' + element);
 
-        $divCalendar.append('<div><h4><strong class="weekday">' +
+        $divCalendar.append('<div><h4><strong class="text-uppercase">' +
             table[element].calWeekday + '</strong></h4><h4><small>'+
             table[element].calDate +'</small></h4></div><div id="event' + element + '" class="calendar-event"></div>');
 
@@ -162,8 +162,8 @@
 
                     $('.list-element').draggable({
                     helper: 'clone',
-                    appendTo: '.agenda',
-                    connectToSortable: '.agenda',
+                    appendTo: '#agenda',
+                    connectToSortable: '#agenda',
                     zIndex: 20,
                     stop: function (event, ui) {
                         $('#agenda div').css({width: '100%', height: '10%'});
@@ -171,6 +171,7 @@
                 });
 
                 $('[data-toggle="popover"]').popover({
+                    container: 'body',
                     html : true,
                     content: function() {
                         return $('#tooltiptext', this).html();

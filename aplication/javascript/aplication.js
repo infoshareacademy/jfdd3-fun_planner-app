@@ -141,8 +141,8 @@
         var table = finalCalendarEventsTable;
         var $divCalendar =  $('#' + element);
 
-        $divCalendar.append('<div><h4><strong class="text-uppercase">' +
-            table[element].calWeekday + '</strong></h4><h4><small>'+
+        $divCalendar.append('<div><h3><strong class="text-uppercase weekday">' +
+            table[element].calWeekday + '</strong></h3><h4><small>'+
             table[element].calDate +'</small></h4></div><div id="event' + element + '" class="calendar-event"></div>');
 
         if (table[element].calEvent.length > 0) {
@@ -150,7 +150,7 @@
             for (var index in table[element].calEvent) {
 
                 $('#event' + element).append('<div class="list-element" data-toggle="popover" data-placement="bottom" data-trigger="hover"><h5>'
-                    + table[element].calEvent[index].name + '<br/></h5><div id="tooltiptext" style="display: none" class="panel-body"><div class="media"><div class="media-body"><h3 class="media-heading">'
+                    + table[element].calEvent[index].name + '<button type="button" class="btn btn-default btn-trash pull-right" aria-label="Trash"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></h5><div id="tooltiptext" style="display: none" class="panel-body"><div class="media"><div class="media-body"><h3 class="media-heading">'
                     + table[element].calEvent[index].name + '</h3><small>'
                     + table[element].calEvent[index].address + '</small><div class="star">'
                     + table[element].calEvent[index].stars +'</div>'
@@ -160,14 +160,16 @@
                 );
 
 
-                    $('.list-element').draggable({
+                $('.list-element').draggable({
                     helper: 'clone',
                     appendTo: '#agenda',
                     connectToSortable: '#agenda',
                     zIndex: 20,
                     stop: function (event, ui) {
-                        $('#agenda div').css({width: '100%', height: '10%'});
-                    }
+                        $('#agenda div').css({width: '100%', height: '7%'});
+                        $('#agenda button').addClass('btn-trash-show');
+                    },
+
                 });
 
                 $('[data-toggle="popover"]').popover({

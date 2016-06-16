@@ -87,7 +87,7 @@
             randomCityEventTable.push({
                 name: cityEvents[possibleValues].name,
                 address: cityEvents[possibleValues].address,
-                // info: cityEvents[possibleValues].info,
+                info: cityEvents[possibleValues].info,
                 dateVal: dateVal,
                 datePl: formatter.format(new Date(dateVal)),
                 stars: cityEvents[possibleValues].stars,
@@ -143,36 +143,49 @@
 
         $divCalendar.append('<div><h4><strong class="weekday">' +
             table[element].calWeekday + '</strong></h4><h4><small>'+
-            table[element].calDate +'</small></h4></div><div id="eve' + element + '" class="calendar-event"></div>');
+            table[element].calDate +'</small></h4></div><div id="event' + element + '" class="calendar-event"></div>');
 
         if (table[element].calEvent.length > 0) {
 
             for (var index in table[element].calEvent) {
 
-                $('#eve' + element).append('<div class="media list-element"><h5>'
-                    + table[element].calEvent[index].name + '</h5></div>'
+                $('#event' + element).append('<div class="list-element" data-toggle="popover" data-placement="bottom" data-trigger="hover"><h5>'
+                    + table[element].calEvent[index].name + '<br/></h5><div id="tooltiptext" style="display: none" class="panel-body"><div class="media"><div class="media-body"><h3 class="media-heading">'
+                    + table[element].calEvent[index].name + '</h3><small>'
+                    + table[element].calEvent[index].address + '</small><div class="star">'
+                    + table[element].calEvent[index].stars +'</div>'
+                    + table[element].calEvent[index].info + '</div><div class="media-right">'
+                    + table[element].calEvent[index].datePl + '<img class="media-object" src="images/'
+                    + table[element].calEvent[index].foto + '.jpg"></div></div></div></div>'
                 );
 
-                $('.list-element').draggable({
+
+                    $('.list-element').draggable({
                     helper: 'clone',
                     appendTo: '.agenda',
                     connectToSortable: '.agenda',
                     zIndex: 20,
-                    stop: function(event, ui) {
-                        $('#agenda div').css({width: '100%', height:'10%'});
+                    stop: function (event, ui) {
+                        $('#agenda div').css({width: '100%', height: '10%'});
                     }
                 });
 
-                $('.calendar-event').mouseover(function(event){
-                    $('#show').hide();
+                $('[data-toggle="popover"]').popover({
+                    html : true,
+                    content: function() {
+                        return $('#tooltiptext', this).html();
+                    }
                 });
-            }
 
+
+            }
 
         }
 
 
+
     }
+
 
     //function showRandomCityEvents (element) {
     //

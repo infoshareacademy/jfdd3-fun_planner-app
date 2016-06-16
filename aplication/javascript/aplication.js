@@ -150,7 +150,7 @@
             for (var index in table[element].calEvent) {
 
                 $('#eve' + element).append('<div class="media list-element"><h5>'
-                    + table[element].calEvent[index].name + '</h5></div><div id="show">ewregerhehe</div>'
+                    + table[element].calEvent[index].name + '</h5></div>'
                 );
 
                 $('.list-element').draggable({

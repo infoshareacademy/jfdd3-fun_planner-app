@@ -2,7 +2,6 @@ body {
     font-family: 'Ubuntu', sans-serif;
     font-weight: 400;
     font-size: 1.5em;
-    padding-top: 70px;
 }
 
 /*body > .container-fluid {*/
@@ -19,8 +18,15 @@ body {
 /*height: 60px;*/
 /*}*/
 .navbar-default {
-    background-color: #fff;
+    background-color: #878787;
     height: 60px;
+    position: relative;
+
+}
+
+.logo-container {
+    position: absolute;
+    margin-left: 20%;
 }
 
 .navbar-right {
@@ -29,18 +35,19 @@ body {
 
 .page-header {
     padding-bottom: 50px;
+    margin-left: 20%;
 }
 
 span.logo-planner {
     font-family: 'Oswald', sans-serif;
-    color: #c3c3c3;
+    color: white;
     font-weight: 400;
     font-size: 32px;
 }
 
 span.logo-fun {
     font-family: 'Oswald', sans-serif;
-    color: #c3c3c3;
+    color: white;
     font-weight: 700;
     font-size: 30px;
 }
@@ -200,6 +207,7 @@ span.logo-ikon {
     font-size: 90%;
     text-align: center;
     margin: 0 0 20px 0;
+
 }
 
 .fb-twit {

@@ -149,7 +149,7 @@ function showRandomCityEvents (element) {
 
         for (var index in table[element].calEvent) {
 
-            $('#event' + element).append('<div class="list-element" data-toggle="popover" data-placement="bottom" data-trigger="hover"><h5>'
+            $('#event' + element).append('<div class="list-element" data-toggle="popover" data-placement="bottom" data-trigger="hover manual"><h5>'
                 + table[element].calEvent[index].name + '<button onclick="deleteEvent($(this))" type="button" class="btn btn-default btn-trash pull-right" aria-label="Trash"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></h5><div id="tooltiptext" style="display: none" class="panel-body"><div class="media"><div class="media-body"><h3 class="media-heading">'
                 + table[element].calEvent[index].name + '</h3><small>'
                 + table[element].calEvent[index].address + '</small><div class="star">'
@@ -185,7 +185,7 @@ function showRandomCityEvents (element) {
     }
 }
 
-function deleteEvent(value) {
-
-    value.parent().parent().remove();
-}
+    function deleteEvent(value) {
+        $('.list-element').popover('hide');
+        value.parent().parent().remove();
+    }

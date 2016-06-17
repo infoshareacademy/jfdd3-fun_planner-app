@@ -259,7 +259,6 @@ function createDraggable() {
         connectToSortable: '.event-sorting',
         zIndex: 20,
         stop: function (event) {
-
             $('.event-sorting div').css({
                 width: '100%',
                 height: '9%'
@@ -267,8 +266,17 @@ function createDraggable() {
             $('.event-sorting button').addClass('btn-trash-show');
 
             $('.event-sorting .list-element').sort(function (a, b) {
-
                 return new Date($(a).attr('data-date').split('.').reverse().join('-')) - new Date($(b).attr('data-date').split('.').reverse().join('-'));
+            }).filter(function () {
+
+                var item = this;
+
+                if ( $('.event-sorting .list-element[orderid=' + $(item).attr('orderid') + ']').length === 1 ) {
+
+                    return true;
+                }
+                $(item).remove();
+                return false;
             }).appendTo('.event-sorting');
 
 

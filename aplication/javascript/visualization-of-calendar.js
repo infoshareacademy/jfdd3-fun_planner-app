@@ -72,4 +72,4 @@ $buttonRightFifth.click(function () {
     right(500, 5);
 });
 
-$('.sortowalny').sortable();
+$('.event-sorting').sortable();

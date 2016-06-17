@@ -59,6 +59,12 @@ span.logo-ikon {
     width: 100%;
 }
 
+.sortowalny {
+    width: 100%;
+    height: 410px;
+    border: dashed 1px #e1e1e1;
+}
+
 .list-box {
     min-height: 320px;
     overflow: hidden;
@@ -104,7 +110,7 @@ span.logo-ikon {
     position: relative;
 }
 
-.left-navi{
+.left-navi {
     float: left;
     width: 5%;
     height: 320px;
@@ -112,8 +118,9 @@ span.logo-ikon {
     z-index: 10;
     background-color: white;
 }
+
 .right-navi {
-    float:right;
+    float: right;
     height: 320px;
     width: 5%;
     position: relative;
@@ -121,26 +128,30 @@ span.logo-ikon {
     background-color: white;
 
 }
+
 .btn-default {
     border: none;
     display: block;
 
 }
 
-.glyphicon-arrow-left    {
-    font-size:200%;
+.glyphicon-arrow-left {
+    font-size: 200%;
     color: #8cc63f;
 }
+
 .glyphicon-backward {
-    font-size:200%;
+    font-size: 200%;
     color: #8cc63f;
 }
+
 .glyphicon-arrow-right {
-    font-size:200%;
+    font-size: 200%;
     color: #8cc63f;
 }
+
 .glyphicon-forward {
-    font-size:200%;
+    font-size: 200%;
     color: #8cc63f;
 }
 
@@ -152,6 +163,7 @@ span.logo-ikon {
     float: right;
     margin-right: 3%;
 }
+
 .btn-trash {
     visibility: hidden;
     padding: 0;
@@ -173,8 +185,9 @@ span.logo-ikon {
     font-size: 1.5vw;
     margin-left: 6%;
 }
+
 #map {
-    width:40%;
+    width: 40%;
     height: 320px;
     margin-right: auto;
     margin-left: auto;

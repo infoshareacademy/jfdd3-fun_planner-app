@@ -157,19 +157,17 @@ function showRandomCityEvents (element) {
                 + table[element].calEvent[index].info + '</div><div class="media-right">'
                 + table[element].calEvent[index].datePl + '<img class="media-object" src="images/'
                 + table[element].calEvent[index].foto + '.jpg"></div></div></div></div>'
-
             );
-
 
 
             $('.list-element').draggable({
                 helper: 'clone',
-                appendTo: '#agenda',
-                connectToSortable: '#agenda',
+                appendTo: '.sortowalny',
+                connectToSortable: '.sortowalny',
                 zIndex: 20,
                 stop: function (event, ui) {
-                    $('#agenda div').css({width: '100%', height: '7%'});
-                    $('#agenda button').addClass('btn-trash-show');
+                    $('.sortowalny div').css({width: '100%', height: '9%'});
+                    $('.sortowalny button').addClass('btn-trash-show');
                 }
 
             });

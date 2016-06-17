@@ -72,6 +72,7 @@ $buttonRightFifth.click(function () {
     right(500, 5);
 });
 
+
 $('.event-sorting').sortable({
     cancel: '.list-element'
 });

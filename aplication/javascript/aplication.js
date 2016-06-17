@@ -149,7 +149,7 @@ function showRandomCityEvents (element) {
 
         for (var index in table[element].calEvent) {
 
-            $('#event' + element).append('<div class="list-element" data-toggle="popover" data-placement="bottom" data-trigger="hover manual"><h5>'
+            $('#event' + element).append('<div class="list-element drag" data-toggle="popover" data-placement="bottom" data-trigger="hover manual"><h5>'
                 + table[element].calEvent[index].name + '<button onclick="deleteEvent($(this))" type="button" class="btn btn-default btn-trash pull-right" aria-label="Trash"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></h5><div id="tooltiptext" style="display: none" class="panel-body"><div class="media"><div class="media-body"><h3 class="media-heading">'
                 + table[element].calEvent[index].name + '</h3><small>'
                 + table[element].calEvent[index].address + '</small><div class="star">'
@@ -160,13 +160,13 @@ function showRandomCityEvents (element) {
             );
 
 
-            $('.list-element').draggable({
+            $('.drag').draggable({
                 helper: 'clone',
                 appendTo: '.event-sorting',
                 connectToSortable: '.event-sorting',
                 zIndex: 20,
                 stop: function (event, ui) {
-                    $('.event-sorting div').css({width: '100%', height: '9%'});
+                    $('.event-sorting div').css({width: '100%', height: '9%'}).removeClass('drag');
                     $('.event-sorting button').addClass('btn-trash-show');
                 }
             });
@@ -177,6 +177,10 @@ function showRandomCityEvents (element) {
                 content: function() {
                     return $('#tooltiptext', this).html();
                 }
+            });
+
+            $('.event-sorting').sortable({
+                cancel: '.list-element'
             });
         }
     }

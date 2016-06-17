@@ -166,7 +166,7 @@ function showRandomCityEvents (element) {
                 connectToSortable: '.event-sorting',
                 zIndex: 20,
                 stop: function (event, ui) {
-                    $('.event-sorting div').css({width: '100%', height: '9%'}).removeClass('drag');
+                    $('.event-sorting div').css({width: '100%', height: 'auto'}).removeClass('drag');
                     $('.event-sorting button').addClass('btn-trash-show');
                 }
             });

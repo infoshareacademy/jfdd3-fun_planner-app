@@ -3,11 +3,36 @@ body {
     font-weight: 400;
     font-size: 1.5em;
 }
+.btn-fp,
+.btn-fp:focus,
+.btn-fp:active,
+.btn-fp:link,
+.btn-fp:visited,
+.btn-fp:target {
+    background: none;
+    border: none;
+    outline: none;
+}
 
-.navbar-default {
+.glyphicon:hover {
+    color: #ffa400;
+}
+
+.navbar-top {
+    padding-top: 5px;
     background-color: #878787;
     height: 60px;
     position: relative;
+}
+
+.navbar-bottom {
+    background: none;
+    margin-top: 50px;
+    padding-top: 10px;
+    /*border-top: solid 1px #c8c8c8;*/
+    /*border-bottom: none;*/
+    height: 50px;
+    /*position: relative;*/
 }
 
 .logo-container {
@@ -55,27 +80,22 @@ span.logo-ikon {
     margin: 10px 0;
     padding: 0 10px;
     box-shadow: 0 0 6px #8cc63f;
-    height: 7%;
-    width: 100%;
+    min-width: 50%;
 }
 
 .event-sorting {
     width: 100%;
-    height: 30vw;
-    border: dashed 1px #e1e1e1;
+    min-height: 430px;
+    padding: 0 15px;
+    border: dashed 1px #b5b5b5;
     color: black;
 }
 
 .list-box {
-    min-height: 320px;
+    min-height: 500px;
     overflow: hidden;
     position: relative;
 }
-
-.ui-sortable-helper {
-    background-color: #f0f0f0;
-}
-
 
 #week-columns {
     overflow: hidden;
@@ -99,12 +119,14 @@ span.logo-ikon {
     float: left;
     display: inline;
     width: 10%;
-    border-left: dashed 1px #e1e1e1;
-    border-right: dashed 1px #e1e1e1;
+    border-left: dashed 1px #c6c6c6;
     padding: 15px;
     min-height: 1000px;
     font-size: 1.5vw;
+}
 
+.calendar-column:last-child {
+    border-right: dashed 1px #c6c6c6;
 }
 
 .navigation {
@@ -115,16 +137,19 @@ span.logo-ikon {
 }
 
 .left-navi {
+    text-align: center;
     float: left;
     width: 5%;
-    height: 320px;
+    /*height: 320px;*/
     position: relative;
+    left: -10px;
     z-index: 10;
     background-color: white;
 }
 .right-navi {
+    text-align: center;
     float: right;
-    height: 320px;
+    /*height: 320px;*/
     width: 5%;
     position: relative;
     z-index: 10;
@@ -132,28 +157,18 @@ span.logo-ikon {
 
 }
 
-.btn-default {
-    border: none;
-    display: block;
-}
-
-.glyphicon-arrow-left {
-    font-size: 200%;
+.arrow {
+    float: left;
+    display: inline;
+    font-size: 300%;
     color: #8cc63f;
 }
 
-.glyphicon-backward {
-    font-size: 200%;
-    color: #8cc63f;
-}
-
-.glyphicon-arrow-right {
-    font-size: 200%;
-    color: #8cc63f;
-}
-
-.glyphicon-forward {
-    font-size: 200%;
+.dabble-arrow {
+    float: left;
+    padding: 0 10px;
+    display: inline;
+    font-size: 150%;
     color: #8cc63f;
 }
 
@@ -163,7 +178,7 @@ span.logo-ikon {
 
 .calendar-position {
     float: right;
-    margin-right: 3%;
+    margin-right: 15px;
 }
 
 .btn-trash {
@@ -181,7 +196,6 @@ span.logo-ikon {
     position: absolute;
     width: 20%;
     text-align: center;
-    border: dashed 1px #e1e1e1;
     padding: 15px;
     min-height: 500px;
     font-size: 1.5vw;
@@ -200,21 +214,17 @@ span.logo-ikon {
 
 .footer {
     font-size: 90%;
-    text-align: center;
-    margin: 0 0 20px 0;
+    color: #8c8c8c;
 
 }
 
 .fb-twit {
-    width: 150px;
-    margin: auto;
-    padding-bottom: 15px;
-    padding-top: 15px;
+
 
 }
 
 .fb-twit i {
-    font-size: 60px;
+    font-size: 30px;
     color: #8cc63f;
     margin-right: 10px;
 }
@@ -229,11 +239,6 @@ span.logo-ikon {
 
 .logo-scrumboys {
     width: auto;
-    height: 30px;
-    vertical-align: -3px;
-}
-
-.angular-google-map-container {
-    height: 400px;
-    display: none;
+    height: 20px;
+    vertical-align: -2px;
 }

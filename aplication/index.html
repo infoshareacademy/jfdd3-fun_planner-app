@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
           integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link rel="stylesheet" href="styles/style.css">
-
+    <link rel="stylesheet" href="styles/loading-bar.css">
     <link href='https://fonts.googleapis.com/css?family=Ubuntu:400,300,300italic,400italic,500,500italic,700,700italic&subset=latin,latin-ext'
           rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Oswald:400,300,700&subset=latin,latin-ext' rel='stylesheet'
@@ -49,7 +49,7 @@
 
     </header>
 
-    <main>
+    <main ng-controller="uiGmapgoogle-mapsController">
         <div class="container-fluid">
 
             <div class="row">
@@ -92,9 +92,8 @@
 
         </div>
 
-        <div id="map">
+        <ui-gmap-google-map center='map.center' zoom='map.zoom'></ui-gmap-google-map>
 
-        </div>
 
     </main>
 
@@ -122,21 +121,23 @@
 
     </footer>
 
-<script src="libraries/jquery-2.2.4.js"></script>
-<script src="libraries/jquery-ui.js"></script>
-<script src="libraries/bootstrap.min.js"></script>
-<script src='angular-box/angular.min.js'></script>
-<script src='angular-box/angular-google-maps.min.js'></script>
-<script src='angular-box/angular-simple-logger.js'></script>
-<script src='angular-box/lodash.js'></script>
-<script src="angular-box/angular.min.js"></script>
-<script src="javascript/aplication.js"></script>
-<script src="javascript/visualization-of-calendar.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBM41EEbNYPJnU7lyii_LXS9z9nPFnZ2_g&callback=initMap"
-        async defer></script>
-<script src="javascript/map.js"></script>
-<script src='//maps.googleapis.com/maps/api/js?sensor=false'></script>
-<script src="javascript/app.js"></script>
+        <!--Skrypty zewnętrzne-->
+    <script src="libraries/jquery-2.2.4.js"></script>
+    <script src="libraries/jquery-ui.js"></script>
+    <script src="libraries/bootstrap.min.js"></script>
+    <script src='angular-box/lodash.js'></script>
+    <script src='angular-box/angular.min.js'></script>
+    <script src='angular-box/angular-simple-logger.js'></script>
+    <script src='angular-box/angular-google-maps.min.js'></script>
+    <script src="angular-box/loading-bar.js"></script>
+        <!--Nasze skrypty-->
+    <script src="javascript/app.js"></script>
+    <script src="javascript/aplication.js"></script>
+    <script src="javascript/visualization-of-calendar.js"></script>
+
+        <!--Skrypt Map API-->
+    <script src="https://maps.googleapis.com/maps/api/js?key=&libraries=places"></script>
+
 
 
 

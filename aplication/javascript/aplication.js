@@ -150,14 +150,16 @@ function showRandomCityEvents (element) {
         for (var index in table[element].calEvent) {
 
             $('#event' + element).append('<div class="list-element" data-toggle="popover" data-placement="bottom" data-trigger="hover"><h5>'
-                + table[element].calEvent[index].name + '<button onclick="deleteEvent()" type="button" class="btn btn-default btn-trash pull-right" aria-label="Trash"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></h5><div id="tooltiptext" style="display: none" class="panel-body"><div class="media"><div class="media-body"><h3 class="media-heading">'
+                + table[element].calEvent[index].name + '<button onclick="deleteEvent($(this))" type="button" class="btn btn-default btn-trash pull-right" aria-label="Trash"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></h5><div id="tooltiptext" style="display: none" class="panel-body"><div class="media"><div class="media-body"><h3 class="media-heading">'
                 + table[element].calEvent[index].name + '</h3><small>'
                 + table[element].calEvent[index].address + '</small><div class="star">'
                 + table[element].calEvent[index].stars +'</div>'
                 + table[element].calEvent[index].info + '</div><div class="media-right">'
                 + table[element].calEvent[index].datePl + '<img class="media-object" src="images/'
                 + table[element].calEvent[index].foto + '.jpg"></div></div></div></div>'
+
             );
+
 
 
             $('.list-element').draggable({
@@ -185,6 +187,7 @@ function showRandomCityEvents (element) {
     }
 }
 
-function deleteEvent(){
-    $("#agenda .list-element").remove();
-}
+    function deleteEvent(value) {
+
+    value.parent().parent().remove();
+    }

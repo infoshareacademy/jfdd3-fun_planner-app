@@ -3,6 +3,20 @@ body {
     font-weight: 400;
     font-size: 1.5em;
 }
+.btn-fp,
+.btn-fp:focus,
+.btn-fp:active,
+.btn-fp:link,
+.btn-fp:visited,
+.btn-fp:target {
+    background: none;
+    border: none;
+    outline: none;
+}
+
+.glyphicon:hover {
+    color: #ffa400;
+}
 
 .navbar-top {
     padding-top: 5px;
@@ -72,6 +86,7 @@ span.logo-ikon {
 .event-sorting {
     width: 100%;
     min-height: 430px;
+    padding: 0 15px;
     border: dashed 1px #b5b5b5;
     color: black;
 }
@@ -139,27 +154,12 @@ span.logo-ikon {
 
 }
 
-.btn-default {
-    border: none;
-    display: block;
-}
-
-.glyphicon-arrow-left {
-    font-size: 200%;
+.arrow {
+    font-size: 400%;
     color: #8cc63f;
 }
 
-.glyphicon-backward {
-    font-size: 200%;
-    color: #8cc63f;
-}
-
-.glyphicon-arrow-right {
-    font-size: 200%;
-    color: #8cc63f;
-}
-
-.glyphicon-forward {
+.dabble-arrow {
     font-size: 200%;
     color: #8cc63f;
 }

@@ -3,25 +3,8 @@ body {
     font-weight: 400;
     font-size: 1.5em;
 }
-button {
-    background: none;
-    border: none;
-}
-button:hover {
-    background: none;
-    border: none;
-}
-.left-navi:active {
-    background: none;
-    border: none;
-}
-
-.glyphicon:active {
-    border: none;
-}
 
 .navbar-default {
-    padding-top: 5px;
     background-color: #878787;
     height: 60px;
     position: relative;
@@ -72,16 +55,15 @@ span.logo-ikon {
     margin: 10px 0;
     padding: 0 10px;
     box-shadow: 0 0 6px #8cc63f;
-    min-width: 50%;
-    /*height: auto;*/
-    /*width: 100%;*/
+    height: 7%;
+    width: 100%;
 }
 
-.sortowalny {
+.event-sorting {
     width: 100%;
-    height: 410px;
-    border: dashed 1px #bcbcbc;
-    padding: 0 15px;
+    height: 30vw;
+    border: dashed 1px #e1e1e1;
+    color: black;
 }
 
 .list-box {
@@ -94,6 +76,7 @@ span.logo-ikon {
     background-color: #f0f0f0;
 }
 
+
 #week-columns {
     overflow: hidden;
     width: 90%;
@@ -103,6 +86,8 @@ span.logo-ikon {
 
 .weekday {
     color: #8cc63f;
+    font-size: 1.3vw;
+    text-transform: uppercase;
 }
 
 #cols-wrapper {
@@ -114,8 +99,8 @@ span.logo-ikon {
     float: left;
     display: inline;
     width: 10%;
-    border-left: dashed 1px #bcbcbc;
-    border-right: dashed 1px #bcbcbc;
+    border-left: dashed 1px #e1e1e1;
+    border-right: dashed 1px #e1e1e1;
     padding: 15px;
     min-height: 1000px;
     font-size: 1.5vw;
@@ -137,7 +122,6 @@ span.logo-ikon {
     z-index: 10;
     background-color: white;
 }
-
 .right-navi {
     float: right;
     height: 320px;
@@ -151,7 +135,6 @@ span.logo-ikon {
 .btn-default {
     border: none;
     display: block;
-
 }
 
 .glyphicon-arrow-left {
@@ -184,23 +167,13 @@ span.logo-ikon {
 }
 
 .btn-trash {
-    vertical-align: middle;
     visibility: hidden;
     padding: 0;
     background: none;
 }
 
-.btn-trash:hover {
-    background-color: #fff;
-    color: #8cc63f;
-}
-
 .btn-trash-show {
     visibility: visible;
-}
-
-.media-object-img {
-    padding-bottom: 10px;
 }
 
 .agenda {
@@ -208,11 +181,12 @@ span.logo-ikon {
     position: absolute;
     width: 20%;
     text-align: center;
-    /*border: dashed 1px #e1e1e1;*/
+    border: dashed 1px #e1e1e1;
     padding: 15px;
     min-height: 500px;
     font-size: 1.5vw;
     margin-left: 6%;
+    color: #8cc63f;
 }
 
 #map {

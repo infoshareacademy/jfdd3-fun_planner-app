@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="pl" ng-app="FunPlanner">
 <head>
 
     <meta charset="UTF-8">
@@ -21,26 +21,28 @@
 
 </head>
 
-<body>
+<body ng-controller="FunPlannerController">
 
     <header>
 
         <nav class="navbar navbar-default">
             <div class="container-fluid">
                 <div class="navbar-header">
-                        <!--<div class="logo-container">-->
+                    <a class="navbar-brand" href="#">
+                        <div class="logo-container">
 
-                            <span class="logo-fun">
-                                FUN
-                            </span>
-                            <span class="logo-ikon">
-                                <i class="fa fa-random" aria-hidden="true"></i>
-                            </span>
-                            <span class="logo-planner">
-                                planner
-                            </span>
+                                <span class="logo-fun">
+                                    FUN
+                                </span>
+                                <span class="logo-ikon">
+                                    <i class="fa fa-random" aria-hidden="true"></i>
+                                </span>
+                                <span class="logo-planner">
+                                    planner
+                                </span>
 
-                        <!--</div>-->
+                        </div>
+                    </a>
                 </div>
             </div>
         </nav>
@@ -53,17 +55,17 @@
             <div class="row">
                 <div id='agenda' class="agenda">
                     <h3>AGENDA</h3>
-                    <div class="sortowalny"></div>
+                    <div class="event-sorting"></div>
                 </div>
                 <div class="col-xs-12 col-sm-8 calendar-position">
 
                     <div class="list-box">
                         <div class="left-navi">
-                            <button id="navi-left-single" type="button" aria-label="Left Align"
-                                    style="margin-top:115px">
+                            <button id="navi-left-single" type="button"  class="btn btn-default button-left" aria-label="Left Align"
+                                    style="margin-top:115px; padding: 6px">
                                 <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>
                             </button>
-                            <button id="navi-left-fifth" type="button" class="btn btn-default" aria-label="Left Align">
+                            <button id="navi-left-fifth" type="button" style="padding: 6px" class="btn btn-default button-left" aria-label="Left Align">
                                 <span class="glyphicon glyphicon-backward" aria-hidden="true"></span>
                             </button>
                         </div>
@@ -74,10 +76,10 @@
                         </div>
                         <div class="right-navi">
                             <button id="navi-right-single" type="button" class="btn btn-default" aria-label="Left Align"
-                                    style="margin-top:115px">
+                                    style="margin-top:115px; padding: 6px"">
                                 <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
                             </button>
-                            <button id="navi-right-fifth" type="button" class="btn btn-default" aria-label="Left Align">
+                            <button id="navi-right-fifth" type="button" style="padding: 6px" class="btn btn-default" aria-label="Left Align">
                                 <span class="glyphicon glyphicon-forward" aria-hidden="true"></span>
                             </button>
 
@@ -123,12 +125,18 @@
 <script src="libraries/jquery-2.2.4.js"></script>
 <script src="libraries/jquery-ui.js"></script>
 <script src="libraries/bootstrap.min.js"></script>
-<script src="libraries/angular.min.js"></script>
+<script src='angular-box/angular.min.js'></script>
+<script src='angular-box/angular-google-maps.min.js'></script>
+<script src='angular-box/angular-simple-logger.js'></script>
+<script src='angular-box/lodash.js'></script>
+<script src="angular-box/angular.min.js"></script>
 <script src="javascript/aplication.js"></script>
 <script src="javascript/visualization-of-calendar.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBM41EEbNYPJnU7lyii_LXS9z9nPFnZ2_g&callback=initMap"
         async defer></script>
 <script src="javascript/map.js"></script>
+<script src='//maps.googleapis.com/maps/api/js?sensor=false'></script>
+<script src="javascript/app.js"></script>
 
 
 

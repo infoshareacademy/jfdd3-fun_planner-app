@@ -9,8 +9,11 @@
     app.controller('uiGmapgoogle-mapsController', mapCtrl);
     app.controller('loadingBar', loadingBarCtrl);
 
-    function ctrl($scope) {
-        $scope.name = 'Mateusz'
+
+    function ctrl ($scope) {
+
+
+
     }
 
     function mapCtrl($scope) {

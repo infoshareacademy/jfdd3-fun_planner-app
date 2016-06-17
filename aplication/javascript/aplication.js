@@ -162,14 +162,13 @@ function showRandomCityEvents (element) {
 
             $('.list-element').draggable({
                 helper: 'clone',
-                appendTo: '.sortowalny',
-                connectToSortable: '.sortowalny',
+                appendTo: '.event-sorting',
+                connectToSortable: '.event-sorting',
                 zIndex: 20,
                 stop: function (event, ui) {
-                    $('.sortowalny div').css({width: '100%', height: '9%'});
-                    $('.sortowalny button').addClass('btn-trash-show');
+                    $('.event-sorting div').css({width: '100%', height: '9%'});
+                    $('.event-sorting button').addClass('btn-trash-show');
                 }
-
             });
 
             $('[data-toggle="popover"]').popover({
@@ -179,8 +178,6 @@ function showRandomCityEvents (element) {
                     return $('#tooltiptext', this).html();
                 }
             });
-
-
         }
     }
 }

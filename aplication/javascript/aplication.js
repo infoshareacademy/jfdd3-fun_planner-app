@@ -184,7 +184,6 @@ function showRandomCityEvents (element) {
         }
     }
 }
-
     function deleteEvent(value) {
         $('.list-element').popover('hide');
         value.parent().parent().remove();

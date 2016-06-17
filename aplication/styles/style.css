@@ -178,6 +178,7 @@ span.logo-ikon {
     margin-right: auto;
     margin-left: auto;
     margin-top: 20px;
+    display: none;
 }
 
 .footer {

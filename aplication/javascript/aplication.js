@@ -153,10 +153,10 @@ function showRandomCityEvents (element) {
                 + table[element].calEvent[index].name + '<button onclick="deleteEvent($(this))" type="button" class="btn btn-default btn-trash pull-right" aria-label="Trash"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></h5><div id="tooltiptext" style="display: none" class="panel-body"><div class="media"><div class="media-body"><h3 class="media-heading">'
                 + table[element].calEvent[index].name + '</h3><small>'
                 + table[element].calEvent[index].address + '</small><div class="star">'
-                + table[element].calEvent[index].stars +'</div>'
-                + table[element].calEvent[index].info + '</div><div class="media-right">'
-                + table[element].calEvent[index].datePl + '<img class="media-object" src="images/'
-                + table[element].calEvent[index].foto + '.jpg"></div></div></div></div>'
+                + table[element].calEvent[index].stars +'</div></div><div class="media-right">'
+                + table[element].calEvent[index].datePl + '<img class="media-object media-object-img" src="images/'
+                + table[element].calEvent[index].foto + '.jpg"></div><div>'
+                + table[element].calEvent[index].info + '</div></div></div></div>'
             );
 
 
@@ -166,7 +166,7 @@ function showRandomCityEvents (element) {
                 connectToSortable: '.sortowalny',
                 zIndex: 20,
                 stop: function (event, ui) {
-                    $('.sortowalny div').css({width: '100%', height: '9%'});
+                    $('.sortowalny div').css({width: '100%', height: 'auto'});
                     $('.sortowalny button').addClass('btn-trash-show');
                 }
 

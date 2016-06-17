@@ -178,8 +178,6 @@ function showRandomCityEvents (element) {
                     return $('#tooltiptext', this).html();
                 }
             });
-
-
         }
     }
 }

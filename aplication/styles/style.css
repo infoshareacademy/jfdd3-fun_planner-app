@@ -232,4 +232,5 @@ span.logo-ikon {
 
 .angular-google-map-container {
     height: 400px;
+    display: none;
 }

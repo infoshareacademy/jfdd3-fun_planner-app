@@ -3,6 +3,7 @@ body {
     font-weight: 400;
     font-size: 1.5em;
 }
+
 .btn-fp,
 .btn-fp:focus,
 .btn-fp:active,
@@ -15,7 +16,21 @@ body {
 }
 
 .glyphicon:hover {
-    color: #ffa400;
+    color: #8cc63f;
+}
+
+.background-city {
+    background-image: url('../images/background_city.png');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
+    background-image: element('#footer');
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    bottom: 60px;
+    z-index: -1;
+
 }
 
 .navbar-top {
@@ -83,11 +98,19 @@ span.logo-ikon {
     min-width: 50%;
 }
 
+.list-element:hover {
+    background-color: #f2f2f2;
+}
+
+.drag:hover {
+    cursor: move;
+}
+
 .event-sorting {
     width: 100%;
     min-height: 430px;
     padding: 0 15px;
-    border: dashed 1px #b5b5b5;
+    /*border: dashed 1px #b5b5b5;*/
     color: black;
 }
 
@@ -161,7 +184,7 @@ span.logo-ikon {
     float: left;
     display: inline;
     font-size: 300%;
-    color: #8cc63f;
+    color: #d2d2d2;
 }
 
 .dabble-arrow {
@@ -169,7 +192,7 @@ span.logo-ikon {
     padding: 0 10px;
     display: inline;
     font-size: 150%;
-    color: #8cc63f;
+    color: #d2d2d2;
 }
 
 .clear {
@@ -185,6 +208,8 @@ span.logo-ikon {
     visibility: hidden;
     padding: 0;
     background: none;
+    border: none;
+    outline: none;
 }
 
 .btn-trash-show {
@@ -192,6 +217,8 @@ span.logo-ikon {
 }
 
 .agenda {
+    border-left: dashed 1px #b5b5b5;
+    border-right: dashed 1px #b5b5b5;
     float: left;
     position: absolute;
     width: 20%;
@@ -215,11 +242,6 @@ span.logo-ikon {
 .footer {
     font-size: 90%;
     color: #8c8c8c;
-
-}
-
-.fb-twit {
-
 
 }
 

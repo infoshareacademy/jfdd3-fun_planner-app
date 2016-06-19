@@ -226,8 +226,8 @@ function showRandomCityEvents(element) {
 function createEventItem(index, table, element) {
 
     var sortingData = table[element].calEvent[index].datePl;
-    var eventItem = $('<div class="list-element drag " orderId="' + element + index + '" data-toggle="popover" data-placement="bottom" data-trigger="hover manual"><h5>'
-        + table[element].calEvent[index].name + '<button onclick="deleteEvent($(this))" type="button" class="btn btn-default btn-trash pull-right" aria-label="Trash"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></h5><div id="tooltiptext" style="display: none" class="panel-body"><div class="media"><div class="media-body"><h3 class="media-heading">'
+    var eventItem = $('<div class="list-element drag" orderId="' + element + index + '" data-toggle="popover" data-placement="bottom" data-trigger="hover manual"><h5>'
+        + table[element].calEvent[index].name + '<button onclick="deleteEvent($(this))" type="button" class="btn-trash pull-right" aria-label="Trash"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></h5><div id="tooltiptext" style="display: none" class="panel-body"><div class="media"><div class="media-body"><h3 class="media-heading">'
         + table[element].calEvent[index].name + '</h3><small>'
         + table[element].calEvent[index].address + '</small><div class="star">'
         + table[element].calEvent[index].stars + '</div>'
@@ -286,6 +286,7 @@ function createDraggable() {
     $('.event-sorting').sortable({
         cancel: '.list-element'
     });
+
 }
 
 function deleteEvent(value) {

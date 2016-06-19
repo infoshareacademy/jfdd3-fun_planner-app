@@ -125,6 +125,18 @@ span.logo-ikon {
     font-size: 1.5vw;
 }
 
+/*@media screen and (max-width:800px) {*/
+    /*.calendar-column {*/
+        /*text-align: center;*/
+        /*clear: left;*/
+        /*display: inline;*/
+        /*width: 50%;*/
+        /*border-left: dashed 1px #c6c6c6;*/
+        /*!*padding: 15px;*!*/
+        /*!*min-height: 1000px;*!*/
+        /*font-size: 1.5vw;*/
+    /*}*/
+
 .calendar-column:last-child {
     border-right: dashed 1px #c6c6c6;
 }
@@ -202,6 +214,23 @@ span.logo-ikon {
     margin-left: 6%;
     color: #8cc63f;
 }
+
+@media screen and (max-width:800px) {
+        .agenda {
+        float: left;
+        position: absolute;
+        width: 40%;
+        text-align: center;
+        margin-left: 0
+        color: #8cc63f;
+    }
+
+@media screen and (max-width:800px) {
+        .list-box {
+            width: 50%;
+            float: right;
+        }
+    }
 
 #map {
     width: 40%;

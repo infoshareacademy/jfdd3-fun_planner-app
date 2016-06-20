@@ -2,6 +2,7 @@ body {
     font-family: 'Ubuntu', sans-serif;
     font-weight: 400;
     font-size: 1.5em;
+    height: 60vw;
 }
 
 .btn-fp,
@@ -106,13 +107,7 @@ span.logo-ikon {
     cursor: move;
 }
 
-.event-sorting {
-    width: 100%;
-    min-height: 430px;
-    padding: 0 15px;
-    /*border: dashed 1px #b5b5b5;*/
-    color: black;
-}
+
 
 .list-box {
     min-height: 500px;
@@ -237,11 +232,23 @@ span.logo-ikon {
     text-align: center;
     padding: 15px;
     min-height: 500px;
+
     font-size: 1.5vw;
     margin-left: 6%;
     color: #8cc63f;
 }
 
+.scrollAgenda{
+    overflow-y: scroll;
+    max-height: 400px;
+}
+.event-sorting {
+    width: 100%;
+    min-height: 430px;
+    padding: 0 15px;
+    max-width: 258px;
+    color: black;
+}
 @media screen and (max-width: 768px) {
     .agenda {
         width: 25%;
@@ -261,6 +268,7 @@ span.logo-ikon {
 .footer {
     font-size: 90%;
     color: #8c8c8c;
+
 
 }
 

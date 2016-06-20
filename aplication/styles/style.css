@@ -137,7 +137,7 @@ span.logo-ikon {
     float: left;
     display: inline;
     width: 10%;
-    border-left: dashed 1px #c6c6c6;
+    border-left: dashed 1px #828282;
     padding: 15px;
     min-height: 1000px;
     font-size: 1.5vw;
@@ -156,7 +156,7 @@ span.logo-ikon {
 }
 
 .calendar-column:last-child {
-    border-right: dashed 1px #c6c6c6;
+    border-right: dashed 1px #828282;
 }
 
 .navigation {
@@ -224,8 +224,8 @@ span.logo-ikon {
 }
 
 .agenda {
-    border-left: dashed 1px #b5b5b5;
-    border-right: dashed 1px #b5b5b5;
+    border-left: dashed 1px #828282;
+    border-right: dashed 1px #828282;
     float: left;
     position: absolute;
     width: 20%;

@@ -239,7 +239,7 @@ span.logo-ikon {
 }
 
 .scrollAgenda{
-    overflow-y: scroll;
+
     max-height: 400px;
 }
 .event-sorting {

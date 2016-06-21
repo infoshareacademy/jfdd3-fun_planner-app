@@ -212,6 +212,69 @@ var cityEvents = [
         foto: 'images16',
         coordinates: [54.516773, 18.545091],
         type: 'Wydarzenie artystyczne'
+    },
+    {
+        name: 'Teatr Wybrzeże',
+        address: 'Gdańsk, ul. Św. Ducha 2',
+        eventName: 'Maria Stuart',
+        info: 'Dwie wielkie królowe - uwięziona Maria Stuart i panująca Elżbieta I. ' +
+        'Jeden tron - wspaniały tron Anglii. A także dwie wspaniałe ' +
+        'aktorki - Dorota Kolak i Katarzyna Figura.',
+        dateVal: {},
+        stars: stars(5),
+        foto: 'images17',
+        coordinates: [54.351603, 18.648902],
+        type: 'Spektakl'
+    },
+    {
+        name: 'Teatr Szekspirowski',
+        address: 'Gdańsk, ul. Bolesławskiego 1',
+        eventName: 'Wesołe Kumoszki z Windsoru',
+        info: 'Rewelacyjna komedia, która podbiła serca publiczności. ' +
+        'Spektakl na scenie elżbietańskiej Teatru Szekspirowskiego. ' +
+        'Zdrada. Zazdrość. Komedia omyłek.',
+        dateVal: {},
+        stars: stars(4),
+        foto: 'images18',
+        coordinates: [54.348199, 18.647168],
+        type: 'Spektakl'
+    },
+    {
+        name: 'Europejskie Centrum Solidarności',
+        address: 'Gdańsk, Plac Solidarności 1',
+        eventName: 'ALL ABOUT FREEDOM FESTIVAL',
+        info: 'Już po raz dziesiąty zapraszamy na interdyscyplinarny ' +
+        'festiwal ALL ABOUT FREEDOM FESTIVAL, ' +
+        'jedną z najbardziej znanych imprez realizowanych przez ECS.',
+        dateVal: {},
+        stars: stars(3),
+        foto: 'images19',
+        coordinates: [54.361428, 18.649432],
+        type: 'Wydarzenie artystyczne'
+    },
+    {
+        name: 'Opera Bałtycka',
+        address: 'Gdańsk, ul. Św. Ducha 2',
+        eventName: 'Opera Ubu Rex',
+        info: 'Jeden z najciekawszych spektakli, jakie powstały w Operze Bałtyckiej. ' +
+        'Jeden z najlepszych w dorobku wybitnego twórcy teatru polskiego, ' +
+        'jakim jest Janusz Wiśniewski.',
+        dateVal: {},
+        stars: stars(5),
+        foto: 'images20',
+        coordinates: [54.380989, 18.622520],
+        type: 'Spektakl'
+    },
+    {
+        name: 'Filharmonia Bałtycka',
+        address: 'Gdańsk, ul. Ołowianka 1',
+        eventName: 'Koncert symfoniczny',
+        info: 'Najlepsi muzycy, wirtuozi, nawspanialsze orkiestry, niezapomniane chwile.',
+        dateVal: {},
+        stars: stars(5),
+        foto: 'images21',
+        coordinates: [54.352512, 18.659656],
+        type: 'Koncert'
     }
 ];
 

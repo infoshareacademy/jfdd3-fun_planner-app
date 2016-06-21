@@ -39,7 +39,7 @@ body {
 .navbar-top {
     padding-top: 5px;
     background-color: #878787;
-    height: 60px;
+    /*height: 60px;*/
     position: relative;
 }
 
@@ -49,7 +49,7 @@ body {
     padding-top: 10px;
     /*border-top: solid 1px #c8c8c8;*/
     /*border-bottom: none;*/
-    height: 50px;
+    /*height: 50px;*/
     /*position: relative;*/
 }
 

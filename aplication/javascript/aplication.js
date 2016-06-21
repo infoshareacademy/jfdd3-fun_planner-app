@@ -162,6 +162,56 @@ var cityEvents = [
         foto: 'images12',
         coordinates: [54.518011, 18.540758],
         type: 'Koncert'
+    },
+    {
+        name: 'Scena Letnia w Orłowie',
+        address: 'Gdynia, Plaża w Orłowie',
+        eventName: 'Piosenka jest dobra na wszystko',
+        info: '"Piosenka jest dobra na wszystko" to dla starszych widzów, pamiętających początki Sceny Letniej w ' +
+        'Orłowie, koncert bardzo sentymentalny. Dla młodszych będzie to możliwość poznania choćby fragmentów ' +
+        'przedstawień Sceny Letniej z ostatnich 19 lat.',
+        dateVal: {},
+        stars: stars(5),
+        foto: 'images13',
+        coordinates: [54.475543, 18.562205],
+        type: 'Sprektakl'
+    },
+    {
+        name: 'Ergo Arena',
+        address: 'Gdańsk, pl. Dwóch Miast 1',
+        eventName: 'Lionel Richie',
+        info: 'Właściciel jednej z najbardziej charakterystycznych "ciemnych" barw głosów w branży muzycznej, ' +
+        'artysta, który sprzedał ponad 100 milionów egzemplarzy płyt na całym świecie - Lionel Richie wystąpi w Polsce!',
+        dateVal: {},
+        stars: stars(5),
+        foto: 'images14',
+        coordinates: [54.426855, 18.580577],
+        type: 'Koncert'
+    },
+    {
+        name: 'Teatr Muzyczny',
+        address: 'Gdynia, pl. Grunwaldzki 1',
+        eventName: 'Ladies Jazz Festival: Rumer',
+        info: 'Urodzona w Islamabadzie (Pakistan), obdarzona wspaniałym głosem, talentem i uznaniem na ' +
+        'całym świecie zarówno fanów jak prominentnych przedstawicieli międzynarodowego środowiska muzycznego ' +
+        'Rumer zaprasza na swój pierwszy w Polsce koncert do Gdyni.',
+        dateVal: {},
+        stars: stars(5),
+        foto: 'images15',
+        coordinates: [54.516773, 18.545091],
+        type: 'Koncert'
+    },
+    {
+        name: 'PPNT Gdynia',
+        address: 'Gdynia, al. Zwycięstwa 96/98',
+        eventName: 'Gdynia Design Days 2016',
+        info: 'W lipcu nie można przegapić 9. edycji Gdynia Design Days, największego letniego festiwalu ' +
+        'branży projektowej w Polsce.',
+        dateVal: {},
+        stars: stars(5),
+        foto: 'images16',
+        coordinates: [54.516773, 18.545091],
+        type: 'Wydarzenie artystyczne'
     }
 ];
 

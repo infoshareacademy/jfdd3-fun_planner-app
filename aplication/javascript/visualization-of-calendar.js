@@ -76,3 +76,4 @@ $buttonRightFifth.click(function () {
 $('.event-sorting').sortable({
     cancel: '.list-element'
 });
+

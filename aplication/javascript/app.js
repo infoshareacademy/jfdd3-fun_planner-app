@@ -20,6 +20,7 @@
             console.log('Email: ' + profile.getEmail());
             $scope.signedIn = true;
             $scope.$apply();
+            createDraggable();
             $('.drag').draggable('enable');
         }
 

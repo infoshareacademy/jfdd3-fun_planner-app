@@ -1,5 +1,6 @@
 'use strict';
 
+
 var formatter = new Intl.DateTimeFormat('pl', {
     day: '2-digit',
     month: '2-digit',
@@ -323,6 +324,7 @@ function randomCityEvent(tableSize) {
         randomCityEventTable.push({
             name: cityEvents[possibleValues].name,
             address: cityEvents[possibleValues].address,
+            eventName: cityEvents[possibleValues].eventName,
             info: cityEvents[possibleValues].info,
             dateVal: dateVal,
             datePl: formatter.format(new Date(dateVal)),
@@ -387,7 +389,7 @@ function showRandomCityEvents(element) {
             createEventItem(index, table, element);
             addPopover();
         }
-        createDraggable();
+
     }
 }
 
@@ -422,6 +424,7 @@ function addPopover() {
 function createDraggable() {
 
     $('.drag').draggable({
+
         helper: 'clone',
         appendTo: '.event-sorting',
         connectToSortable: '.event-sorting',
@@ -439,7 +442,7 @@ function createDraggable() {
 
                 var item = this;
 
-                if ( $('.event-sorting .list-element[orderid=' + $(item).attr('orderid') + ']').length === 1 ) {
+                if ($('.event-sorting .list-element[orderid=' + $(item).attr('orderid') + ']').length === 1) {
 
                     return true;
                 }
@@ -462,3 +465,6 @@ function deleteEvent(value) {
     value.parent().parent().remove();
 }
 
+setTimeout(function() {
+    $('.abcRioButtonLightBlue').css('background-color', '#8cc63f').css('color', 'white')
+}, 700);

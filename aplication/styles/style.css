@@ -271,12 +271,18 @@ span.logo-ikon {
 h3{
     font-size: 3vw;
 }
+h5{
+    font-size: 2vw;
+}
+    .dabble-arrow {
+        display: none;
+    }
 
 }
 
 @media screen and (min-width:769px) and (max-width: 1200px) {
     .calendar-column {
-        width: 16.5%;
+      width: 16.5%;
     }
     .rightArrow {
         margin-right: 40px;

@@ -43,8 +43,8 @@
                 </div>
 
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <div class="g-signin2 navbar-btn navbar-right" data-onsuccess="onSignIn">Sign in</div>
-                    <button type="button" class="btn navbar-btn navbar-right" onclick="signOut();">Sign out</button>
+                    <div class="g-signin2 navbar-btn navbar-right" ng-hide="signedIn" data-onsuccess="onSignIn">Sign in</div>
+                    <button type="button" ng-click="signOut()" ng-show="signedIn" class="btn navbar-btn navbar-right" >Sign out</button>
                 </div>
 
             </div>
@@ -99,6 +99,7 @@
                     <div class="scrollAgenda event-sorting">
 
                     </div>
+                    <button id="button-map" class="btn btn-success" type="button" style="margin-bottom: 0; margin-right:0px; background-color: #8cc63f">Zobacz na mapie</button>
                 </div>
 
                 <div class="calendar-position">
@@ -195,6 +196,7 @@
     <script src="https://apis.google.com/js/platform.js" async defer></script>
         <!--Nasze skrypty-->
     <script src="javascript/app.js"></script>
+    <script src="javascript/map.js"></script>
     <script src="javascript/aplication.js"></script>
     <script src="javascript/visualization-of-calendar.js"></script>
 

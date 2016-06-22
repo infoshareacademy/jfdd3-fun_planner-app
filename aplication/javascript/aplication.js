@@ -327,7 +327,8 @@ function randomCityEvent(tableSize) {
             dateVal: dateVal,
             datePl: formatter.format(new Date(dateVal)),
             stars: cityEvents[possibleValues].stars,
-            foto: cityEvents[possibleValues].foto
+            foto: cityEvents[possibleValues].foto,
+            eventId: i
         });
     }
 
@@ -365,9 +366,7 @@ function calendarTabs() {
             })
         });
     }
-
     return tableCalendar;
-
 }
 
 var finalCalendarEventsTable = calendarTabs();
@@ -393,8 +392,9 @@ function showRandomCityEvents(element) {
 
 function createEventItem(index, table, element) {
 
+    var eventId = table[element].calEvent[index].eventId;
     var sortingData = table[element].calEvent[index].datePl;
-    var eventItem = $('<div class="list-element drag" orderId="' + element + index + '" data-toggle="popover" data-placement="bottom" data-trigger="hover manual"><h5>'
+    var eventItem = $('<div class="list-element drag" orderId="' + element +'-'+ index + '" eventId="'+eventId+'" data-toggle="popover" data-placement="bottom" data-trigger="hover manual"><h5>'
         + table[element].calEvent[index].name + '<button onclick="deleteEvent($(this))" type="button" class="btn-trash pull-right" aria-label="Trash"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></h5><div id="tooltiptext" style="display: none" class="panel-body"><div class="media"><div class="media-body"><h3 class="media-heading">'
         + table[element].calEvent[index].name + '</h3><small>'
         + table[element].calEvent[index].address + '</small><div class="star">'
@@ -427,13 +427,14 @@ function createDraggable() {
         connectToSortable: '.event-sorting',
         zIndex: 20,
         stop: function (event) {
+            var $sortedEvents = $('.event-sorting .list-element');
             $('.event-sorting div').css({
                 width: '100%',
                 height: '9%'
             }).removeClass('drag');
             $('.event-sorting button').addClass('btn-trash-show');
 
-            $('.event-sorting .list-element').sort(function (a, b) {
+            $sortedEvents.sort(function (a, b) {
                 return new Date($(a).attr('data-date').split('.').reverse().join('-')) - new Date($(b).attr('data-date').split('.').reverse().join('-'));
             }).filter(function () {
 
@@ -446,8 +447,7 @@ function createDraggable() {
                 $(item).remove();
                 return false;
             }).appendTo('.event-sorting');
-
-
+            sendToStorage($sortedEvents);
         }
     });
 

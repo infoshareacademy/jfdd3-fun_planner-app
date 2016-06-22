@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <meta name="google-signin-client_id" content="993664436204-qb2no5draqr7mmiq4q1rlug854n3gjgj.apps.googleusercontent.com">
 
     <title>Aplikacja FunPlanner</title>
 
@@ -43,7 +43,8 @@
                 </div>
 
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <button type="button" class="btn btn-default navbar-btn navbar-right" disabled="disabled">Sign in</button>
+                    <div class="g-signin2 navbar-btn navbar-right" data-onsuccess="onSignIn">Sign in</div>
+                    <button type="button" class="btn navbar-btn navbar-right" onclick="signOut();">Sign out</button>
                 </div>
 
             </div>
@@ -113,7 +114,7 @@
 
     <footer id="footer">
         <div class="background-city"></div>
-        <nav class="navbar navbar-default navbar-bottom navbar-fixed-bottom" >
+        <nav class="navbar navbar-default navbar-bottom" >
             <div class="container-fluid">
 
                 <p class="footer navbar-left">
@@ -155,6 +156,7 @@
     <script src='angular-box/angular-simple-logger.js'></script>
     <script src='angular-box/angular-google-maps.min.js'></script>
     <script src="angular-box/loading-bar.js"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
         <!--Nasze skrypty-->
     <script src="javascript/app.js"></script>
     <script src="javascript/aplication.js"></script>

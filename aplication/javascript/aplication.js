@@ -12,101 +12,269 @@ var formatterDay = new Intl.DateTimeFormat('pl', {
 
 var cityEvents = [
     {
-        name: 'Dream Club', address: 'Sopot, Bohaterów Monte Cassino 53',
-        info: 'Suspendisse sed consectetur quam. Duis vel nulla sit amet neque suscipit faucibus. Nullam ut odio tempor, lacinia arcu vitae, efficitur mauris. Vivamus.',
-        dateVal: {}, stars: stars(5), foto: 'images1'
+        name: 'Dream Club',
+        address: 'Sopot, Bohaterów Monte Cassino 53',
+        eventName: 'Girls Night Out!',
+        info: 'Tego wieczora w klubie rządzą dziewczyny!Na wokalu pojawi się niepowtarzalna i jedyna w swoim rodzaju ' +
+        'Maria Czajkovski i sprawi, że nie zejdziecie z parkietu do samego rana!Muzycznie zadbają o Was PROCENT i BROMI, ' +
+        'a na wokalu zaśpiewa niepowtarzalna Maria Czajkovski',
+        dateVal: {},
+        stars: stars(5),
+        foto: 'images1',
+        coordinates: [54.444312, 18.566630],
+        type: 'Imprezy klubowe'
     },
     {
         name: 'TAN',
         address: 'Sopot, Bohaterów Monte Cassino 63/6',
-        info: 'Ut ac orci viverra, eleifend odio eu, feugiat quam. Curabitur mattis interdum urna. Ut pulvinar faucibus dictum. Etiam felis nibh, ornare ac.',
+        eventName: 'TANgo!',
+        info: 'Klasyk śpiewał, że do tanga trzeba dwojga. W tym wypadku mowa o Was i o nas. Jakże piękny jest to taniec.' +
+        'Pełen zmysłowości i klasy. Niech i ten wieczór skojarzy się Wam z pozytywną emocją. Zatańcz z nami jeszcze raz.',
         dateVal: {},
         stars: stars(5),
-        foto: 'images2'
+        foto: 'images2',
+        coordinates: [54.445232, 18.567916],
+        type: 'Imprezy Klubowe'
     },
     {
         name: '3 Siostry',
         address: 'Sopot, Powstańców Warszawy 6',
-        info: 'Suspendisse facilisis lectus tellus, a pulvinar erat iaculis scelerisque. Duis sit amet lacinia ipsum. Nulla vestibulum malesuada arcu ut laoreet. Fusce eget.',
+        eventName: 'Annie & the circus',
+        info: 'Zapraszamy na wystąpienie szalonych jazzowych klaunow z punkowym podbiciem! Będzie mieszanina styli od jazzu, funky, folku aż po punk, piwko i zabawę! ',
         dateVal: {},
         stars: stars(5),
-        foto: 'images3'
+        foto: 'images3',
+        coordinates: [54.445872, 18.568486],
+        type: 'Imprezy Klubowe'
     },
     {
         name: 'Sfinks700',
         address: 'Sopot, al. Franciszka Mamuszki 1',
-        info: 'Duis sed ullamcorper ante, a luctus ex. Cras maximus enim vitae massa aliquet ornare sodales sit amet leo. Nullam id sodales sem.',
+        eventName: 'Summer Drum&Bass',
+        info: 'Przy współpracy klubu Sfinks700 oraz kolektywów MATIC i Breaky Vibes powstała idea stworzenia bardzo Drum&Bassowego ' +
+        'wydarzenia w samym środku wakacji. Klub mieszczący się prawie na plaży, słoneczna pogoda, skoczne dźwięki jungle, jump-up, ' +
+        'techstep i neurofunk – jeśli właśnie takiej zabawy szukasz w lato, to dobrze trafiłeś.',
         dateVal: {},
         stars: stars(5),
-        foto: 'images4'
+        foto: 'images4',
+        coordinates: [54.448544, 18.567314],
+        type: 'Imprezy Klubowe'
     },
 
 
     {
         name: 'Miasto Aniołów Club & Restaurant',
         address: 'Gdańsk, Chmielna 26',
-        info: 'Sed id dui eget libero blandit commodo id et sem. Ut ut ligula ipsum. In hac habitasse platea dictumst. Phasellus ut felis.',
+        eventName: 'Twisted by Angels',
+        info: 'Impreza, gdzie będziemy jak zwykle bawić się w klimacie mashup, funk, rnb, house, deep i latino house oraz oczywiście ' +
+        'największych i najbardziej znanych „miastowych” hitów. Muzę miksować dla Was będzie Rezydent Miasta Aniołów Mike G .',
         dateVal: {},
         stars: stars(5),
-        foto: 'images5'
+        foto: 'images5',
+        coordinates: [54.347702, 18.656805],
+        type: 'Imprezy Klubowe'
     },
     {
-        name: 'Klub Parlament',
+        name: 'Klub Muzyczny Parlament',
         address: 'Gdańsk, Świętego Ducha 2',
-        info: 'Duis aliquam arcu quam, molestie varius urna tincidunt a. Phasellus ac mi feugiat, tincidunt leo id, laoreet dolor. Ut a nibh vitae.',
+        eventName: 'cCu2Night',
+        info: 'Chcesz przenieść się w czasy prekursorów disco i poczuć się jak John Travolta w "Gorączce sobotniej nocy"?' +
+        'A może kręci Cię klubowe granie i całonocna zabawa dokładnie tak jak robią to na słonecznej Ibizie albo hip-hopowe rytmy rodem zza oceanu?' +
+        'Jeśli tak to musisz tu być! Bowiem w Parlamencie w sobotnią noc jest to wszystko i o wiele więcej. W sobotnie wieczory w Parlamencie, ' +
+        'każdy znajdzie dla siebie coś miłego.',
         dateVal: {},
         stars: stars(5),
-        foto: 'images6'
+        foto: 'images6',
+        coordinates: [54.351140, 18.649863],
+        type: 'Imprezy Klubowe'
     },
     {
         name: "Jack's Bar & Restaurant Fahrenheit",
         address: 'Gdańsk, Długi Targ 39/40',
-        info: 'Vestibulum eget massa dui. Fusce sit amet aliquam mauris, quis tincidunt lacus. Nunc fringilla ultrices lectus ut aliquam. Aliquam id posuere metus.',
+        eventName: 'Funky Splendor',
+        info: 'HEJ TY! Nie bądź zły tylko wpadaj na FUNKY SPLENDOR !!! Odgonimy pecha gorącym brzmieniem żywych instrumentów !' +
+        'Na trzecią już edycję tego wyjątkowego spendu przygotowaliśmy dla was sam ogień!' +
+        'Tym razem do naszego funky bandu dołącza kolejny instrument - saksofon! Lecimy z hałasem na całego !!! ',
         dateVal: {},
         stars: stars(5),
-        foto: 'images7'
+        foto: 'images7',
+        coordinates: [54.348410, 18.653798],
+        type: 'Imprezy Klubowe'
     },
     {
         name: 'Club Echo',
         address: 'Gdańsk, Wały Jagiellońskie 2/4',
-        info: 'Praesent et tortor vel sem iaculis interdum. Nulla semper dapibus eros et porttitor. Ut condimentum libero id condimentum ultricies. Fusce nibh augue.',
+        eventName: 'Summer Disco Night',
+        info: 'Przenieś się z nami w czasy, w których rządziło prawdziwe disco, wrotki, disco kula. Naszymi gorącymi brzmieniamy nie damy Ci się nudzić, ' +
+        'a nóżka będzie tupać sama. Jeśli lubisz prawdziwy klimat imprezy to musisz tu być!',
         dateVal: {},
         stars: stars(5),
-        foto: 'images8'
+        foto: 'images8',
+        coordinates: [54.350342, 18.647033],
+        type: 'Imprezy Klubowe'
     },
 
 
     {
-        name: 'Pokład Gdynia',
+        name: 'Klub Pokład Gdynia',
         address: 'Gdynia, al. Jana Pawła II 11',
-        info: 'Fusce lobortis porttitor blandit. Cras diam quam, maximus vel elit eu, auctor euismod dolor. Duis tortor nisl, laoreet non turpis sit amet.',
+        eventName: 'We are Your Friends',
+        info: 'Witajcie Pokładowicze !' +
+        'Czas na powtórkę z rozrywki i uczynienie "małego" piekiełka. Na naszej imprezie, na wszystkie panie czeka spersonalizowana karta "21" drinków. ' +
+        'Mnóstwo atrakcji, dobvra muzyka to Pokład w Gdyni.',
         dateVal: {},
         stars: stars(5),
-        foto: 'images9'
+        foto: 'images9',
+        coordinates: [54.518653, 18.548150],
+        type: 'Imprezy Klubowe'
     },
     {
         name: 'Blues Club',
         address: 'Gdynia, Portowa 9',
-        info: 'Curabitur gravida odio lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam sollicitudin quis neque eu.',
+        eventName: 'Jam Session Bluesowe z Water Jug',
+        info: 'Zapraszamy was nasi drodzy Bluesowi entuzjaści na Jem Session w wykonaniu Water Jug.' +
+        'Prawdziwe brzmienia, klimat to coś czego nie zapomnicie. My będziemy, a Ty?',
         dateVal: {},
         stars: stars(5),
-        foto: 'images10'
+        foto: 'images10',
+        coordinates: [54.524461, 18.543094],
+        type: 'Koncert'
     },
     {
-        name: 'Klub Atlantic',
+        name: 'Klub Atlantic Gdynia',
         address: 'Gdynia, 3 Maja 28',
-        info: 'Donec fringilla quis urna at tristique. Maecenas blandit leo libero, ac dictum dui pulvinar in. Sed quis mi non tortor hendrerit efficitur.',
+        eventName: 'Exciting Night 14',
+        info: 'Czternasty raz mamy zaszczyt zaprosić wszystkich fanów i miłośników twórczości Depeche Mode na wyjątkowe wydarzenie jakim jest EXCITING NIGHT.',
         dateVal: {},
         stars: stars(5),
-        foto: 'images11'
+        foto: 'images11',
+        coordinates: [54.519184, 18.535465],
+        type: 'Imprezy Klubowe'
     },
     {
-        name: 'Desdemona',
+        name: 'Klub Desdemona',
         address: 'Gdynia, Antoniego Abrahama 37',
-        info: 'Curabitur laoreet magna ut nisi accumsan, vel fermentum ipsum vulputate. Duis eget orci sem. Pellentesque ullamcorper justo at augue volutpat, eget tempus.',
+        eventName: 'ODRA, 71TONMAN',
+        info: 'Mamy przyjemność zaprosić wszystkich na piękny koncert jednych z bardziej komercyjnych(nie) ' +
+        'zespołów polskich! Już niebawem w gdyńskiej Desdemonie wystąpią w ramach wspólnej trasy wystąpią: ODRA, 71TONMAN',
         dateVal: {},
         stars: stars(5),
-        foto: 'images12'
+        foto: 'images12',
+        coordinates: [54.518011, 18.540758],
+        type: 'Koncert'
+    },
+    {
+        name: 'Scena Letnia w Orłowie',
+        address: 'Gdynia, Plaża w Orłowie',
+        eventName: 'Piosenka jest dobra na wszystko',
+        info: '"Piosenka jest dobra na wszystko" to dla starszych widzów, pamiętających początki Sceny Letniej w ' +
+        'Orłowie, koncert bardzo sentymentalny. Dla młodszych będzie to możliwość poznania choćby fragmentów ' +
+        'przedstawień Sceny Letniej z ostatnich 19 lat.',
+        dateVal: {},
+        stars: stars(5),
+        foto: 'images13',
+        coordinates: [54.475543, 18.562205],
+        type: 'Sprektakl'
+    },
+    {
+        name: 'Ergo Arena',
+        address: 'Gdańsk, pl. Dwóch Miast 1',
+        eventName: 'Lionel Richie',
+        info: 'Właściciel jednej z najbardziej charakterystycznych "ciemnych" barw głosów w branży muzycznej, ' +
+        'artysta, który sprzedał ponad 100 milionów egzemplarzy płyt na całym świecie - Lionel Richie wystąpi w Polsce!',
+        dateVal: {},
+        stars: stars(5),
+        foto: 'images14',
+        coordinates: [54.426855, 18.580577],
+        type: 'Koncert'
+    },
+    {
+        name: 'Teatr Muzyczny',
+        address: 'Gdynia, pl. Grunwaldzki 1',
+        eventName: 'Ladies Jazz Festival: Rumer',
+        info: 'Urodzona w Islamabadzie (Pakistan), obdarzona wspaniałym głosem, talentem i uznaniem na ' +
+        'całym świecie zarówno fanów jak prominentnych przedstawicieli międzynarodowego środowiska muzycznego ' +
+        'Rumer zaprasza na swój pierwszy w Polsce koncert do Gdyni.',
+        dateVal: {},
+        stars: stars(5),
+        foto: 'images15',
+        coordinates: [54.516773, 18.545091],
+        type: 'Koncert'
+    },
+    {
+        name: 'PPNT Gdynia',
+        address: 'Gdynia, al. Zwycięstwa 96/98',
+        eventName: 'Gdynia Design Days 2016',
+        info: 'W lipcu nie można przegapić 9. edycji Gdynia Design Days, największego letniego festiwalu ' +
+        'branży projektowej w Polsce.',
+        dateVal: {},
+        stars: stars(5),
+        foto: 'images16',
+        coordinates: [54.516773, 18.545091],
+        type: 'Wydarzenie artystyczne'
+    },
+    {
+        name: 'Teatr Wybrzeże',
+        address: 'Gdańsk, ul. Św. Ducha 2',
+        eventName: 'Maria Stuart',
+        info: 'Dwie wielkie królowe - uwięziona Maria Stuart i panująca Elżbieta I. ' +
+        'Jeden tron - wspaniały tron Anglii. A także dwie wspaniałe ' +
+        'aktorki - Dorota Kolak i Katarzyna Figura.',
+        dateVal: {},
+        stars: stars(5),
+        foto: 'images17',
+        coordinates: [54.351603, 18.648902],
+        type: 'Spektakl'
+    },
+    {
+        name: 'Teatr Szekspirowski',
+        address: 'Gdańsk, ul. Bolesławskiego 1',
+        eventName: 'Wesołe Kumoszki z Windsoru',
+        info: 'Rewelacyjna komedia, która podbiła serca publiczności. ' +
+        'Spektakl na scenie elżbietańskiej Teatru Szekspirowskiego. ' +
+        'Zdrada. Zazdrość. Komedia omyłek.',
+        dateVal: {},
+        stars: stars(4),
+        foto: 'images18',
+        coordinates: [54.348199, 18.647168],
+        type: 'Spektakl'
+    },
+    {
+        name: 'Europejskie Centrum Solidarności',
+        address: 'Gdańsk, Plac Solidarności 1',
+        eventName: 'ALL ABOUT FREEDOM FESTIVAL',
+        info: 'Już po raz dziesiąty zapraszamy na interdyscyplinarny ' +
+        'festiwal ALL ABOUT FREEDOM FESTIVAL, ' +
+        'jedną z najbardziej znanych imprez realizowanych przez ECS.',
+        dateVal: {},
+        stars: stars(3),
+        foto: 'images19',
+        coordinates: [54.361428, 18.649432],
+        type: 'Wydarzenie artystyczne'
+    },
+    {
+        name: 'Opera Bałtycka',
+        address: 'Gdańsk, ul. Św. Ducha 2',
+        eventName: 'Opera Ubu Rex',
+        info: 'Jeden z najciekawszych spektakli, jakie powstały w Operze Bałtyckiej. ' +
+        'Jeden z najlepszych w dorobku wybitnego twórcy teatru polskiego, ' +
+        'jakim jest Janusz Wiśniewski.',
+        dateVal: {},
+        stars: stars(5),
+        foto: 'images20',
+        coordinates: [54.380989, 18.622520],
+        type: 'Spektakl'
+    },
+    {
+        name: 'Filharmonia Bałtycka',
+        address: 'Gdańsk, ul. Ołowianka 1',
+        eventName: 'Koncert symfoniczny',
+        info: 'Najlepsi muzycy, wirtuozi, nawspanialsze orkiestry, niezapomniane chwile.',
+        dateVal: {},
+        stars: stars(5),
+        foto: 'images21',
+        coordinates: [54.352512, 18.659656],
+        type: 'Koncert'
     }
 ];
 
@@ -292,4 +460,20 @@ function createDraggable() {
 function deleteEvent(value) {
     $('.list-element').popover('hide');
     value.parent().parent().remove();
+}
+
+function signOut() {
+    var auth2 = gapi.auth2.getAuthInstance();
+    auth2.signOut().then(function () {
+        console.log('User signed out.');
+    });
+}
+
+
+function onSignIn(googleUser) {
+    var profile = googleUser.getBasicProfile();
+    console.log('ID: ' + profile.getId());
+    console.log('Name: ' + profile.getName());
+    console.log('Image URL: ' + profile.getImageUrl());
+    console.log('Email: ' + profile.getEmail());
 }

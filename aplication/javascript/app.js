@@ -20,6 +20,7 @@
             console.log('Email: ' + profile.getEmail());
             $scope.signedIn = true;
             $scope.$apply();
+            $('.drag').draggable('enable');
         }
 
 
@@ -30,11 +31,8 @@
                 console.log('User signed out.');
                 $scope.signedIn = false;
                 $scope.$apply();
-                setTimeout(function () {
-                    $scope.$apply()
-                }, 1000)
+                $('.drag').draggable('disable');
             });
-            $scope.$apply();
         }
 
         window.signOut = signOut;

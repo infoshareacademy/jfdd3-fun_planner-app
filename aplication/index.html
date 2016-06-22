@@ -43,8 +43,8 @@
                 </div>
 
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <div class="g-signin2 navbar-btn navbar-right" data-onsuccess="onSignIn">Sign in</div>
-                    <button type="button" class="btn navbar-btn navbar-right" onclick="signOut();">Sign out</button>
+                    <div class="g-signin2 navbar-btn navbar-right" ng-hide="signedIn" data-onsuccess="onSignIn">Sign in</div>
+                    <button type="button" ng-click="signOut()" ng-show="signedIn" class="btn navbar-btn navbar-right" >Sign out</button>
                 </div>
 
             </div>
@@ -52,7 +52,7 @@
 
     </header>
 
-    <main ng-controller="uiGmapgoogle-mapsController">
+    <main>
         <div class="container-fluid">
 
             <div class="row">
@@ -107,7 +107,7 @@
 
         </div>
 
-        <ui-gmap-google-map center='map.center' zoom='map.zoom'></ui-gmap-google-map>
+        <!--<ui-gmap-google-map center='map.center' zoom='map.zoom'></ui-gmap-google-map>-->
 
         <div class="background-city"></div>
     </main>

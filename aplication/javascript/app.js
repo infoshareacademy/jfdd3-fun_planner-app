@@ -19,6 +19,7 @@
             console.log('Image URL: ' + profile.getImageUrl());
             console.log('Email: ' + profile.getEmail());
             $scope.signedIn = true;
+            window.signedIn = true;
             $scope.$apply();
             createDraggable();
             $('.drag').draggable('enable');
@@ -37,7 +38,7 @@
         }
 
         window.signOut = signOut;
-
+  
     });
 
     function mapCtrl($scope) {

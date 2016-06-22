@@ -389,9 +389,18 @@ function showRandomCityEvents(element) {
             createEventItem(index, table, element);
             addPopover();
         }
+        signedYes();
 
     }
+
 }
+function signedYes() {
+    if (window.signedIn == true) {
+        createDraggable();
+    }
+}
+
+
 
 function createEventItem(index, table, element) {
 
@@ -460,11 +469,12 @@ function createDraggable() {
 
 }
 
+
 function deleteEvent(value) {
     $('.list-element').popover('hide');
     value.parent().parent().remove();
 }
 
-setTimeout(function() {
+setTimeout(function () {
     $('.abcRioButtonLightBlue').css('background-color', '#8cc63f').css('color', 'white')
 }, 700);

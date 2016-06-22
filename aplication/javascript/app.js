@@ -3,11 +3,11 @@
  */
 
 (function () {
-    var app = angular.module('FunPlanner', ['uiGmapgoogle-maps','angular-loading-bar']);
+    var app = angular.module('FunPlanner', ['uiGmapgoogle-maps', 'angular-loading-bar']);
     app.controller('uiGmapgoogle-mapsController', mapCtrl);
-    app.controller('loadingBar', loadingBarCtrl);
+    //app.controller('loadingBar', loadingBarCtrl);
 
-    app.controller('FunPlannerController', function ($scope){
+    app.controller('FunPlannerController', function ($scope) {
 
         $scope.signedIn = false;
         $scope.signOut = signOut;
@@ -22,18 +22,8 @@
             $scope.$apply();
         }
 
-    function mapCtrl($scope) {
-        $scope.map = {center: {
-            latitude: 54.4444,
-            longitude: 18.56444},
-            zoom: 10,
-            disableDefaultUI: true,
-            zoomControl: false,
-            scaleControl: true
-        }
-    }
 
-    window.onSignIn = onSignIn;
+        window.onSignIn = onSignIn;
         function signOut() {
             var auth2 = gapi.auth2.getAuthInstance();
             auth2.signOut().then(function () {
@@ -50,4 +40,17 @@
         window.signOut = signOut;
 
     });
+
+    function mapCtrl($scope) {
+        $scope.map = {
+            center: {
+                latitude: 54.4444,
+                longitude: 18.56444
+            },
+            zoom: 10,
+            disableDefaultUI: true,
+            zoomControl: false,
+            scaleControl: true
+        }
+    }
 })();

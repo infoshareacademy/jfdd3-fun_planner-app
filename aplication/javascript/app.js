@@ -5,7 +5,7 @@
 (function () {
     var app = angular.module('FunPlanner', ['uiGmapgoogle-maps', 'angular-loading-bar']);
     app.controller('uiGmapgoogle-mapsController', mapCtrl);
-    //app.controller('loadingBar', loadingBarCtrl);
+    app.controller('loadingBar', loadingBarCtrl);
 
     app.controller('FunPlannerController', function ($scope) {
 
@@ -52,5 +52,9 @@
             zoomControl: false,
             scaleControl: true
         }
+    }
+
+    function loadingBarCtrl () {
+
     }
 })();

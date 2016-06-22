@@ -12,8 +12,6 @@
 
     function ctrl ($scope) {
 
-
-
     }
 
     function mapCtrl($scope) {

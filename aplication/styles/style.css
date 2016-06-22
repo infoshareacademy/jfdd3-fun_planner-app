@@ -335,9 +335,14 @@ h5{
 
 .angular-google-map-container {
     height: 400px;
-    /*display: none;*/
+    display: none;
     width: 80%;
     margin-left: 15%;
     margin-bottom: 5%;
-    margin-top: 2%;
+    margin-top: 3%;
+}
+
+.btn-success {
+    margin-bottom: 0;
+    background-color: #8cc63f;
 }

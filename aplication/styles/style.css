@@ -145,6 +145,10 @@ span.logo-ikon {
     border-right: dashed 1px #828282;
 }
 
+.signOut {
+    background-color: #8cc63f;
+    color: white;
+}
 .navigation {
     min-height: 320px;
     width: 5%;

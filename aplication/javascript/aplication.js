@@ -175,7 +175,7 @@ var cityEvents = [
         stars: stars(5),
         foto: 'images13',
         coordinates: [54.475543, 18.562205],
-        type: 'Sprektakl'
+        type: 'Spektakl'
     },
     {
         name: 'Ergo Arena',
@@ -276,7 +276,67 @@ var cityEvents = [
         foto: 'images21',
         coordinates: [54.352512, 18.659656],
         type: 'Koncert'
+    },
+    {
+        name: 'Klub Żak',
+        address: 'Gdańsk, ul. Grunwaldzka 195/197',
+        eventName: 'Dni Muzyki Nowej',
+        info: 'Druga dekada XXI wieku udowadnia, że w muzyce jeszcze ' +
+        'nie wszystko zostało powiedziane, a rozwój technologii umożliwiającej ' +
+        'eksperymentowanie z syntezą oraz przetwarzaniem sygnałów dźwiękowych ' +
+        'prowadzi nie tylko do powstawania Nowej Muzyki, ale również do ' +
+        'konstruowania wyjątkowych, często stworzonych w zaledwie jednym egzemplarzu instrumentów.',
+        dateVal: {},
+        stars: stars(5),
+        foto: 'images22',
+        coordinates: [54.387117, 18.592246],
+        type: 'Wydarzenie artystyczne'
+    },
+    {
+        name: 'B90',
+        address: 'Gdańsk, ul. Doki 1',
+        eventName: 'Brujeria. Cieżkie brzmienia',
+        info: 'Brujeria (po hiszpańsku "czary") to nazwa kontrowersyjnego zespołu, ' +
+        'który 22 czerwca zawładnie gdańskim klubem B90. Będzie to iście czarna ' +
+        'magia spod znaku grindcorowego i death metalowego brzmienia. ' +
+        'Podczas koncertu grupa zaprezentuje materiał z najnowszego, wydanego po 16 latach przerwy, albumu.',
+        dateVal: {},
+        stars: stars(5),
+        foto: 'images23',
+        coordinates: [54.364764, 18.648509],
+        type: 'Koncert'
+    },
+    {
+        name: 'Teatr Miejski im. W. Gombrowicza',
+        address: 'Gdynia, ul. Bema 26',
+        eventName: 'Dzień Świra',
+        info: 'Pierwsza teatralna realizacja scenariusza Marka Koterskiego, ' +
+        'według którego autor zrealizował kultowy już dzisiaj film. ' +
+        '"Dzień świra". To historia mężczyzny uwikłanego w natręctwa ' +
+        'życia codziennego, dla którego każdy kontakt z drugim człowiekiem ' +
+        'jest piekłem i ogromnym wyzwaniem jednocześnie. Codziennie rano ' +
+        'szuka pomysłu na nadchodzący dzień: higiena, jedzenie, praca, dzieci, ' +
+        'jedzenie, drzemka, praca, jedzenie, praca, palenie, proszki, sen... ',
+        dateVal: {},
+        stars: stars(2),
+        foto: 'images24',
+        coordinates: [54.511031, 18.539289],
+        type: 'Spektakl'
+    },
+    {
+        name: 'Kotłownia',
+        address: 'Gdynia, ul. 3 Maja 27',
+        eventName: 'La bomba',
+        info: 'Kotłownia to bardzo klimatyczne ' +
+        'miejsce zlokalizowane w podziemiach kamienicy w centrum Gdyni. ' +
+        'Klub kusi niesamowitą atmosferą i niskimi cenami.',
+        dateVal: {},
+        stars: stars(1),
+        foto: 'images25',
+        coordinates: [54.519540, 18.535661],
+        type: 'Imprezy klubowe'
     }
+
 ];
 
 function randomValue(endOfrange) {

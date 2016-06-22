@@ -6,7 +6,6 @@
     var app = angular.module('FunPlanner', ['uiGmapgoogle-maps', 'angular-loading-bar']);
     app.controller('uiGmapgoogle-mapsController', mapCtrl);
     app.controller('loadingBar', loadingBarCtrl);
-
     app.controller('FunPlannerController', function ($scope) {
 
         $scope.signedIn = false;
@@ -40,19 +39,6 @@
         window.signOut = signOut;
   
     });
-
-    function mapCtrl($scope) {
-        $scope.map = {
-            center: {
-                latitude: 54.4444,
-                longitude: 18.56444
-            },
-            zoom: 10,
-            disableDefaultUI: true,
-            zoomControl: false,
-            scaleControl: true
-        }
-    }
 
     function loadingBarCtrl () {
 

@@ -26,9 +26,9 @@
 
     <header>
 
-        <nav class="navbar navbar-default navbar-top">
+        <nav class="naviBar navibar-top">
             <div class="container-fluid">
-                <div class="navbar-header">
+                <div class="navibar-header">
 
                     <span class="logo-fun">
                         FUN
@@ -39,13 +39,8 @@
                     <span class="logo-planner">
                         planner
                     </span>
-
-                </div>
-
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-
-                    <div class="g-signin2 navbar-btn navbar-right" ng-hide="signedIn" data-onsuccess="onSignIn">Sign in</div>
-                    <button type="button" ng-click="signOut()" ng-show="signedIn" class="btn signOut navbar-btn navbar-right" >Sign out</button>
+                    <div class="g-signin2 btn googleButton" ng-hide="signedIn" data-onsuccess="onSignIn">Sign in</div>
+                    <button type="button" ng-click="signOut()" ng-show="signedIn" class="signOut btn" >Sign out</button>
                 </div>
 
             </div>

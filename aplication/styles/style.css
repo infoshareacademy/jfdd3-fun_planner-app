@@ -35,18 +35,17 @@ body {
 
 }
 
-.navbar-top {
+.navibar-top {
     padding-top: 5px;
     background-color: #878787;
     position: relative;
 }
 
-.navbar-bottom {
-    margin-top: 50px;
-    padding-top: 10px;
-    z-index: 1000;
+.naviBar{
+    height: 70px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
 }
-
 .logo-container {
     position: absolute;
     margin-left: 15%;
@@ -103,8 +102,6 @@ span.logo-ikon {
     cursor: move;
 }
 
-
-
 .list-box {
     min-height: 500px;
     overflow: hidden;
@@ -148,6 +145,14 @@ span.logo-ikon {
 .signOut {
     background-color: #8cc63f;
     color: white;
+    margin-top: 8px;
+    margin-bottom: 13px;
+    float: right;
+}
+.googleButton {
+    margin-top: 8px;
+    margin-bottom: 13px;
+    float: right;
 }
 .navigation {
     min-height: 320px;
@@ -301,7 +306,7 @@ h5{
     margin-right: auto;
     margin-left: auto;
     margin-top: 20px;
-    display: none;
+    visibility: hidden;
 }
 
 .footer {

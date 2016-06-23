@@ -31,11 +31,12 @@
             auth2.signOut().then(function () {
                 console.log('User signed out.');
                 $scope.signedIn = false;
+                window.signedIn = false;
                 $scope.$apply();
                 $('.drag').draggable('disable');
             });
         }
-
+        $scope.signedIn = window.signedIn;
         window.signOut = signOut;
   
     });

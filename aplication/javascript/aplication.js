@@ -449,6 +449,7 @@ function showRandomCityEvents(element) {
             createEventItem(index, table, element);
             addPopover();
         }
+        signedNo();
         signedYes();
 
     }
@@ -457,6 +458,12 @@ function showRandomCityEvents(element) {
 function signedYes() {
     if (window.signedIn == true) {
         createDraggable();
+    }
+}
+
+function signedNo(){
+    if (window.signedIn == false){
+        $('.drag', {draggable: 'disable'});
     }
 }
 

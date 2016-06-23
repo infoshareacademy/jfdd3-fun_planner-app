@@ -6,10 +6,15 @@ var $buttonLeftSingle = $('#navi-left-single'),
     $buttonLeftFifth = $('#navi-left-fifth'),
     $buttonRightFifth = $('#navi-right-fifth'),
     first = 0,
-    last = 4;
-
+    last = 4,
+    finalCalendarEventsTable;
 
 (function start() {
+    if (localStorage.calendar) {
+        finalCalendarEventsTable = JSON.parse(localStorage.calendar);
+    } else {
+        finalCalendarEventsTable = calendarTabs();
+    }
     for (var i = 0; i < 5; i++) {
         var $newColumn = $('<div class= "calendar-column">').attr('id', i);
         $parentDiv.append($newColumn);

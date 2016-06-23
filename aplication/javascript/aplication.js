@@ -366,10 +366,9 @@ function calendarTabs() {
             })
         });
     }
+    localStorage.calendar = JSON.stringify(tableCalendar);
     return tableCalendar;
 }
-
-var finalCalendarEventsTable = calendarTabs();
 
 function showRandomCityEvents(element) {
 

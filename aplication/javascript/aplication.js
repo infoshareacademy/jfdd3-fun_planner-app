@@ -459,19 +459,18 @@ function signedYes() {
     }
 }
 
-function signedNo(){
-    if (window.signedIn == false){
+function signedNo() {
+    if (window.signedIn == false) {
         $('.drag', {draggable: 'disable'});
     }
 }
-
 
 
 function createEventItem(index, table, element) {
 
     var eventId = table[element].calEvent[index].eventId;
     var sortingData = table[element].calEvent[index].datePl;
-    var eventItem = $('<div class="list-element drag" orderId="' + element +'-'+ index + '" eventId="'+eventId+'" data-toggle="popover" data-placement="bottom" data-trigger="hover manual"><h5>'
+    var eventItem = $('<div class="list-element drag" data-date="sortingData" data-orderId="' + element + '-' + index + '" data-eventId="' + eventId + '" data-toggle="popover" data-placement="bottom" data-trigger="hover manual"><h5>'
         + table[element].calEvent[index].name + '<button onclick="deleteEvent($(this))" type="button" class="btn-trash pull-right" aria-label="Trash"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></h5><div id="tooltiptext" style="display: none" class="panel-body"><div class="media"><div class="media-body"><h3 class="media-heading">'
         + table[element].calEvent[index].name + '</h3><small>'
         + table[element].calEvent[index].address + '</small><div class="star">'
@@ -518,7 +517,7 @@ function createDraggable() {
 
                 var item = this;
 
-                if ($('.event-sorting .list-element[orderid=' + $(item).attr('orderid') + ']').length === 1) {
+                if ($('.event-sorting .list-element[data-orderid=' + $(item).attr('data-orderid') + ']').length === 1) {
 
                     return true;
                 }
@@ -537,8 +536,10 @@ function createDraggable() {
 
 
 function deleteEvent(value) {
+    var element = value.parent().parent();
     $('.list-element').popover('hide');
-    value.parent().parent().remove();
+    element.remove();
+    removeFromStorage(element[0].attributes[3].nodeValue);
 }
 
 setTimeout(function () {

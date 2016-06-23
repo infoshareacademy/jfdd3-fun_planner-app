@@ -36,7 +36,6 @@
                 $('.drag').draggable('disable');
             });
         }
-        $scope.signedIn = window.signedIn;
         window.signOut = signOut;
   
     });

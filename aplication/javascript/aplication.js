@@ -544,4 +544,4 @@ function deleteEvent(value) {
 
 setTimeout(function () {
     $('.abcRioButtonLightBlue').css('background-color', '#8cc63f').css('color', 'white').css('width', '100px').css('border-radius', '4px')
-}, 700);
+}, 500);

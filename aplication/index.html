@@ -43,8 +43,9 @@
                 </div>
 
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <div class="g-signin2 navbar-btn navbar-right" data-onsuccess="onSignIn">Sign in</div>
-                    <button type="button" class="btn navbar-btn navbar-right" onclick="signOut();">Sign out</button>
+
+                    <div class="g-signin2 navbar-btn navbar-right" ng-hide="signedIn" data-onsuccess="onSignIn">Sign in</div>
+                    <button type="button" ng-click="signOut()" ng-show="signedIn" class="btn signOut navbar-btn navbar-right" >Sign out</button>
                 </div>
 
             </div>
@@ -54,14 +55,52 @@
 
     <main ng-controller="uiGmapgoogle-mapsController">
         <div class="container-fluid">
+            <div class="row input-group panel-body pull-right">
+                <form class="form-inline">
+                    <div class="form-group">
+                        <label class="sr-only" for="startDate">Email address</label>
+                        <input type="date" class="form-control" id="startDate" placeholder="dd/mm/yyyy">
+                    </div>
+                    <div class="form-group">
+                        <label class="sr-only" for="endDate">Password</label>
+                        <input type="date" class="form-control" id="endDate" placeholder="dd/mm/yyyy">
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"> impreza klubowa
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"> koncert
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"> wydarzenie artystyczne
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"> spektakl
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-default">FILTRUJ</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="container-fluid">
 
             <div class="row">
+
                 <div id='agenda' class="agenda">
 
                     <h3>AGENDA</h3>
                     <div class="scrollAgenda event-sorting">
 
                     </div>
+                    <button id="button-map" class="btn btn-success" type="button" style="margin-bottom: 0; margin-right:0px; background-color: #8cc63f">Zobacz na mapie</button>
                 </div>
 
                 <div class="calendar-position">
@@ -109,12 +148,11 @@
 
         <ui-gmap-google-map center='map.center' zoom='map.zoom'></ui-gmap-google-map>
 
-        <div class="background-city"></div>
     </main>
 
     <footer id="footer">
         <div class="background-city"></div>
-        <nav class="navbar navbar-default navbar-bottom" >
+        <nav class="navbar navbar-default navbar-bottom navbar-fixed-bottom" >
             <div class="container-fluid">
 
                 <p class="footer navbar-left">
@@ -158,8 +196,10 @@
     <script src="angular-box/loading-bar.js"></script>
     <script src="https://apis.google.com/js/platform.js" async defer></script>
         <!--Nasze skrypty-->
-    <script src="javascript/app.js"></script>
     <script src="javascript/aplication.js"></script>
+    <script src="javascript/app.js"></script>
+    <script src="javascript/map.js"></script>
+
     <script src="javascript/visualization-of-calendar.js"></script>
     <script src="javascript/localStorage.js"></script>
 

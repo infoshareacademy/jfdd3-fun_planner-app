@@ -42,8 +42,8 @@
 
     function mapCtrl($scope) {
         $scope.map = {center: {
-            latitude: 54.428,
-            longitude: 18.5188},
+            latitude: 54.432448,
+            longitude: 18.594874},
             zoom: 11,
             disableDefaultUI: true,
             zoomControl: false,

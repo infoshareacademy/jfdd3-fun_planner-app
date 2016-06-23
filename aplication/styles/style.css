@@ -333,10 +333,12 @@ h5{
 
 .angular-google-map-container {
     height: 470px;
-    visibility:hidden;
+    /*visibility:hidden;*/
     /*display: none;*/
+    position: absolute;
+    left: -100%;
     width: 40%;
-    margin: 3% auto 5% auto;
+    /*margin: 3% auto 5% auto;*/
 
 }
 

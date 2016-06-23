@@ -48,7 +48,9 @@
             disableDefaultUI: true,
             zoomControl: false,
             scaleControl: true
-        }
+        };
+
+        window.map = $scope.map;
     }
 
     function loadingBarCtrl () {

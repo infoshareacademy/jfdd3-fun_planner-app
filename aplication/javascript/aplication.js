@@ -389,7 +389,8 @@ function randomCityEvent(tableSize) {
             dateVal: dateVal,
             datePl: formatter.format(new Date(dateVal)),
             stars: cityEvents[possibleValues].stars,
-            foto: cityEvents[possibleValues].foto
+            foto: cityEvents[possibleValues].foto,
+            type: cityEvents[possibleValues].type
         });
     }
 
@@ -432,7 +433,43 @@ function calendarTabs() {
 
 }
 
-var finalCalendarEventsTable = calendarTabs();
+var templateFinalCalendarEventsTable = calendarTabs();
+var finalCalendarEventsTable = templateFinalCalendarEventsTable;
+
+$('#sandbox-container .input-daterange').datepicker({
+    format: "dd.mm.yyyy",
+    clearBtn: true,
+    language: "pl",
+    multidateSeparator: ".",
+    autoclose: true,
+    todayHighlight: true
+});
+
+$('form').change(function() {
+    var filterCheckboxValue = [];
+    var filterDateValue = {};
+    // var startDate = $('.datepicker').datepicker('getStartDate');
+
+    console.log(dateFrom.value);
+    console.log(dateTo.value);
+
+    function removeCheckboxValue (value) {
+        var pos = filterCheckboxValue.indexOf(value);
+        filterCheckboxValue.splice(pos, 0);
+    }
+
+    clubParty.checked ? filterCheckboxValue.push('Imprezy klubowe') : removeCheckboxValue('Imprezy klubowe');
+    concert.checked ? filterCheckboxValue.push('Koncert') : removeCheckboxValue('Koncert');
+    artisticEvent.checked ? filterCheckboxValue.push('Wydarzenie artystyczne') : removeCheckboxValue('Wydarzenie artystyczne');
+    spectacle.checked ? filterCheckboxValue.push('Spektakl') : removeCheckboxValue('Spektakl');
+
+
+
+    console.log(filterCheckboxValue);
+    // console.log(startDate)
+});
+$('.datepicker').datepicker('update');
+
 
 function showRandomCityEvents(element) {
 

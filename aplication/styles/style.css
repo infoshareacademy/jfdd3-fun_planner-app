@@ -16,7 +16,14 @@ body {
     outline: none;
 }
 
+#sandbox-container {
+    display: inline-block;
+    margin-left: 2vh;
+}
 
+.checkbox {
+    padding: 1vh 1vh;
+}
 
 .glyphicon:hover {
     color: #8cc63f;

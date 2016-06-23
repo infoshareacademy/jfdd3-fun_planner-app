@@ -335,8 +335,37 @@ var cityEvents = [
         foto: 'images25',
         coordinates: [54.519540, 18.535661],
         type: 'Imprezy klubowe'
+    },
+    {
+        name: 'Opera Leśna',
+        address: 'Sopot, ul. Moniuszki 12',
+        eventName: 'Koncert Rodriguez',
+        info: 'Rodriguez to legendarny gitarzysta-samouk i wokalista. ' +
+        'Swoje pierwsze koncerty zagrał w latach 60. ubiegłego wieku w barach i klubach rodzinnego Detroit. ' +
+        'To właśnie w tym mieście Rodriguez zarejestrował dwa studyjne albumy – ' +
+        '„Cold Fact" (1969) i „Coming from Reality" (1971). ' +
+        'Niestety wydawnictwa przeszły wówczas bez zasłużonego bez echa, ' +
+        'a muzyk postanowił skoncentrować się na innych dziedzinach, ' +
+        'kończąc filozofię na Wayne State University.',
+        dateVal: {},
+        stars: stars(3),
+        foto: 'images26',
+        coordinates: [54.444246, 18.544385],
+        type: 'Koncert'
+    },
+    {
+        name: 'Teatr Leśny',
+        address: 'Gdańsk, ul. Jaśkowa Dolina 45',
+        eventName: 'Lato ludzi',
+        info: 'Projekt Kołakowski czyli cztery trójmiejskie teatry: Teatr Mimo To (Gdańsk), ' +
+        'Teatr Biuro Rzeczy Osobistych (Gdynia), TeatRazem (Gdańsk); ' +
+        'Teatr Kasablanka (Gdańsk) orupa muzyczna Remont Pomp',
+        dateVal: {},
+        stars: stars(5),
+        foto: 'images27',
+        coordinates: [54.372863, 18.595490],
+        type: 'Wydarzenie artystyczne'
     }
-
 ];
 
 function randomValue(endOfrange) {

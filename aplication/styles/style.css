@@ -296,15 +296,11 @@ span.logo-ikon {
 
 .angular-google-map-container {
     height: 470px;
-    /*visibility:hidden;*/
-    /*display: none;*/
     position: absolute;
     left: -100%;
     margin-top: 2%;
     margin-bottom: 2%;
     width: 60%;
-    /*margin: 3% auto 5% auto;*/
-
 
 }
 

@@ -16,7 +16,14 @@ body {
     outline: none;
 }
 
+#sandbox-container {
+    display: inline-block;
+    margin-left: 2vh;
+}
 
+.checkbox {
+    padding: 1vh 1vh;
+}
 
 .glyphicon:hover {
     color: #8cc63f;
@@ -35,18 +42,17 @@ body {
 
 }
 
-.navbar-top {
+.navibar-top {
     padding-top: 5px;
     background-color: #878787;
     position: relative;
 }
 
-.navbar-bottom {
-    margin-top: 50px;
-    padding-top: 10px;
-    z-index: 1000;
+.naviBar{
+    height: 70px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
 }
-
 .logo-container {
     position: absolute;
     margin-left: 15%;
@@ -103,8 +109,6 @@ span.logo-ikon {
     cursor: move;
 }
 
-
-
 .list-box {
     min-height: 500px;
     overflow: hidden;
@@ -148,6 +152,21 @@ span.logo-ikon {
 .signOut {
     background-color: #8cc63f;
     color: white;
+    margin-top: 8px;
+    margin-bottom: 13px;
+    float: right;
+    width: 100px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+.googleButton {
+    margin-top: 8px;
+    margin-bottom: 13px;
+    float: right;
 }
 .navigation {
     min-height: 320px;
@@ -238,70 +257,14 @@ span.logo-ikon {
     padding: 0 15px;
     color: black;
 }
-@media screen and (max-width: 768px) {
-    .agenda {
-        width: 25%;
-        margin-left: 2%;
-    }
-}
 
-@media screen and (max-width:768px) {
-    .right-navi {
-        width: 20%;
-    }
-    .left-navi {
-        width: 20%;
-    }
-    .calendar-column {
-        width: 49%;
-    }
-    #week-columns {
-        width: 50%;
-    }
-    .rightArrow {
-        margin-right: 40px;
-    }
-    .weekday {
-        font-size: 3.3vw;
-    }
-h3{
-    font-size: 3vw;
-}
-h5{
-    font-size: 2vw;
-}
-    .dabble-arrow {
-        display: none;
-    }
-#startDate {
-    margin-right: 50px;
-}
-}
-
-@media screen and (min-width:769px) and (max-width: 1200px) {
-    .calendar-column {
-      width: 16.5%;
-    }
-    .rightArrow {
-        margin-right: 40px;
-    }
-    .padingArrow {
-        padding: 0px;
-    }
-    .arrow {
-        font-size: 200%;
-    }
-    .dabble-arrow{
-        font-size: 110%;
-    }
-}
 #map {
     width: 40%;
     height: 320px;
     margin-right: auto;
     margin-left: auto;
     margin-top: 20px;
-    display: none;
+    visibility: hidden;
 }
 
 .footer {
@@ -332,15 +295,76 @@ h5{
 }
 
 .angular-google-map-container {
-    height: 400px;
-    display: none;
-    width: 80%;
-    margin-left: 15%;
-    margin-bottom: 5%;
-    margin-top: 3%;
+    height: 470px;
+    /*visibility:hidden;*/
+    /*display: none;*/
+    position: absolute;
+    left: -100%;
+    width: 40%;
+    /*margin: 3% auto 5% auto;*/
+
 }
 
 .btn-success {
     margin-bottom: 0;
     background-color: #8cc63f;
+}
+
+@media screen and (max-width:768px) {
+    .right-navi {
+        width: 20%;
+    }
+    .left-navi {
+        width: 20%;
+    }
+    .calendar-column {
+        width: 49%;
+    }
+    #week-columns {
+        width: 50%;
+    }
+    .rightArrow {
+        margin-right: 40px;
+    }
+    .weekday {
+        font-size: 3.3vw;
+    }
+    h3{
+        font-size: 3vw;
+    }
+    h5{
+        font-size: 2vw;
+    }
+    .dabble-arrow {
+        display: none;
+    }
+    #startDate {
+        margin-right: 50px;
+    }
+    .agenda {
+        width: 25%;
+        margin-left: 2%;
+    }
+    /*.googleButton{*/
+        /*margin-bottom: 0;*/
+        /*float: left;*/
+    /*}*/
+}
+
+@media screen and (min-width:769px) and (max-width: 1200px) {
+    .calendar-column {
+        width: 16.5%;
+    }
+    .rightArrow {
+        margin-right: 40px;
+    }
+    .padingArrow {
+        padding: 0px;
+    }
+    .arrow {
+        font-size: 200%;
+    }
+    .dabble-arrow{
+        font-size: 110%;
+    }
 }

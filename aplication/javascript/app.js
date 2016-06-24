@@ -31,24 +31,26 @@
             auth2.signOut().then(function () {
                 console.log('User signed out.');
                 $scope.signedIn = false;
+                window.signedIn = false;
                 $scope.$apply();
                 $('.drag').draggable('disable');
             });
         }
-
         window.signOut = signOut;
   
     });
 
     function mapCtrl($scope) {
         $scope.map = {center: {
-            latitude: 54.4444,
-            longitude: 18.56444},
-            zoom: 10,
+            latitude: 54.432448,
+            longitude: 18.594874},
+            zoom: 11,
             disableDefaultUI: true,
             zoomControl: false,
             scaleControl: true
-        }
+        };
+
+        window.map = $scope.map;
     }
 
     function loadingBarCtrl () {

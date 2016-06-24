@@ -335,8 +335,37 @@ var cityEvents = [
         foto: 'images25',
         coordinates: [54.519540, 18.535661],
         type: 'Imprezy klubowe'
+    },
+    {
+        name: 'Opera Leśna',
+        address: 'Sopot, ul. Moniuszki 12',
+        eventName: 'Koncert Rodriguez',
+        info: 'Rodriguez to legendarny gitarzysta-samouk i wokalista. ' +
+        'Swoje pierwsze koncerty zagrał w latach 60. ubiegłego wieku w barach i klubach rodzinnego Detroit. ' +
+        'To właśnie w tym mieście Rodriguez zarejestrował dwa studyjne albumy – ' +
+        '„Cold Fact" (1969) i „Coming from Reality" (1971). ' +
+        'Niestety wydawnictwa przeszły wówczas bez zasłużonego bez echa, ' +
+        'a muzyk postanowił skoncentrować się na innych dziedzinach, ' +
+        'kończąc filozofię na Wayne State University.',
+        dateVal: {},
+        stars: stars(3),
+        foto: 'images26',
+        coordinates: [54.444246, 18.544385],
+        type: 'Koncert'
+    },
+    {
+        name: 'Teatr Leśny',
+        address: 'Gdańsk, ul. Jaśkowa Dolina 45',
+        eventName: 'Lato ludzi',
+        info: 'Projekt Kołakowski czyli cztery trójmiejskie teatry: Teatr Mimo To (Gdańsk), ' +
+        'Teatr Biuro Rzeczy Osobistych (Gdynia), TeatRazem (Gdańsk); ' +
+        'Teatr Kasablanka (Gdańsk) orupa muzyczna Remont Pomp',
+        dateVal: {},
+        stars: stars(5),
+        foto: 'images27',
+        coordinates: [54.372863, 18.595490],
+        type: 'Wydarzenie artystyczne'
     }
-
 ];
 
 function randomValue(endOfrange) {
@@ -348,7 +377,7 @@ function randomValue(endOfrange) {
 function createDate() {
 
     var startDate = new Date().getTime();
-    var endDate = new Date(2016, 8, 0).getTime();
+    var endDate = new Date(2016, 7, 0).getTime();
 
     return new Date(startDate + Math.random() * (endDate - startDate));
 
@@ -389,7 +418,8 @@ function randomCityEvent(tableSize) {
             dateVal: dateVal,
             datePl: formatter.format(new Date(dateVal)),
             stars: cityEvents[possibleValues].stars,
-            foto: cityEvents[possibleValues].foto
+            foto: cityEvents[possibleValues].foto,
+            type: cityEvents[possibleValues].type
         });
     }
 
@@ -402,7 +432,7 @@ function randomCityEvent(tableSize) {
 }
 
 function calendarTabs() {
-    var tableEvents = randomCityEvent(200);
+    var tableEvents = randomCityEvent(100);
     var tableCalendar = [];
     var nowDay = new Date().getTime();
     var lastDay = Date.parse(tableEvents[tableEvents.length - 1].dateVal);
@@ -431,25 +461,44 @@ function calendarTabs() {
     return tableCalendar;
 
 }
+
 var templateFinalCalendarEventsTable = calendarTabs();
-var finalCalendarEventsTable = templateFinalCalendarEventsTable
+var finalCalendarEventsTable = templateFinalCalendarEventsTable;
 
-$('form').change(function () {
-
-    $parentDiv.empty();
-
-
-
-    finalCalendarEventsTable = templateFinalCalendarEventsTable.filter(function (item) {
-        if (item.calWeekday === 'poniedziałek' || item.calWeekday === 'wtorek')
-            return item;
-    });
-
-    first = 0;
-    last = 4;
-    start();
-
+$('#sandbox-container .input-daterange').datepicker({
+    format: "dd.mm.yyyy",
+    clearBtn: true,
+    language: "pl",
+    multidateSeparator: ".",
+    autoclose: true,
+    todayHighlight: true
 });
+
+$('form').change(function() {
+    var filterCheckboxValue = [];
+    var filterDateValue = {};
+    // var startDate = $('.datepicker').datepicker('getStartDate');
+
+    console.log(dateFrom.value);
+    console.log(dateTo.value);
+
+    function removeCheckboxValue (value) {
+        var pos = filterCheckboxValue.indexOf(value);
+        filterCheckboxValue.splice(pos, 0);
+    }
+
+    clubParty.checked ? filterCheckboxValue.push('Imprezy klubowe') : removeCheckboxValue('Imprezy klubowe');
+    concert.checked ? filterCheckboxValue.push('Koncert') : removeCheckboxValue('Koncert');
+    artisticEvent.checked ? filterCheckboxValue.push('Wydarzenie artystyczne') : removeCheckboxValue('Wydarzenie artystyczne');
+    spectacle.checked ? filterCheckboxValue.push('Spektakl') : removeCheckboxValue('Spektakl');
+
+
+
+    console.log(filterCheckboxValue);
+    // console.log(startDate)
+});
+$('.datepicker').datepicker('update');
+
 
 function showRandomCityEvents(element) {
 
@@ -466,6 +515,7 @@ function showRandomCityEvents(element) {
             createEventItem(index, table, element);
             addPopover();
         }
+        signedNo();
         signedYes();
 
     }
@@ -474,6 +524,12 @@ function showRandomCityEvents(element) {
 function signedYes() {
     if (window.signedIn == true) {
         createDraggable();
+    }
+}
+
+function signedNo(){
+    if (window.signedIn == false){
+        $('.drag', {draggable: 'disable'});
     }
 }
 
@@ -553,5 +609,5 @@ function deleteEvent(value) {
 }
 
 setTimeout(function () {
-    $('.abcRioButtonLightBlue').css('background-color', '#8cc63f').css('color', 'white')
-}, 700);
+    $('.abcRioButtonLightBlue').css('background-color', '#8cc63f').css('color', 'white').css('width', '100px').css('border-radius', '4px')
+}, 500);

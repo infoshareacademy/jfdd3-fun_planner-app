@@ -7,7 +7,7 @@ $(document).ready(function () {
 
     $ShowMap.on('click', function () {
         $('.calendar-position').hide();
-        //$('.pull-right').hide();
+        $('.pull-right').css({'visibility': 'hidden'});
         $('#button-map').hide();
         $('#hide-button-map').show();
         $('.hide-button-map').css({"display": "inline"});
@@ -17,8 +17,10 @@ $(document).ready(function () {
 
     $ShowCalendarAgain.on('click', function () {
         $('.angular-google-map-container').css({'display': 'none'});
+        $('.pull-right').css({'visibility': 'visible'});
         $('.calendar-position').show();
         $('.pull-right').show();
+        $('.pull-right').css({'visibility': 'visible'});
         $('#button-map').show();
         $('#hide-button-map').hide();
     });

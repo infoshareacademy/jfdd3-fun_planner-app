@@ -9,14 +9,17 @@ var $buttonLeftSingle = $('#navi-left-single'),
     last = 4;
 
 
-(function start() {
+function start() {
+
     for (var i = 0; i < 5; i++) {
         var $newColumn = $('<div class= "calendar-column">').attr('id', i);
         $parentDiv.append($newColumn);
         showRandomCityEvents (i);
     }
-})();
-//start();
+}
+
+start();
+
 function left(time, multi) {
     for (var i = 0; i < multi; i += 1) {
         if (first ) {

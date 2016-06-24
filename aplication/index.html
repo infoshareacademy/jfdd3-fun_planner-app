@@ -96,7 +96,16 @@
                     <div class="scrollAgenda event-sorting">
 
                     </div>
-                    <button id="button-map" class="btn btn-success" type="button" style="margin-bottom: 0; margin-right:0px; background-color: #8cc63f">Zobacz na mapie</button>
+
+                    <button id="button-map" class="btn btn-success" type="button"
+                            style="margin-bottom: 0; margin-right:0; background-color: #8cc63f">
+                        Zobacz na mapie
+                    </button>
+                    <button id="hide-button-map" class="btn btn-success" type="button"
+                            style="margin-bottom: 0; margin-right:0; background-color: #8cc63f; display: none">
+                        Wróć do kalendarza
+                    </button>
+
                 </div>
 
                 <div class="calendar-position">
@@ -142,7 +151,10 @@
 
         </div>
 
-        <ui-gmap-google-map center='map.center' zoom='map.zoom'></ui-gmap-google-map>
+        <ui-gmap-google-map center='map.center' zoom='map.zoom'>
+
+
+        </ui-gmap-google-map>
 
     </main>
 

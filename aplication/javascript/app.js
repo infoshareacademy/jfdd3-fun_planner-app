@@ -53,6 +53,7 @@
         window.map = $scope.map;
     }
 
+
     function loadingBarCtrl () {
 
     }

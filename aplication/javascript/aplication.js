@@ -359,11 +359,38 @@ var cityEvents = [
         eventName: 'Lato ludzi',
         info: 'Projekt Kołakowski czyli cztery trójmiejskie teatry: Teatr Mimo To (Gdańsk), ' +
         'Teatr Biuro Rzeczy Osobistych (Gdynia), TeatRazem (Gdańsk); ' +
-        'Teatr Kasablanka (Gdańsk) orupa muzyczna Remont Pomp',
+        'Teatr Kasablanka (Gdańsk) orupa muzyczna Remont Pomp.',
         dateVal: {},
         stars: stars(5),
         foto: 'images27',
         coordinates: [54.372863, 18.595490],
+        type: 'Wydarzenie artystyczne'
+    },
+    {
+        name: 'Teatr w Oknie',
+        address: 'Gdańsk, ul. Długa 50/51',
+        eventName: 'MONOTEATR: Być jak Charlie Chaplin',
+        info: 'Być jak Charlie Chaplin to brawurowa próba zmierzenia się z legendą. ' +
+        'Najsłynniejszy komik kina niemego stał się ikoną popkultury już bardzo dawno temu, ' +
+        'jednak do dziś nie wiemy, kim był z pochodzenia i gdzie się urodził ten genialny aktor, scenarzysta i reżyser.',
+        dateVal: {},
+        stars: stars(5),
+        foto: 'images28',
+        coordinates: [54.349080, 18.652117],
+        type: 'Spektakl'
+    },
+    {
+        name: 'Centrum Sztuki Współczesnej Łaźnia',
+        address: 'Gdańsk, ul. Jaskółcza 1',
+        eventName: 'In Out Festival',
+        info: 'Festiwal In Out jest cyklicznym projektem Centrum Sztuki Współczesnej Łaźnia ' +
+        'organizowany od 2005 roku. W 2015 roku CSW Łaźnia planuje jego jubileuszową 10 ' +
+        'już edycję poświęcić tematowi "teatralność". Celem Festiwalu jest przyjrzenie się ' +
+        'czym jest teatr i teatralność dla twórców wizualnych, a czym wideo i filmy dla twórców teatralnych.',
+        dateVal: {},
+        stars: stars(3),
+        foto: 'images29',
+        coordinates: [54.341753, 18.658093],
         type: 'Wydarzenie artystyczne'
     }
 ];

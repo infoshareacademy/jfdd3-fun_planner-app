@@ -348,7 +348,7 @@ function randomValue(endOfrange) {
 function createDate() {
 
     var startDate = new Date().getTime();
-    var endDate = new Date(2016, 7, 0).getTime();
+    var endDate = new Date(2016, 8, 0).getTime();
 
     return new Date(startDate + Math.random() * (endDate - startDate));
 
@@ -402,7 +402,7 @@ function randomCityEvent(tableSize) {
 }
 
 function calendarTabs() {
-    var tableEvents = randomCityEvent(100);
+    var tableEvents = randomCityEvent(200);
     var tableCalendar = [];
     var nowDay = new Date().getTime();
     var lastDay = Date.parse(tableEvents[tableEvents.length - 1].dateVal);
@@ -431,8 +431,25 @@ function calendarTabs() {
     return tableCalendar;
 
 }
+var templateFinalCalendarEventsTable = calendarTabs();
+var finalCalendarEventsTable = templateFinalCalendarEventsTable
 
-var finalCalendarEventsTable = calendarTabs();
+$('form').change(function () {
+
+    $parentDiv.empty();
+
+
+
+    finalCalendarEventsTable = templateFinalCalendarEventsTable.filter(function (item) {
+        if (item.calWeekday === 'poniedziałek' || item.calWeekday === 'wtorek')
+            return item;
+    });
+
+    first = 0;
+    last = 4;
+    start();
+
+});
 
 function showRandomCityEvents(element) {
 

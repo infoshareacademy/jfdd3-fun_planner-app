@@ -5,6 +5,9 @@ $(document).ready(function () {
     var $ButtonMap = $('#button-map');
 
     $ButtonMap.on('click', function () {
+        $('.calendar-position').hide();
+        $('.pull-right').hide();
+
         //$('.angular-google-map-container').css({left: 0});
         $('.angular-google-map-container').css({"left": "0", "margin-left": "50%"});
         //$('.angular-google-map-container').show();

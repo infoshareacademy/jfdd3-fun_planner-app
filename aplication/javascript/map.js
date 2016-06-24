@@ -7,7 +7,7 @@ $(document).ready(function () {
 
     $ShowMap.on('click', function () {
         $('.calendar-position').hide();
-        $('.pull-right').hide();
+        //$('.pull-right').hide();
         $('#button-map').hide();
         $('#hide-button-map').show();
         $('.hide-button-map').css({"display": "inline"});

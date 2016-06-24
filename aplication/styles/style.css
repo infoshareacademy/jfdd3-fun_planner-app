@@ -271,7 +271,6 @@ span.logo-ikon {
     font-size: 90%;
     color: #8c8c8c;
 
-
 }
 
 .fb-twit i {
@@ -344,10 +343,7 @@ span.logo-ikon {
         width: 25%;
         margin-left: 2%;
     }
-    /*.googleButton{*/
-        /*margin-bottom: 0;*/
-        /*float: left;*/
-    /*}*/
+
 }
 
 @media screen and (min-width:769px) and (max-width: 1200px) {

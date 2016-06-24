@@ -620,6 +620,18 @@ function createDraggable() {
             }).appendTo('.event-sorting');
 
 
+            // Potrzebujemy tablicę z orderid eventów w agendzie.
+            // Na podstawie tablicy filtrujemy eventy z bazy i przekazujemy je do $scope w kontrolerze, w którym
+            // znajduje się mapa angularowa.
+
+            //var markers = [{
+            //    idKey: 1,
+            //    coords: {
+            //        latitude: 54.432448,
+            //        longitude: 18.594874
+            //    }
+            //}];
+            //window.updateMarkers(markers);
         }
     });
 

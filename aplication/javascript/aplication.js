@@ -35,7 +35,7 @@ var cityEvents = [
         stars: stars(5),
         foto: 'images2',
         coordinates: [54.445232, 18.567916],
-        type: 'Imprezy Klubowe'
+        type: 'Imprezy klubowe'
     },
     {
         name: '3 Siostry',
@@ -46,7 +46,7 @@ var cityEvents = [
         stars: stars(5),
         foto: 'images3',
         coordinates: [54.445872, 18.568486],
-        type: 'Imprezy Klubowe'
+        type: 'Imprezy klubowe'
     },
     {
         name: 'Sfinks700',
@@ -59,7 +59,7 @@ var cityEvents = [
         stars: stars(5),
         foto: 'images4',
         coordinates: [54.448544, 18.567314],
-        type: 'Imprezy Klubowe'
+        type: 'Imprezy klubowe'
     },
 
 
@@ -73,7 +73,7 @@ var cityEvents = [
         stars: stars(5),
         foto: 'images5',
         coordinates: [54.347702, 18.656805],
-        type: 'Imprezy Klubowe'
+        type: 'Imprezy klubowe'
     },
     {
         name: 'Klub Muzyczny Parlament',
@@ -87,7 +87,7 @@ var cityEvents = [
         stars: stars(5),
         foto: 'images6',
         coordinates: [54.351140, 18.649863],
-        type: 'Imprezy Klubowe'
+        type: 'Imprezy klubowe'
     },
     {
         name: "Jack's Bar & Restaurant Fahrenheit",
@@ -100,7 +100,7 @@ var cityEvents = [
         stars: stars(5),
         foto: 'images7',
         coordinates: [54.348410, 18.653798],
-        type: 'Imprezy Klubowe'
+        type: 'Imprezy klubowe'
     },
     {
         name: 'Club Echo',
@@ -112,7 +112,7 @@ var cityEvents = [
         stars: stars(5),
         foto: 'images8',
         coordinates: [54.350342, 18.647033],
-        type: 'Imprezy Klubowe'
+        type: 'Imprezy klubowe'
     },
 
 
@@ -127,7 +127,7 @@ var cityEvents = [
         stars: stars(5),
         foto: 'images9',
         coordinates: [54.518653, 18.548150],
-        type: 'Imprezy Klubowe'
+        type: 'Imprezy klubowe'
     },
     {
         name: 'Blues Club',
@@ -150,7 +150,7 @@ var cityEvents = [
         stars: stars(5),
         foto: 'images11',
         coordinates: [54.519184, 18.535465],
-        type: 'Imprezy Klubowe'
+        type: 'Imprezy klubowe'
     },
     {
         name: 'Klub Desdemona',
@@ -368,16 +368,16 @@ var cityEvents = [
     }
 ];
 
-function randomValue(endOfrange) {
+function randomValue(endOfRange) {
 
-    return (Math.round(Math.random() * (endOfrange - 1)));
+    return (Math.round(Math.random() * (endOfRange - 1)));
 
 }
 
 function createDate() {
 
     var startDate = new Date().getTime();
-    var endDate = new Date(2016, 7, 0).getTime();
+    var endDate = new Date(2016, 8, 0).getTime();
 
     return new Date(startDate + Math.random() * (endDate - startDate));
 
@@ -432,7 +432,7 @@ function randomCityEvent(tableSize) {
 }
 
 function calendarTabs() {
-    var tableEvents = randomCityEvent(100);
+    var tableEvents = randomCityEvent(200);
     var tableCalendar = [];
     var nowDay = new Date().getTime();
     var lastDay = Date.parse(tableEvents[tableEvents.length - 1].dateVal);
@@ -476,26 +476,37 @@ $('#sandbox-container .input-daterange').datepicker({
 
 $('form').change(function() {
     var filterCheckboxValue = [];
-    var filterDateValue = {};
-    // var startDate = $('.datepicker').datepicker('getStartDate');
-
-    console.log(dateFrom.value);
-    console.log(dateTo.value);
 
     function removeCheckboxValue (value) {
         var pos = filterCheckboxValue.indexOf(value);
         filterCheckboxValue.splice(pos, 0);
     }
 
-    clubParty.checked ? filterCheckboxValue.push('Imprezy klubowe') : removeCheckboxValue('Imprezy klubowe');
-    concert.checked ? filterCheckboxValue.push('Koncert') : removeCheckboxValue('Koncert');
-    artisticEvent.checked ? filterCheckboxValue.push('Wydarzenie artystyczne') : removeCheckboxValue('Wydarzenie artystyczne');
-    spectacle.checked ? filterCheckboxValue.push('Spektakl') : removeCheckboxValue('Spektakl');
+    $('#clubParty').is(':checked') ? filterCheckboxValue.push('Imprezy klubowe') : removeCheckboxValue('Imprezy klubowe');
+    $('#concert').is(':checked') ? filterCheckboxValue.push('Koncert') : removeCheckboxValue('Koncert');
+    $('#artisticEvent').is(':checked') ? filterCheckboxValue.push('Wydarzenie artystyczne') : removeCheckboxValue('Wydarzenie artystyczne');
+    $('#spectacle').is(':checked') ? filterCheckboxValue.push('Spektakl') : removeCheckboxValue('Spektakl');
 
+    $parentDiv.empty();
 
+    finalCalendarEventsTable = templateFinalCalendarEventsTable.map(function (itemCalendar) {
+       return {
+           calWeekday: itemCalendar.calWeekday,
+           calDate: itemCalendar.calDate,
+           calEvent: itemCalendar.calEvent.filter(function (itemEvent) {
 
-    console.log(filterCheckboxValue);
-    // console.log(startDate)
+               if (filterCheckboxValue.length === 0) {
+                   return true;
+               }
+               return filterCheckboxValue.includes(itemEvent.type);
+           })
+       };
+
+    });
+
+    first = 0;
+    last = 4;
+    start();
 });
 
 

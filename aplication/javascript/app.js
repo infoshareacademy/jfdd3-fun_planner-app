@@ -6,6 +6,28 @@
     var app = angular.module('FunPlanner', ['uiGmapgoogle-maps', 'angular-loading-bar']);
     app.controller('uiGmapgoogle-mapsController', mapCtrl);
     app.controller('loadingBar', loadingBarCtrl);
+    app.controller("MarkerController", [ '$scope', function($scope) {
+        angular.extend($scope, {
+            gdanskCenter: {
+                lat: 54.432448,
+                lng: 18.594874,
+                zoom: 12
+            },
+            markers: {
+                gdanskMarker: {
+                    lat: 54.357962,
+                    lng: 18.646619,
+                    message: "Dupa!",
+                    focus: true,
+                    draggable: false
+                }
+            },
+            defaults: {
+                scrollWheelZoom: false
+            }
+        });
+    }]);
+
     app.controller('FunPlannerController', function ($scope) {
 
         $scope.signedIn = false;

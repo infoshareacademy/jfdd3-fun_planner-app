@@ -11,12 +11,12 @@ $(document).ready(function () {
         $('#button-map').hide();
         $('#hide-button-map').show();
         $('.hide-button-map').css({"display": "inline"});
-        $('.angular-google-map-container').css({"left": "35%"});
+        $('.angular-google-map-container').css({"left": "35%", 'display': 'block'});
 
     });
 
     $ShowCalendarAgain.on('click', function () {
-        $('.angular-google-map-container').css({"left": "100%"});
+        $('.angular-google-map-container').css({'display': 'none'});
         $('.calendar-position').show();
         $('.pull-right').show();
         $('#button-map').show();

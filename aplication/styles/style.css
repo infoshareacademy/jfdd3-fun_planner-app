@@ -258,14 +258,6 @@ span.logo-ikon {
     color: black;
 }
 
-#map {
-    width: 40%;
-    height: 320px;
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: 20px;
-    visibility: hidden;
-}
 
 .footer {
     font-size: 90%;
@@ -300,7 +292,6 @@ span.logo-ikon {
     margin-top: 2%;
     margin-bottom: 2%;
     width: 60%;
-
 }
 
 .btn-success {

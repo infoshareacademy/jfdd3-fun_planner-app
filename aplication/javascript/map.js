@@ -2,9 +2,10 @@
 
 $(document).ready(function () {
 
-    var $ButtonMap = $('#button-map');
+    var $ShowMap = $('#button-map');
+    var $ShowCalendarAgain = $('#hide-button-map');
 
-    $ButtonMap.on('click', function () {
+    $ShowMap.on('click', function () {
         $('.calendar-position').hide();
         $('.pull-right').hide();
         $('#button-map').hide();
@@ -13,6 +14,16 @@ $(document).ready(function () {
         $('.angular-google-map-container').css({"left": "35%"});
 
     });
+
+    $ShowCalendarAgain.on('click', function () {
+        $('.angular-google-map-container').css({"left": "100%"});
+        $('.calendar-position').show();
+        $('.pull-right').show();
+        $('#button-map').show();
+        $('#hide-button-map').hide();
+    });
+
+
 
 
 

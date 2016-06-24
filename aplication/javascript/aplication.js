@@ -497,7 +497,6 @@ $('form').change(function() {
     console.log(filterCheckboxValue);
     // console.log(startDate)
 });
-$('.datepicker').datepicker('update');
 
 
 function showRandomCityEvents(element) {

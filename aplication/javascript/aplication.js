@@ -392,7 +392,64 @@ var cityEvents = [
         foto: 'images29',
         coordinates: [54.341753, 18.658093],
         type: 'Wydarzenie artystyczne'
+    },
+    {
+        name: 'Teatr Miniatura',
+        address: 'Gdańsk, al. Grunwaldzka 16',
+        eventName: 'Zostań przyjacielem',
+        info: 'Muzyczną historię przyjaźni pingwinki, która uciekła z zoo i żółwia ' +
+        'porzuconego przez właścicielkę wyreżyserował sam autor Tomasz Man, ' +
+        'reżyser teatralny i radiowy, dramatopisarz, wykładowca na Wydziale ' +
+        'Lalkarskim we Wrocławiu Państwowej Wyższej Szkoły Teatralnej im. Ludwika Solskiego w Krakowie.',
+        dateVal: {},
+        stars: stars(1),
+        foto: 'images30',
+        coordinates: [54.375012, 18.618389],
+        type: 'Spektakl'
+    },
+    {
+        name: 'Akademia Muzyczna',
+        address: 'Gdańsk, ul. Ląkowa 1-2',
+        eventName: 'Koncert pianistyczny',
+        info: 'Dr Bogna Czerwińska-Szymula jest wszechstronnym muzykiem, ' +
+        'pedagogiem oraz propagatorem twórczości kompozytorów polskich. ' +
+        'W 2003 roku z wyróżnieniem ukończyła Akademię Muzyczną im. ' +
+        'Stanisława Moniuszki w Gdańsku w klasie fortepianu prof. Grażyny Fiedoruk-Sienkiewicz, ' +
+        'gdzie następnie podjęła działalność artystyczną, pedagogiczną i badawczą. ' +
+        'W 2012 roku, na macierzystej uczelni, uzyskała tytuł doktora sztuki w specjalności gry na fortepianie.',
+        dateVal: {},
+        stars: stars(5),
+        foto: 'images31',
+        coordinates: [54.346177, 18.663851],
+        type: 'Koncert'
+    },
+    {
+        name: 'Zbrojownia Sztuki',
+        address: 'Gdańsk, ul. Kołodziejska 2',
+        eventName: 'ASP 2016. Najlepsze dyplomy',
+        info: 'Już wkrótce poznamy najciekawsze dyplomy tegorocznych absolwentów polskich szkół artystycznych. ' +
+        'Prace prezentowane będą w Zbrojowni Sztuki oraz w Auli Akademii Sztuk Pięknych.',
+        dateVal: {},
+        stars: stars(3),
+        foto: 'images32',
+        coordinates: [54.350840, 18.649206],
+        type: 'Wydarzenie artystyczne'
+    },
+    {
+        name: 'Centrum Sztuki Współczesnej Łaźnia',
+        address: 'Gdańsk, ul. Jaskółcza 1',
+        eventName: 'In Out Festival',
+        info: 'Festiwal In Out jest cyklicznym projektem Centrum Sztuki Współczesnej Łaźnia ' +
+        'organizowany od 2005 roku. W 2015 roku CSW Łaźnia planuje jego jubileuszową 10 ' +
+        'już edycję poświęcić tematowi "teatralność". Celem Festiwalu jest przyjrzenie się ' +
+        'czym jest teatr i teatralność dla twórców wizualnych, a czym wideo i filmy dla twórców teatralnych.',
+        dateVal: {},
+        stars: stars(3),
+        foto: 'images29',
+        coordinates: [54.341753, 18.658093],
+        type: 'Wydarzenie artystyczne'
     }
+
 ];
 
 function randomValue(endOfRange) {

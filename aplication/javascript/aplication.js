@@ -436,20 +436,35 @@ var cityEvents = [
         type: 'Wydarzenie artystyczne'
     },
     {
-        name: 'Centrum Sztuki Współczesnej Łaźnia',
-        address: 'Gdańsk, ul. Jaskółcza 1',
-        eventName: 'In Out Festival',
-        info: 'Festiwal In Out jest cyklicznym projektem Centrum Sztuki Współczesnej Łaźnia ' +
-        'organizowany od 2005 roku. W 2015 roku CSW Łaźnia planuje jego jubileuszową 10 ' +
-        'już edycję poświęcić tematowi "teatralność". Celem Festiwalu jest przyjrzenie się ' +
-        'czym jest teatr i teatralność dla twórców wizualnych, a czym wideo i filmy dla twórców teatralnych.',
+        name: 'Bunkier Club',
+        address: 'Gdańsk, ul. Olejarna 3',
+        eventName: 'DJ Bobo dla helskich fok',
+        info: 'Schron wybudowano prawdopodobnie w 1941r, dla wykwalifikowanych pracowników przemysłu, ' +
+        'cywili oraz dla dowództwa sił zbrojnych i ich rodzin. ' +
+        'Od zwykłych schronów przeciwlotniczych, ukrytych z reguły pod ziemią, ' +
+        'wyróżniało go wyposażenie w agregaty prądotwórcze, wentylację, gabinety medyczne, ' +
+        'magazyny uzbrojenia a nawet prysznice oraz prawdziwe toalety. ' +
+        'Jak wygląda teraz? Przyjdź i przekonaj się sam!',
         dateVal: {},
-        stars: stars(3),
-        foto: 'images29',
-        coordinates: [54.341753, 18.658093],
-        type: 'Wydarzenie artystyczne'
+        stars: stars(1),
+        foto: 'images33',
+        coordinates: [54.354688, 18.654481],
+        type: 'Imprezy klubowe'
+    },
+    {
+        name: 'Scena Kameralna',
+        address: 'Sopot, ul. Bohaterów Monte Cassino 30',
+        eventName: 'Murzyn Warszawski',
+        info: 'Pierwsza powojenna inscenizacja popularnej w międzywojniu komedii Antoniego Słonimskiego, ' +
+        'jednej z najbarwniejszych postaci polskiego życia artystycznego i intelektualnego. ' +
+        'Opowiedziana tu historia rozgrywa się w środowisku inteligencji pochodzenia żydowskiego, ' +
+        'w księgarni i mieszkaniu Konrada Hertmana vel Hertmańskiego, który choruje na polskość.',
+        dateVal: {},
+        stars: stars(5),
+        foto: 'images34',
+        coordinates: [54.443647, 18.565829],
+        type: 'Spektakl'
     }
-
 ];
 
 function randomValue(endOfRange) {

@@ -50,7 +50,7 @@
 
     </header>
 
-    <main ng-controller="uiGmapgoogle-mapsController">
+    <main>
         <div class="container-fluid">
             <div class="row input-group panel panel-body pull-right">
                 <form class="form-inline">
@@ -152,15 +152,13 @@
 
         </div>
 
-        <ui-gmap-google-map center='map.center' zoom='map.zoom'>
-            <ui-gmap-marker coords="marker.coords"
-                            options="marker.options"
-                            events="marker.events"
-                            idkey="marker.id"
-                            icon="marker.icon">
-            </ui-gmap-marker>
-        </ui-gmap-google-map>
-
+        <div ng-app="mapsApp" ng-controller="MapCtrl">
+            <div id="map"></div>
+            <div ng-repeat="marker in markers"
+                 ng-class="{active: $index == markerId}">
+                <a href="#" ng-click="openInfoWindow($event, marker)">{{marker.title}}</a>
+            </div>
+        </div>
 
     </main>
 

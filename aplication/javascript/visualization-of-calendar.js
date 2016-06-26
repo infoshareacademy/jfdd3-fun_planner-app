@@ -8,7 +8,6 @@ var $buttonLeftSingle = $('#navi-left-single'),
     first = 0,
     last = 4;
 
-
 function start() {
 
     for (var i = 0; i < 5; i++) {
@@ -74,9 +73,3 @@ $buttonRightSingle.click(function () {
 $buttonRightFifth.click(function () {
     right(500, 5);
 });
-
-
-$('.event-sorting').sortable({
-    cancel: '.list-element'
-});
-

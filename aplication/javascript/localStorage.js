@@ -9,6 +9,6 @@ function sendToStorage(agendaEvents) {
     });
 
     function findEvent(element, index, array) {
-        console.log(element);
+        // console.log(element);
     }
 }

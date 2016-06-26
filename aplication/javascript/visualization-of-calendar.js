@@ -15,6 +15,7 @@ function start() {
         $parentDiv.append($newColumn);
         showRandomCityEvents (i);
     }
+    agendaFromStorage();
 }
 
 start();

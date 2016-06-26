@@ -528,7 +528,7 @@ function calendarTabs() {
     var nowDay = new Date().getTime();
     var lastDay = Date.parse(tableEvents[tableEvents.length - 1].dateVal);
     var dDay = Math.round((lastDay - nowDay) / (1000 * 60 * 60 * 24));
-    
+
     function addDate(days) {
         return formatter.format(new Date().setDate(new Date().getDate() + days));
     }
@@ -551,7 +551,7 @@ function calendarTabs() {
     return tableCalendar;
 }
 
-var templateFinalCalendarEventsTable = localStorage.calendar ?  JSON.parse(localStorage.calendar) : calendarTabs();
+var templateFinalCalendarEventsTable = localStorage.calendar ? JSON.parse(localStorage.calendar) : calendarTabs();
 var finalCalendarEventsTable = templateFinalCalendarEventsTable;
 
 $('#sandbox-container .input-daterange').datepicker({
@@ -563,10 +563,10 @@ $('#sandbox-container .input-daterange').datepicker({
     todayHighlight: true
 });
 
-$('form').change(function() {
+$('form').change(function () {
     var filterCheckboxValue = [];
 
-    function removeCheckboxValue (value) {
+    function removeCheckboxValue(value) {
         var pos = filterCheckboxValue.indexOf(value);
         filterCheckboxValue.splice(pos, 0);
     }
@@ -621,8 +621,8 @@ function signedYes() {
     }
 }
 
-function signedNo(){
-    if (window.signedIn == false){
+function signedNo() {
+    if (window.signedIn == false) {
         $('.drag', {draggable: 'disable'});
     }
 }
@@ -632,7 +632,7 @@ function createEventItem(index, table, element) {
     var sortingData = table[element].calEvent[index].datePl,
         eventId = table[element].calEvent[index].eventId;
 
-    var eventItem = $('<div class="list-element drag" data-orderId="' + element +'-'+ index + '" data-eventId="' + eventId+ '" data-toggle="popover" data-placement="bottom" data-trigger="hover manual"><h5>'
+    var eventItem = $('<div class="list-element drag" data-orderId="' + element + '-' + index + '" data-eventId="' + eventId + '" data-toggle="popover" data-placement="bottom" data-trigger="hover manual"><h5>'
         + table[element].calEvent[index].name + '<button onclick="deleteEvent($(this))" type="button" class="btn-trash pull-right" aria-label="Trash"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></h5><div id="tooltiptext" style="display: none" class="panel-body"><div class="media"><div class="media-body"><h3 class="media-heading">'
         + table[element].calEvent[index].name + '</h3><small>'
         + table[element].calEvent[index].address + '</small><div class="star">'
@@ -679,13 +679,11 @@ function createDraggable() {
                 var item = this;
 
                 if ($('.event-sorting .list-element[data-orderid=' + $(item).attr('data-orderid') + ']').length === 1) {
-
                     return true;
                 }
                 $(item).remove();
                 return false;
             }).appendTo('.event-sorting');
-            sendToStorage(this);
         }
     });
 
@@ -695,8 +693,10 @@ function createDraggable() {
 }
 
 function deleteEvent(value) {
+    var element = value.parent().parent();
     $('.list-element').popover('hide');
-    value.parent().parent().remove();
+    changeAgendaStorage(element[0], 1);
+    element.remove();
 }
 
 setTimeout(function () {

@@ -36,7 +36,7 @@
             });
         }
         window.signOut = signOut;
-  
+
     });
 
     // function mapCtrl($scope) {
@@ -74,7 +74,7 @@ angular.module('mapsApp', []).controller('MapCtrl', function ($scope) {
     var mapOptions = {
         zoom: 11,
         center: new google.maps.LatLng(54.432448, 18.594874),
-        mapTypeId: google.maps.MapTypeId.TERRAIN
+        mapTypeId: google.maps.MapTypeId.ROADMAP
     }
 
         $scope.map = new google.maps.Map(document.getElementById('map'), mapOptions);
@@ -85,10 +85,12 @@ angular.module('mapsApp', []).controller('MapCtrl', function ($scope) {
 
         var createMarker = function (x){
 
+            var image = 'images/publicart.png'
             var marker = new google.maps.Marker({
                 map: $scope.map,
                 position: new google.maps.LatLng(x.latitude, x.longitude),
-                title: x.name
+                title: x.name,
+                icon: image
             });
             marker.content = '<div class="infoWindowContent">' + '<h>x.eventName</h>' + '<p>x.info</p>' + '</div>';
 

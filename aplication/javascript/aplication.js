@@ -22,7 +22,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(5),
         foto: 'images1',
-        coordinates: [54.444312, 18.566630],
+        coords: {
+            latitude: 54.444312,
+            longitude: 18.566630
+        },
         type: 'Imprezy klubowe'
     },
     {
@@ -34,6 +37,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(5),
         foto: 'images2',
+        coords: {
+            latitude: 54.444312,
+            longitude: 18.566630
+        },
         coordinates: [54.445232, 18.567916],
         type: 'Imprezy klubowe'
     },
@@ -45,6 +52,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(5),
         foto: 'images3',
+        coords: {
+            latitude: 54.444312,
+            longitude: 18.566630
+        },
         coordinates: [54.445872, 18.568486],
         type: 'Imprezy klubowe'
     },
@@ -58,6 +69,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(5),
         foto: 'images4',
+        coords: {
+            latitude: 54.444312,
+            longitude: 18.566630
+        },
         coordinates: [54.448544, 18.567314],
         type: 'Imprezy klubowe'
     },
@@ -72,6 +87,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(5),
         foto: 'images5',
+        coords: {
+            latitude: 54.444312,
+            longitude: 18.566630
+        },
         coordinates: [54.347702, 18.656805],
         type: 'Imprezy klubowe'
     },
@@ -86,6 +105,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(5),
         foto: 'images6',
+        coords: {
+            latitude: 54.444312,
+            longitude: 18.566630
+        },
         coordinates: [54.351140, 18.649863],
         type: 'Imprezy klubowe'
     },
@@ -99,6 +122,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(5),
         foto: 'images7',
+        coords: {
+            latitude: 54.444312,
+            longitude: 18.566630
+        },
         coordinates: [54.348410, 18.653798],
         type: 'Imprezy klubowe'
     },
@@ -111,6 +138,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(5),
         foto: 'images8',
+        coords: {
+            latitude: 54.444312,
+            longitude: 18.566630
+        },
         coordinates: [54.350342, 18.647033],
         type: 'Imprezy klubowe'
     },
@@ -126,6 +157,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(5),
         foto: 'images9',
+        coords: {
+            latitude: 54.444312,
+            longitude: 18.566630
+        },
         coordinates: [54.518653, 18.548150],
         type: 'Imprezy klubowe'
     },
@@ -138,6 +173,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(5),
         foto: 'images10',
+        coords: {
+            latitude: 54.444312,
+            longitude: 18.566630
+        },
         coordinates: [54.524461, 18.543094],
         type: 'Koncert'
     },
@@ -149,6 +188,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(5),
         foto: 'images11',
+        coords: {
+            latitude: 54.444312,
+            longitude: 18.566630
+        },
         coordinates: [54.519184, 18.535465],
         type: 'Imprezy klubowe'
     },
@@ -161,6 +204,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(5),
         foto: 'images12',
+        coords: {
+            latitude: 54.444312,
+            longitude: 18.566630
+        },
         coordinates: [54.518011, 18.540758],
         type: 'Koncert'
     },
@@ -174,6 +221,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(5),
         foto: 'images13',
+        coords: {
+            latitude: 54.444312,
+            longitude: 18.566630
+        },
         coordinates: [54.475543, 18.562205],
         type: 'Spektakl'
     },
@@ -186,6 +237,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(5),
         foto: 'images14',
+        coords: {
+            latitude: 54.444312,
+            longitude: 18.566630
+        },
         coordinates: [54.426855, 18.580577],
         type: 'Koncert'
     },
@@ -199,6 +254,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(5),
         foto: 'images15',
+        coords: {
+            latitude: 54.444312,
+            longitude: 18.566630
+        },
         coordinates: [54.516773, 18.545091],
         type: 'Koncert'
     },
@@ -211,6 +270,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(5),
         foto: 'images16',
+        coords: {
+            latitude: 54.444312,
+            longitude: 18.566630
+        },
         coordinates: [54.516773, 18.545091],
         type: 'Wydarzenie artystyczne'
     },
@@ -224,6 +287,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(5),
         foto: 'images17',
+        coords: {
+            latitude: 54.444312,
+            longitude: 18.566630
+        },
         coordinates: [54.351603, 18.648902],
         type: 'Spektakl'
     },
@@ -237,6 +304,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(4),
         foto: 'images18',
+        coords: {
+            latitude: 54.444312,
+            longitude: 18.566630
+        },
         coordinates: [54.348199, 18.647168],
         type: 'Spektakl'
     },
@@ -250,6 +321,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(3),
         foto: 'images19',
+        coords: {
+            latitude: 54.444312,
+            longitude: 18.566630
+        },
         coordinates: [54.361428, 18.649432],
         type: 'Wydarzenie artystyczne'
     },
@@ -263,6 +338,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(5),
         foto: 'images20',
+        coords: {
+            latitude: 54.444312,
+            longitude: 18.566630
+        },
         coordinates: [54.380989, 18.622520],
         type: 'Spektakl'
     },
@@ -274,6 +353,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(5),
         foto: 'images21',
+        coords: {
+            latitude: 54.444312,
+            longitude: 18.566630
+        },
         coordinates: [54.352512, 18.659656],
         type: 'Koncert'
     },
@@ -289,6 +372,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(5),
         foto: 'images22',
+        coords: {
+            latitude: 54.444312,
+            longitude: 18.566630
+        },
         coordinates: [54.387117, 18.592246],
         type: 'Wydarzenie artystyczne'
     },
@@ -303,6 +390,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(5),
         foto: 'images23',
+        coords: {
+            latitude: 54.444312,
+            longitude: 18.566630
+        },
         coordinates: [54.364764, 18.648509],
         type: 'Koncert'
     },
@@ -320,6 +411,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(2),
         foto: 'images24',
+        coords: {
+            latitude: 54.444312,
+            longitude: 18.566630
+        },
         coordinates: [54.511031, 18.539289],
         type: 'Spektakl'
     },
@@ -333,6 +428,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(1),
         foto: 'images25',
+        coords: {
+            latitude: 54.444312,
+            longitude: 18.566630
+        },
         coordinates: [54.519540, 18.535661],
         type: 'Imprezy klubowe'
     },
@@ -350,6 +449,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(3),
         foto: 'images26',
+        coords: {
+            latitude: 54.444312,
+            longitude: 18.566630
+        },
         coordinates: [54.444246, 18.544385],
         type: 'Koncert'
     },
@@ -363,6 +466,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(5),
         foto: 'images27',
+        coords: {
+            latitude: 54.444312,
+            longitude: 18.566630
+        },
         coordinates: [54.372863, 18.595490],
         type: 'Wydarzenie artystyczne'
     },
@@ -376,6 +483,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(5),
         foto: 'images28',
+        coords: {
+            latitude: 54.444312,
+            longitude: 18.566630
+        },
         coordinates: [54.349080, 18.652117],
         type: 'Spektakl'
     },
@@ -390,6 +501,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(3),
         foto: 'images29',
+        coords: {
+            latitude: 54.444312,
+            longitude: 18.566630
+        },
         coordinates: [54.341753, 18.658093],
         type: 'Wydarzenie artystyczne'
     },
@@ -404,6 +519,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(1),
         foto: 'images30',
+        coords: {
+            latitude: 54.444312,
+            longitude: 18.566630
+        },
         coordinates: [54.375012, 18.618389],
         type: 'Spektakl'
     },
@@ -420,6 +539,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(5),
         foto: 'images31',
+        coords: {
+            latitude: 54.444312,
+            longitude: 18.566630
+        },
         coordinates: [54.346177, 18.663851],
         type: 'Koncert'
     },
@@ -432,6 +555,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(3),
         foto: 'images32',
+        coords: {
+            latitude: 54.444312,
+            longitude: 18.566630
+        },
         coordinates: [54.350840, 18.649206],
         type: 'Wydarzenie artystyczne'
     },
@@ -448,6 +575,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(1),
         foto: 'images33',
+        coords: {
+            latitude: 54.444312,
+            longitude: 18.566630
+        },
         coordinates: [54.354688, 18.654481],
         type: 'Imprezy klubowe'
     },
@@ -462,6 +593,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(5),
         foto: 'images34',
+        coords: {
+            latitude: 54.444312,
+            longitude: 18.566630
+        },
         coordinates: [54.443647, 18.565829],
         type: 'Spektakl'
     }

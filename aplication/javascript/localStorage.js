@@ -1,14 +1,12 @@
-function sendToStorage(agendaEvents) {
-    var eventsRemember = [],
-        table = finalCalendarEventsTable;
+var eventsToRemember = [];
 
-    //console.log(agendaEvents);
-    agendaEvents.each(function (index) {
-        table.filter(findEvent);
+function sendToStorage(agendaEvent) {
+    var eventId = agendaEvent.getAttribute('data-eventId');
 
+    templateFinalCalendarEventsTable.forEach(function (day) {
+        day.calEvent.forEach(function (event) {
+            if (event.eventId == eventId) eventsToRemember.push(event);
+        });
     });
-
-    function findEvent(element, index, array) {
-        // console.log(element);
-    }
+    localStorage.agenda = JSON.stringify(eventsToRemember);
 }

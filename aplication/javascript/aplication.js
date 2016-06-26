@@ -497,7 +497,8 @@ function stars(size) {
 
 function randomCityEvent(tableSize) {
 
-    var randomCityEventTable = [];
+    var randomCityEventTable = [],
+        eventId = 1;
 
     for (var i = 0; i < tableSize; i++) {
         var dateVal = createDate();
@@ -512,7 +513,8 @@ function randomCityEvent(tableSize) {
             datePl: formatter.format(new Date(dateVal)),
             stars: cityEvents[possibleValues].stars,
             foto: cityEvents[possibleValues].foto,
-            type: cityEvents[possibleValues].type
+            type: cityEvents[possibleValues].type,
+            eventId: eventId++
         });
     }
     return randomCityEventTable.sort(function (a, b) {
@@ -627,8 +629,10 @@ function signedNo(){
 
 function createEventItem(index, table, element) {
 
-    var sortingData = table[element].calEvent[index].datePl;
-    var eventItem = $('<div class="list-element drag" orderId="' + element + index + '" data-toggle="popover" data-placement="bottom" data-trigger="hover manual"><h5>'
+    var sortingData = table[element].calEvent[index].datePl,
+        eventId = table[element].calEvent[index].eventId;
+
+    var eventItem = $('<div class="list-element drag" data-orderId="' + element +'-'+ index + '" data-eventId="' + eventId+ '" data-toggle="popover" data-placement="bottom" data-trigger="hover manual"><h5>'
         + table[element].calEvent[index].name + '<button onclick="deleteEvent($(this))" type="button" class="btn-trash pull-right" aria-label="Trash"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></h5><div id="tooltiptext" style="display: none" class="panel-body"><div class="media"><div class="media-body"><h3 class="media-heading">'
         + table[element].calEvent[index].name + '</h3><small>'
         + table[element].calEvent[index].address + '</small><div class="star">'
@@ -661,6 +665,7 @@ function createDraggable() {
         connectToSortable: '.event-sorting',
         zIndex: 20,
         stop: function (event) {
+
             $('.event-sorting div').css({
                 width: '100%',
                 height: '9%'
@@ -673,13 +678,14 @@ function createDraggable() {
 
                 var item = this;
 
-                if ($('.event-sorting .list-element[orderid=' + $(item).attr('orderid') + ']').length === 1) {
+                if ($('.event-sorting .list-element[data-orderid=' + $(item).attr('data-orderid') + ']').length === 1) {
 
                     return true;
                 }
                 $(item).remove();
                 return false;
             }).appendTo('.event-sorting');
+            sendToStorage(this);
         }
     });
 

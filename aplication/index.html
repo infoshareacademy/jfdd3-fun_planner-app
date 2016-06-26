@@ -10,9 +10,11 @@
     <title>Aplikacja FunPlanner</title>
 
 
+
+    <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
           integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles/style.css">
+    <link href="styles/bootstrap-datepicker3.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles/loading-bar.css">
     <link href='https://fonts.googleapis.com/css?family=Ubuntu:400,300,300italic,400italic,500,500italic,700,700italic&subset=latin,latin-ext'
           rel='stylesheet' type='text/css'>
@@ -26,9 +28,9 @@
 
     <header>
 
-        <nav class="navbar navbar-default navbar-top">
+        <nav class="naviBar navibar-top">
             <div class="container-fluid">
-                <div class="navbar-header">
+                <div class="navibar-header">
 
                     <span class="logo-fun">
                         FUN
@@ -39,12 +41,8 @@
                     <span class="logo-planner">
                         planner
                     </span>
-
-                </div>
-
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <div class="g-signin2 navbar-btn navbar-right" data-onsuccess="onSignIn">Sign in</div>
-                    <button type="button" class="btn navbar-btn navbar-right" onclick="signOut();">Sign out</button>
+                    <div class="g-signin2 googleButton" ng-hide="signedIn" data-onsuccess="onSignIn">Sign in</div>
+                    <button type="button" ng-click="signOut()" ng-show="signedIn" class="signOut btn" >Sign out</button>
                 </div>
 
             </div>
@@ -54,14 +52,61 @@
 
     <main ng-controller="uiGmapgoogle-mapsController">
         <div class="container-fluid">
+            <div class="row input-group panel panel-body pull-right">
+                <form class="form-inline">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" id="clubParty"> impreza klubowa
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" id="concert"> koncert
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" id="artisticEvent"> wydarzenie artystyczne
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" id="spectacle"> spektakl
+                        </label>
+                    </div>
+                    <div id="sandbox-container">
+                        <div class="input-daterange input-group" id="datepicker">
+                            <input type="text" class="input-sm form-control" id="dateFrom" name="start" />
+                            <span class="input-group-addon">do</span>
+                            <input type="text" class="input-sm form-control" id="dateTo" name="end" />
+                        </div>
+                    </div>
+                </form>
+
+
+            </div>
+        </div>
+
+        <div class="container-fluid">
 
             <div class="row">
+
                 <div id='agenda' class="agenda">
 
                     <h3>AGENDA</h3>
                     <div class="scrollAgenda event-sorting">
 
                     </div>
+
+                    <button id="button-map" class="btn btn-success" type="button"
+                            style="margin-bottom: 0; margin-right:0; background-color: #8cc63f">
+                        Zobacz na mapie
+                    </button>
+                    <button id="hide-button-map" class="btn btn-success" type="button"
+                            style="margin-bottom: 0; margin-right:0; background-color: #8cc63f; display: none">
+                        Wróć do kalendarza
+                    </button>
+
                 </div>
 
                 <div class="calendar-position">
@@ -107,14 +152,16 @@
 
         </div>
 
-        <ui-gmap-google-map center='map.center' zoom='map.zoom'></ui-gmap-google-map>
+        <ui-gmap-google-map center='map.center' zoom='map.zoom'>
 
-        <div class="background-city"></div>
+
+        </ui-gmap-google-map>
+
     </main>
 
     <footer id="footer">
         <div class="background-city"></div>
-        <nav class="navbar navbar-default navbar-bottom" >
+        <nav class="navbar navbar-default navbar-bottom navbar-fixed-bottom" >
             <div class="container-fluid">
 
                 <p class="footer navbar-left">
@@ -150,7 +197,10 @@
         <!--Skrypty zewnętrzne-->
     <script src="libraries/jquery-2.2.4.js"></script>
     <script src="libraries/jquery-ui.js"></script>
+    <script src="libraries/jquery.ui.touch-punch.min.js"></script>
     <script src="libraries/bootstrap.min.js"></script>
+    <script src="libraries/bootstrap-datepicker.min.js"></script>
+    <script src="libraries/bootstrap-datepicker.pl.min.js"></script>
     <script src='angular-box/lodash.js'></script>
     <script src='angular-box/angular.min.js'></script>
     <script src='angular-box/angular-simple-logger.js'></script>
@@ -158,8 +208,10 @@
     <script src="angular-box/loading-bar.js"></script>
     <script src="https://apis.google.com/js/platform.js" async defer></script>
         <!--Nasze skrypty-->
-    <script src="javascript/app.js"></script>
     <script src="javascript/aplication.js"></script>
+    <script src="javascript/app.js"></script>
+    <script src="javascript/map.js"></script>
+
     <script src="javascript/visualization-of-calendar.js"></script>
     <script src="javascript/localStorage.js"></script>
 

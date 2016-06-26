@@ -34,7 +34,7 @@ var cityEvents = [
         stars: stars(5),
         foto: 'images2',
         coordinates: [54.445232, 18.567916],
-        type: 'Imprezy Klubowe'
+        type: 'Imprezy klubowe'
     },
     {
         name: '3 Siostry',
@@ -45,7 +45,7 @@ var cityEvents = [
         stars: stars(5),
         foto: 'images3',
         coordinates: [54.445872, 18.568486],
-        type: 'Imprezy Klubowe'
+        type: 'Imprezy klubowe'
     },
     {
         name: 'Sfinks700',
@@ -58,7 +58,7 @@ var cityEvents = [
         stars: stars(5),
         foto: 'images4',
         coordinates: [54.448544, 18.567314],
-        type: 'Imprezy Klubowe'
+        type: 'Imprezy klubowe'
     },
 
 
@@ -72,7 +72,7 @@ var cityEvents = [
         stars: stars(5),
         foto: 'images5',
         coordinates: [54.347702, 18.656805],
-        type: 'Imprezy Klubowe'
+        type: 'Imprezy klubowe'
     },
     {
         name: 'Klub Muzyczny Parlament',
@@ -86,7 +86,7 @@ var cityEvents = [
         stars: stars(5),
         foto: 'images6',
         coordinates: [54.351140, 18.649863],
-        type: 'Imprezy Klubowe'
+        type: 'Imprezy klubowe'
     },
     {
         name: "Jack's Bar & Restaurant Fahrenheit",
@@ -99,7 +99,7 @@ var cityEvents = [
         stars: stars(5),
         foto: 'images7',
         coordinates: [54.348410, 18.653798],
-        type: 'Imprezy Klubowe'
+        type: 'Imprezy klubowe'
     },
     {
         name: 'Club Echo',
@@ -111,7 +111,7 @@ var cityEvents = [
         stars: stars(5),
         foto: 'images8',
         coordinates: [54.350342, 18.647033],
-        type: 'Imprezy Klubowe'
+        type: 'Imprezy klubowe'
     },
 
 
@@ -126,7 +126,7 @@ var cityEvents = [
         stars: stars(5),
         foto: 'images9',
         coordinates: [54.518653, 18.548150],
-        type: 'Imprezy Klubowe'
+        type: 'Imprezy klubowe'
     },
     {
         name: 'Blues Club',
@@ -149,7 +149,7 @@ var cityEvents = [
         stars: stars(5),
         foto: 'images11',
         coordinates: [54.519184, 18.535465],
-        type: 'Imprezy Klubowe'
+        type: 'Imprezy klubowe'
     },
     {
         name: 'Klub Desdemona',
@@ -174,7 +174,7 @@ var cityEvents = [
         stars: stars(5),
         foto: 'images13',
         coordinates: [54.475543, 18.562205],
-        type: 'Sprektakl'
+        type: 'Spektakl'
     },
     {
         name: 'Ergo Arena',
@@ -275,19 +275,207 @@ var cityEvents = [
         foto: 'images21',
         coordinates: [54.352512, 18.659656],
         type: 'Koncert'
+    },
+    {
+        name: 'Klub Żak',
+        address: 'Gdańsk, ul. Grunwaldzka 195/197',
+        eventName: 'Dni Muzyki Nowej',
+        info: 'Druga dekada XXI wieku udowadnia, że w muzyce jeszcze ' +
+        'nie wszystko zostało powiedziane, a rozwój technologii umożliwiającej ' +
+        'eksperymentowanie z syntezą oraz przetwarzaniem sygnałów dźwiękowych ' +
+        'prowadzi nie tylko do powstawania Nowej Muzyki, ale również do ' +
+        'konstruowania wyjątkowych, często stworzonych w zaledwie jednym egzemplarzu instrumentów.',
+        dateVal: {},
+        stars: stars(5),
+        foto: 'images22',
+        coordinates: [54.387117, 18.592246],
+        type: 'Wydarzenie artystyczne'
+    },
+    {
+        name: 'B90',
+        address: 'Gdańsk, ul. Doki 1',
+        eventName: 'Brujeria. Cieżkie brzmienia',
+        info: 'Brujeria (po hiszpańsku "czary") to nazwa kontrowersyjnego zespołu, ' +
+        'który 22 czerwca zawładnie gdańskim klubem B90. Będzie to iście czarna ' +
+        'magia spod znaku grindcorowego i death metalowego brzmienia. ' +
+        'Podczas koncertu grupa zaprezentuje materiał z najnowszego, wydanego po 16 latach przerwy, albumu.',
+        dateVal: {},
+        stars: stars(5),
+        foto: 'images23',
+        coordinates: [54.364764, 18.648509],
+        type: 'Koncert'
+    },
+    {
+        name: 'Teatr Miejski im. W. Gombrowicza',
+        address: 'Gdynia, ul. Bema 26',
+        eventName: 'Dzień Świra',
+        info: 'Pierwsza teatralna realizacja scenariusza Marka Koterskiego, ' +
+        'według którego autor zrealizował kultowy już dzisiaj film. ' +
+        '"Dzień świra". To historia mężczyzny uwikłanego w natręctwa ' +
+        'życia codziennego, dla którego każdy kontakt z drugim człowiekiem ' +
+        'jest piekłem i ogromnym wyzwaniem jednocześnie. Codziennie rano ' +
+        'szuka pomysłu na nadchodzący dzień: higiena, jedzenie, praca, dzieci, ' +
+        'jedzenie, drzemka, praca, jedzenie, praca, palenie, proszki, sen... ',
+        dateVal: {},
+        stars: stars(2),
+        foto: 'images24',
+        coordinates: [54.511031, 18.539289],
+        type: 'Spektakl'
+    },
+    {
+        name: 'Kotłownia',
+        address: 'Gdynia, ul. 3 Maja 27',
+        eventName: 'La bomba',
+        info: 'Kotłownia to bardzo klimatyczne ' +
+        'miejsce zlokalizowane w podziemiach kamienicy w centrum Gdyni. ' +
+        'Klub kusi niesamowitą atmosferą i niskimi cenami.',
+        dateVal: {},
+        stars: stars(1),
+        foto: 'images25',
+        coordinates: [54.519540, 18.535661],
+        type: 'Imprezy klubowe'
+    },
+    {
+        name: 'Opera Leśna',
+        address: 'Sopot, ul. Moniuszki 12',
+        eventName: 'Koncert Rodriguez',
+        info: 'Rodriguez to legendarny gitarzysta-samouk i wokalista. ' +
+        'Swoje pierwsze koncerty zagrał w latach 60. ubiegłego wieku w barach i klubach rodzinnego Detroit. ' +
+        'To właśnie w tym mieście Rodriguez zarejestrował dwa studyjne albumy – ' +
+        '„Cold Fact" (1969) i „Coming from Reality" (1971). ' +
+        'Niestety wydawnictwa przeszły wówczas bez zasłużonego bez echa, ' +
+        'a muzyk postanowił skoncentrować się na innych dziedzinach, ' +
+        'kończąc filozofię na Wayne State University.',
+        dateVal: {},
+        stars: stars(3),
+        foto: 'images26',
+        coordinates: [54.444246, 18.544385],
+        type: 'Koncert'
+    },
+    {
+        name: 'Teatr Leśny',
+        address: 'Gdańsk, ul. Jaśkowa Dolina 45',
+        eventName: 'Lato ludzi',
+        info: 'Projekt Kołakowski czyli cztery trójmiejskie teatry: Teatr Mimo To (Gdańsk), ' +
+        'Teatr Biuro Rzeczy Osobistych (Gdynia), TeatRazem (Gdańsk); ' +
+        'Teatr Kasablanka (Gdańsk) orupa muzyczna Remont Pomp.',
+        dateVal: {},
+        stars: stars(5),
+        foto: 'images27',
+        coordinates: [54.372863, 18.595490],
+        type: 'Wydarzenie artystyczne'
+    },
+    {
+        name: 'Teatr w Oknie',
+        address: 'Gdańsk, ul. Długa 50/51',
+        eventName: 'MONOTEATR: Być jak Charlie Chaplin',
+        info: 'Być jak Charlie Chaplin to brawurowa próba zmierzenia się z legendą. ' +
+        'Najsłynniejszy komik kina niemego stał się ikoną popkultury już bardzo dawno temu, ' +
+        'jednak do dziś nie wiemy, kim był z pochodzenia i gdzie się urodził ten genialny aktor, scenarzysta i reżyser.',
+        dateVal: {},
+        stars: stars(5),
+        foto: 'images28',
+        coordinates: [54.349080, 18.652117],
+        type: 'Spektakl'
+    },
+    {
+        name: 'Centrum Sztuki Współczesnej Łaźnia',
+        address: 'Gdańsk, ul. Jaskółcza 1',
+        eventName: 'In Out Festival',
+        info: 'Festiwal In Out jest cyklicznym projektem Centrum Sztuki Współczesnej Łaźnia ' +
+        'organizowany od 2005 roku. W 2015 roku CSW Łaźnia planuje jego jubileuszową 10 ' +
+        'już edycję poświęcić tematowi "teatralność". Celem Festiwalu jest przyjrzenie się ' +
+        'czym jest teatr i teatralność dla twórców wizualnych, a czym wideo i filmy dla twórców teatralnych.',
+        dateVal: {},
+        stars: stars(3),
+        foto: 'images29',
+        coordinates: [54.341753, 18.658093],
+        type: 'Wydarzenie artystyczne'
+    },
+    {
+        name: 'Teatr Miniatura',
+        address: 'Gdańsk, al. Grunwaldzka 16',
+        eventName: 'Zostań przyjacielem',
+        info: 'Muzyczną historię przyjaźni pingwinki, która uciekła z zoo i żółwia ' +
+        'porzuconego przez właścicielkę wyreżyserował sam autor Tomasz Man, ' +
+        'reżyser teatralny i radiowy, dramatopisarz, wykładowca na Wydziale ' +
+        'Lalkarskim we Wrocławiu Państwowej Wyższej Szkoły Teatralnej im. Ludwika Solskiego w Krakowie.',
+        dateVal: {},
+        stars: stars(1),
+        foto: 'images30',
+        coordinates: [54.375012, 18.618389],
+        type: 'Spektakl'
+    },
+    {
+        name: 'Akademia Muzyczna',
+        address: 'Gdańsk, ul. Ląkowa 1-2',
+        eventName: 'Koncert pianistyczny',
+        info: 'Dr Bogna Czerwińska-Szymula jest wszechstronnym muzykiem, ' +
+        'pedagogiem oraz propagatorem twórczości kompozytorów polskich. ' +
+        'W 2003 roku z wyróżnieniem ukończyła Akademię Muzyczną im. ' +
+        'Stanisława Moniuszki w Gdańsku w klasie fortepianu prof. Grażyny Fiedoruk-Sienkiewicz, ' +
+        'gdzie następnie podjęła działalność artystyczną, pedagogiczną i badawczą. ' +
+        'W 2012 roku, na macierzystej uczelni, uzyskała tytuł doktora sztuki w specjalności gry na fortepianie.',
+        dateVal: {},
+        stars: stars(5),
+        foto: 'images31',
+        coordinates: [54.346177, 18.663851],
+        type: 'Koncert'
+    },
+    {
+        name: 'Zbrojownia Sztuki',
+        address: 'Gdańsk, ul. Kołodziejska 2',
+        eventName: 'ASP 2016. Najlepsze dyplomy',
+        info: 'Już wkrótce poznamy najciekawsze dyplomy tegorocznych absolwentów polskich szkół artystycznych. ' +
+        'Prace prezentowane będą w Zbrojowni Sztuki oraz w Auli Akademii Sztuk Pięknych.',
+        dateVal: {},
+        stars: stars(3),
+        foto: 'images32',
+        coordinates: [54.350840, 18.649206],
+        type: 'Wydarzenie artystyczne'
+    },
+    {
+        name: 'Bunkier Club',
+        address: 'Gdańsk, ul. Olejarna 3',
+        eventName: 'DJ Bobo dla helskich fok',
+        info: 'Schron wybudowano prawdopodobnie w 1941r, dla wykwalifikowanych pracowników przemysłu, ' +
+        'cywili oraz dla dowództwa sił zbrojnych i ich rodzin. ' +
+        'Od zwykłych schronów przeciwlotniczych, ukrytych z reguły pod ziemią, ' +
+        'wyróżniało go wyposażenie w agregaty prądotwórcze, wentylację, gabinety medyczne, ' +
+        'magazyny uzbrojenia a nawet prysznice oraz prawdziwe toalety. ' +
+        'Jak wygląda teraz? Przyjdź i przekonaj się sam!',
+        dateVal: {},
+        stars: stars(1),
+        foto: 'images33',
+        coordinates: [54.354688, 18.654481],
+        type: 'Imprezy klubowe'
+    },
+    {
+        name: 'Scena Kameralna',
+        address: 'Sopot, ul. Bohaterów Monte Cassino 30',
+        eventName: 'Murzyn Warszawski',
+        info: 'Pierwsza powojenna inscenizacja popularnej w międzywojniu komedii Antoniego Słonimskiego, ' +
+        'jednej z najbarwniejszych postaci polskiego życia artystycznego i intelektualnego. ' +
+        'Opowiedziana tu historia rozgrywa się w środowisku inteligencji pochodzenia żydowskiego, ' +
+        'w księgarni i mieszkaniu Konrada Hertmana vel Hertmańskiego, który choruje na polskość.',
+        dateVal: {},
+        stars: stars(5),
+        foto: 'images34',
+        coordinates: [54.443647, 18.565829],
+        type: 'Spektakl'
     }
 ];
 
-function randomValue(endOfrange) {
+function randomValue(endOfRange) {
 
-    return (Math.round(Math.random() * (endOfrange - 1)));
+    return (Math.round(Math.random() * (endOfRange - 1)));
 
 }
 
 function createDate() {
 
     var startDate = new Date().getTime();
-    var endDate = new Date(2016, 7, 0).getTime();
+    var endDate = new Date(2016, 8, 0).getTime();
 
     return new Date(startDate + Math.random() * (endDate - startDate));
 
@@ -323,10 +511,13 @@ function randomCityEvent(tableSize) {
         randomCityEventTable.push({
             name: cityEvents[possibleValues].name,
             address: cityEvents[possibleValues].address,
+            eventName: cityEvents[possibleValues].eventName,
             info: cityEvents[possibleValues].info,
             dateVal: dateVal,
             datePl: formatter.format(new Date(dateVal)),
             stars: cityEvents[possibleValues].stars,
+            foto: cityEvents[possibleValues].foto,
+            type: cityEvents[possibleValues].type
             foto: cityEvents[possibleValues].foto,
             eventId: i
         });
@@ -341,7 +532,7 @@ function randomCityEvent(tableSize) {
 }
 
 function calendarTabs() {
-    var tableEvents = randomCityEvent(100);
+    var tableEvents = randomCityEvent(200);
     var tableCalendar = [];
     var nowDay = new Date().getTime();
     var lastDay = Date.parse(tableEvents[tableEvents.length - 1].dateVal);
@@ -369,7 +560,53 @@ function calendarTabs() {
     return tableCalendar;
 }
 
-var finalCalendarEventsTable = calendarTabs();
+var templateFinalCalendarEventsTable = calendarTabs();
+var finalCalendarEventsTable = templateFinalCalendarEventsTable;
+
+$('#sandbox-container .input-daterange').datepicker({
+    format: "dd.mm.yyyy",
+    clearBtn: true,
+    language: "pl",
+    multidateSeparator: ".",
+    autoclose: true,
+    todayHighlight: true
+});
+
+$('form').change(function() {
+    var filterCheckboxValue = [];
+
+    function removeCheckboxValue (value) {
+        var pos = filterCheckboxValue.indexOf(value);
+        filterCheckboxValue.splice(pos, 0);
+    }
+
+    $('#clubParty').is(':checked') ? filterCheckboxValue.push('Imprezy klubowe') : removeCheckboxValue('Imprezy klubowe');
+    $('#concert').is(':checked') ? filterCheckboxValue.push('Koncert') : removeCheckboxValue('Koncert');
+    $('#artisticEvent').is(':checked') ? filterCheckboxValue.push('Wydarzenie artystyczne') : removeCheckboxValue('Wydarzenie artystyczne');
+    $('#spectacle').is(':checked') ? filterCheckboxValue.push('Spektakl') : removeCheckboxValue('Spektakl');
+
+    $parentDiv.empty();
+
+    finalCalendarEventsTable = templateFinalCalendarEventsTable.map(function (itemCalendar) {
+       return {
+           calWeekday: itemCalendar.calWeekday,
+           calDate: itemCalendar.calDate,
+           calEvent: itemCalendar.calEvent.filter(function (itemEvent) {
+
+               if (filterCheckboxValue.length === 0) {
+                   return true;
+               }
+               return filterCheckboxValue.includes(itemEvent.type);
+           })
+       };
+
+    });
+
+    first = 0;
+    last = 4;
+    start();
+});
+
 
 function showRandomCityEvents(element) {
 
@@ -386,15 +623,30 @@ function showRandomCityEvents(element) {
             createEventItem(index, table, element);
             addPopover();
         }
+        signedNo();
+        signedYes();
+
+    }
+
+}
+function signedYes() {
+    if (window.signedIn == true) {
         createDraggable();
     }
 }
 
+function signedNo(){
+    if (window.signedIn == false){
+        $('.drag', {draggable: 'disable'});
+    }
+}
+
+
+
 function createEventItem(index, table, element) {
 
-    var eventId = table[element].calEvent[index].eventId;
     var sortingData = table[element].calEvent[index].datePl;
-    var eventItem = $('<div class="list-element drag" orderId="' + element +'-'+ index + '" eventId="'+eventId+'" data-toggle="popover" data-placement="bottom" data-trigger="hover manual"><h5>'
+    var eventItem = $('<div class="list-element drag" orderId="' + element + index + '" data-toggle="popover" data-placement="bottom" data-trigger="hover manual"><h5>'
         + table[element].calEvent[index].name + '<button onclick="deleteEvent($(this))" type="button" class="btn-trash pull-right" aria-label="Trash"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></h5><div id="tooltiptext" style="display: none" class="panel-body"><div class="media"><div class="media-body"><h3 class="media-heading">'
         + table[element].calEvent[index].name + '</h3><small>'
         + table[element].calEvent[index].address + '</small><div class="star">'
@@ -422,6 +674,7 @@ function addPopover() {
 function createDraggable() {
 
     $('.drag').draggable({
+
         helper: 'clone',
         appendTo: '.event-sorting',
         connectToSortable: '.event-sorting',
@@ -440,7 +693,7 @@ function createDraggable() {
 
                 var item = this;
 
-                if ( $('.event-sorting .list-element[orderid=' + $(item).attr('orderid') + ']').length === 1 ) {
+                if ($('.event-sorting .list-element[orderid=' + $(item).attr('orderid') + ']').length === 1) {
 
                     return true;
                 }
@@ -462,18 +715,6 @@ function deleteEvent(value) {
     value.parent().parent().remove();
 }
 
-function signOut() {
-    var auth2 = gapi.auth2.getAuthInstance();
-    auth2.signOut().then(function () {
-        console.log('User signed out.');
-    });
-}
-
-
-function onSignIn(googleUser) {
-    var profile = googleUser.getBasicProfile();
-    console.log('ID: ' + profile.getId());
-    console.log('Name: ' + profile.getName());
-    console.log('Image URL: ' + profile.getImageUrl());
-    console.log('Email: ' + profile.getEmail());
-}
+setTimeout(function () {
+    $('.abcRioButtonLightBlue').css('background-color', '#8cc63f').css('color', 'white').css('width', '100px').css('border-radius', '4px')
+}, 500);

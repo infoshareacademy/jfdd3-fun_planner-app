@@ -35,7 +35,7 @@ var cityEvents = [
         stars: stars(5),
         foto: 'images2',
         coordinates: [54.445232, 18.567916],
-        type: 'Imprezy Klubowe'
+        type: 'Imprezy klubowe'
     },
     {
         name: '3 Siostry',
@@ -46,7 +46,7 @@ var cityEvents = [
         stars: stars(5),
         foto: 'images3',
         coordinates: [54.445872, 18.568486],
-        type: 'Imprezy Klubowe'
+        type: 'Imprezy klubowe'
     },
     {
         name: 'Sfinks700',
@@ -59,7 +59,7 @@ var cityEvents = [
         stars: stars(5),
         foto: 'images4',
         coordinates: [54.448544, 18.567314],
-        type: 'Imprezy Klubowe'
+        type: 'Imprezy klubowe'
     },
 
 
@@ -73,7 +73,7 @@ var cityEvents = [
         stars: stars(5),
         foto: 'images5',
         coordinates: [54.347702, 18.656805],
-        type: 'Imprezy Klubowe'
+        type: 'Imprezy klubowe'
     },
     {
         name: 'Klub Muzyczny Parlament',
@@ -87,7 +87,7 @@ var cityEvents = [
         stars: stars(5),
         foto: 'images6',
         coordinates: [54.351140, 18.649863],
-        type: 'Imprezy Klubowe'
+        type: 'Imprezy klubowe'
     },
     {
         name: "Jack's Bar & Restaurant Fahrenheit",
@@ -100,7 +100,7 @@ var cityEvents = [
         stars: stars(5),
         foto: 'images7',
         coordinates: [54.348410, 18.653798],
-        type: 'Imprezy Klubowe'
+        type: 'Imprezy klubowe'
     },
     {
         name: 'Club Echo',
@@ -112,7 +112,7 @@ var cityEvents = [
         stars: stars(5),
         foto: 'images8',
         coordinates: [54.350342, 18.647033],
-        type: 'Imprezy Klubowe'
+        type: 'Imprezy klubowe'
     },
 
 
@@ -127,7 +127,7 @@ var cityEvents = [
         stars: stars(5),
         foto: 'images9',
         coordinates: [54.518653, 18.548150],
-        type: 'Imprezy Klubowe'
+        type: 'Imprezy klubowe'
     },
     {
         name: 'Blues Club',
@@ -150,7 +150,7 @@ var cityEvents = [
         stars: stars(5),
         foto: 'images11',
         coordinates: [54.519184, 18.535465],
-        type: 'Imprezy Klubowe'
+        type: 'Imprezy klubowe'
     },
     {
         name: 'Klub Desdemona',
@@ -392,19 +392,91 @@ var cityEvents = [
         foto: 'images29',
         coordinates: [54.341753, 18.658093],
         type: 'Wydarzenie artystyczne'
+    },
+    {
+        name: 'Teatr Miniatura',
+        address: 'Gdańsk, al. Grunwaldzka 16',
+        eventName: 'Zostań przyjacielem',
+        info: 'Muzyczną historię przyjaźni pingwinki, która uciekła z zoo i żółwia ' +
+        'porzuconego przez właścicielkę wyreżyserował sam autor Tomasz Man, ' +
+        'reżyser teatralny i radiowy, dramatopisarz, wykładowca na Wydziale ' +
+        'Lalkarskim we Wrocławiu Państwowej Wyższej Szkoły Teatralnej im. Ludwika Solskiego w Krakowie.',
+        dateVal: {},
+        stars: stars(1),
+        foto: 'images30',
+        coordinates: [54.375012, 18.618389],
+        type: 'Spektakl'
+    },
+    {
+        name: 'Akademia Muzyczna',
+        address: 'Gdańsk, ul. Ląkowa 1-2',
+        eventName: 'Koncert pianistyczny',
+        info: 'Dr Bogna Czerwińska-Szymula jest wszechstronnym muzykiem, ' +
+        'pedagogiem oraz propagatorem twórczości kompozytorów polskich. ' +
+        'W 2003 roku z wyróżnieniem ukończyła Akademię Muzyczną im. ' +
+        'Stanisława Moniuszki w Gdańsku w klasie fortepianu prof. Grażyny Fiedoruk-Sienkiewicz, ' +
+        'gdzie następnie podjęła działalność artystyczną, pedagogiczną i badawczą. ' +
+        'W 2012 roku, na macierzystej uczelni, uzyskała tytuł doktora sztuki w specjalności gry na fortepianie.',
+        dateVal: {},
+        stars: stars(5),
+        foto: 'images31',
+        coordinates: [54.346177, 18.663851],
+        type: 'Koncert'
+    },
+    {
+        name: 'Zbrojownia Sztuki',
+        address: 'Gdańsk, ul. Kołodziejska 2',
+        eventName: 'ASP 2016. Najlepsze dyplomy',
+        info: 'Już wkrótce poznamy najciekawsze dyplomy tegorocznych absolwentów polskich szkół artystycznych. ' +
+        'Prace prezentowane będą w Zbrojowni Sztuki oraz w Auli Akademii Sztuk Pięknych.',
+        dateVal: {},
+        stars: stars(3),
+        foto: 'images32',
+        coordinates: [54.350840, 18.649206],
+        type: 'Wydarzenie artystyczne'
+    },
+    {
+        name: 'Bunkier Club',
+        address: 'Gdańsk, ul. Olejarna 3',
+        eventName: 'DJ Bobo dla helskich fok',
+        info: 'Schron wybudowano prawdopodobnie w 1941r, dla wykwalifikowanych pracowników przemysłu, ' +
+        'cywili oraz dla dowództwa sił zbrojnych i ich rodzin. ' +
+        'Od zwykłych schronów przeciwlotniczych, ukrytych z reguły pod ziemią, ' +
+        'wyróżniało go wyposażenie w agregaty prądotwórcze, wentylację, gabinety medyczne, ' +
+        'magazyny uzbrojenia a nawet prysznice oraz prawdziwe toalety. ' +
+        'Jak wygląda teraz? Przyjdź i przekonaj się sam!',
+        dateVal: {},
+        stars: stars(1),
+        foto: 'images33',
+        coordinates: [54.354688, 18.654481],
+        type: 'Imprezy klubowe'
+    },
+    {
+        name: 'Scena Kameralna',
+        address: 'Sopot, ul. Bohaterów Monte Cassino 30',
+        eventName: 'Murzyn Warszawski',
+        info: 'Pierwsza powojenna inscenizacja popularnej w międzywojniu komedii Antoniego Słonimskiego, ' +
+        'jednej z najbarwniejszych postaci polskiego życia artystycznego i intelektualnego. ' +
+        'Opowiedziana tu historia rozgrywa się w środowisku inteligencji pochodzenia żydowskiego, ' +
+        'w księgarni i mieszkaniu Konrada Hertmana vel Hertmańskiego, który choruje na polskość.',
+        dateVal: {},
+        stars: stars(5),
+        foto: 'images34',
+        coordinates: [54.443647, 18.565829],
+        type: 'Spektakl'
     }
 ];
 
-function randomValue(endOfrange) {
+function randomValue(endOfRange) {
 
-    return (Math.round(Math.random() * (endOfrange - 1)));
+    return (Math.round(Math.random() * (endOfRange - 1)));
 
 }
 
 function createDate() {
 
     var startDate = new Date().getTime();
-    var endDate = new Date(2016, 7, 0).getTime();
+    var endDate = new Date(2016, 8, 0).getTime();
 
     return new Date(startDate + Math.random() * (endDate - startDate));
 
@@ -459,7 +531,7 @@ function randomCityEvent(tableSize) {
 }
 
 function calendarTabs() {
-    var tableEvents = randomCityEvent(100);
+    var tableEvents = randomCityEvent(200);
     var tableCalendar = [];
     var nowDay = new Date().getTime();
     var lastDay = Date.parse(tableEvents[tableEvents.length - 1].dateVal);
@@ -503,28 +575,38 @@ $('#sandbox-container .input-daterange').datepicker({
 
 $('form').change(function() {
     var filterCheckboxValue = [];
-    var filterDateValue = {};
-    // var startDate = $('.datepicker').datepicker('getStartDate');
-
-    console.log(dateFrom.value);
-    console.log(dateTo.value);
 
     function removeCheckboxValue (value) {
         var pos = filterCheckboxValue.indexOf(value);
         filterCheckboxValue.splice(pos, 0);
     }
 
-    clubParty.checked ? filterCheckboxValue.push('Imprezy klubowe') : removeCheckboxValue('Imprezy klubowe');
-    concert.checked ? filterCheckboxValue.push('Koncert') : removeCheckboxValue('Koncert');
-    artisticEvent.checked ? filterCheckboxValue.push('Wydarzenie artystyczne') : removeCheckboxValue('Wydarzenie artystyczne');
-    spectacle.checked ? filterCheckboxValue.push('Spektakl') : removeCheckboxValue('Spektakl');
+    $('#clubParty').is(':checked') ? filterCheckboxValue.push('Imprezy klubowe') : removeCheckboxValue('Imprezy klubowe');
+    $('#concert').is(':checked') ? filterCheckboxValue.push('Koncert') : removeCheckboxValue('Koncert');
+    $('#artisticEvent').is(':checked') ? filterCheckboxValue.push('Wydarzenie artystyczne') : removeCheckboxValue('Wydarzenie artystyczne');
+    $('#spectacle').is(':checked') ? filterCheckboxValue.push('Spektakl') : removeCheckboxValue('Spektakl');
 
+    $parentDiv.empty();
 
+    finalCalendarEventsTable = templateFinalCalendarEventsTable.map(function (itemCalendar) {
+       return {
+           calWeekday: itemCalendar.calWeekday,
+           calDate: itemCalendar.calDate,
+           calEvent: itemCalendar.calEvent.filter(function (itemEvent) {
 
-    console.log(filterCheckboxValue);
-    // console.log(startDate)
+               if (filterCheckboxValue.length === 0) {
+                   return true;
+               }
+               return filterCheckboxValue.includes(itemEvent.type);
+           })
+       };
+
+    });
+
+    first = 0;
+    last = 4;
+    start();
 });
-$('.datepicker').datepicker('update');
 
 
 function showRandomCityEvents(element) {

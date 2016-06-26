@@ -665,6 +665,8 @@ function createDraggable() {
         connectToSortable: '.event-sorting',
         zIndex: 20,
         stop: function (event) {
+            if(($('.event-sorting .list-element[data-orderid=' + this.getAttribute('data-orderId') + ']').length)===1)
+                changeAgendaStorage(this, 0);
 
             $('.event-sorting div').css({
                 width: '100%',
@@ -684,6 +686,7 @@ function createDraggable() {
                 $(item).remove();
                 return false;
             }).appendTo('.event-sorting');
+
         }
     });
 

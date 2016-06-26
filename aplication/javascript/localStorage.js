@@ -30,7 +30,7 @@ function agendaFromStorage() {
     eventsInStorage.forEach(function (event) {
         var sortingData = event.datePl,
             eventId = event.eventId,
-            orderId = event.eventId;
+            orderId = event.orderId;
 
         var eventItem = $('<div class="list-element" data-orderId="' + orderId + '" data-eventId="' + eventId + '" ' +
             'data-toggle="popover" data-placement="bottom" data-trigger="hover manual" data-date="' + sortingData + '"><h5>'

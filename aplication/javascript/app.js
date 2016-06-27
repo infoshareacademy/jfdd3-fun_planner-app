@@ -20,7 +20,6 @@
         var infoWindow = new google.maps.InfoWindow();
 
         var createMarker = function (x){
-            console.log(x);
 
             var image = 'images/publicart.png';
             var marker = new google.maps.Marker({

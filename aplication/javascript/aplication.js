@@ -235,7 +235,7 @@ var cityEvents = [
         'Spektakl na scenie elżbietańskiej Teatru Szekspirowskiego. ' +
         'Zdrada. Zazdrość. Komedia omyłek.',
         dateVal: {},
-        stars: stars(4),
+        stars: stars(5),
         foto: 'images18',
         coordinates: [54.348199, 18.647168],
         type: 'Spektakl'
@@ -248,7 +248,7 @@ var cityEvents = [
         'festiwal ALL ABOUT FREEDOM FESTIVAL, ' +
         'jedną z najbardziej znanych imprez realizowanych przez ECS.',
         dateVal: {},
-        stars: stars(3),
+        stars: stars(5),
         foto: 'images19',
         coordinates: [54.361428, 18.649432],
         type: 'Wydarzenie artystyczne'
@@ -318,7 +318,7 @@ var cityEvents = [
         'szuka pomysłu na nadchodzący dzień: higiena, jedzenie, praca, dzieci, ' +
         'jedzenie, drzemka, praca, jedzenie, praca, palenie, proszki, sen... ',
         dateVal: {},
-        stars: stars(2),
+        stars: stars(5),
         foto: 'images24',
         coordinates: [54.511031, 18.539289],
         type: 'Spektakl'
@@ -331,7 +331,7 @@ var cityEvents = [
         'miejsce zlokalizowane w podziemiach kamienicy w centrum Gdyni. ' +
         'Klub kusi niesamowitą atmosferą i niskimi cenami.',
         dateVal: {},
-        stars: stars(1),
+        stars: stars(5),
         foto: 'images25',
         coordinates: [54.519540, 18.535661],
         type: 'Imprezy klubowe'
@@ -348,7 +348,7 @@ var cityEvents = [
         'a muzyk postanowił skoncentrować się na innych dziedzinach, ' +
         'kończąc filozofię na Wayne State University.',
         dateVal: {},
-        stars: stars(3),
+        stars: stars(5),
         foto: 'images26',
         coordinates: [54.444246, 18.544385],
         type: 'Koncert'
@@ -388,7 +388,7 @@ var cityEvents = [
         'już edycję poświęcić tematowi "teatralność". Celem Festiwalu jest przyjrzenie się ' +
         'czym jest teatr i teatralność dla twórców wizualnych, a czym wideo i filmy dla twórców teatralnych.',
         dateVal: {},
-        stars: stars(3),
+        stars: stars(5),
         foto: 'images29',
         coordinates: [54.341753, 18.658093],
         type: 'Wydarzenie artystyczne'
@@ -503,6 +503,8 @@ $('#sandbox-container .input-daterange').datepicker({
 
 $('form').change(function() {
     var filterCheckboxValue = [];
+    var dateFrom = new Date($('#dateFrom').val().split('.').reverse().join('-'));
+    var dateTo = new Date($('#dateTo').val().split('.').reverse().join('-'));
 
     function removeCheckboxValue (value) {
         var pos = filterCheckboxValue.indexOf(value);
@@ -516,8 +518,18 @@ $('form').change(function() {
 
     $parentDiv.empty();
 
-    finalCalendarEventsTable = templateFinalCalendarEventsTable.map(function (itemCalendar) {
-       return {
+    finalCalendarEventsTable = templateFinalCalendarEventsTable
+        .filter(function (itemCalendar) {
+            var testDate = new Date((itemCalendar.calDate).split('.').reverse().join('-'));
+            if ($('#dateFrom').val() === "" || $('#dateTo').val() === "") {
+                return true;
+            }
+
+            return dateFrom <= testDate && testDate <= dateTo;
+        })
+
+        .map(function (itemCalendar) {
+        return {
            calWeekday: itemCalendar.calWeekday,
            calDate: itemCalendar.calDate,
            calEvent: itemCalendar.calEvent.filter(function (itemEvent) {
@@ -527,7 +539,7 @@ $('form').change(function() {
                }
                return filterCheckboxValue.includes(itemEvent.type);
            })
-       };
+        };
 
     });
 

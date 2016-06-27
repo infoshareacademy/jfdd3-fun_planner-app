@@ -37,7 +37,7 @@
             });
         }
         window.signOut = signOut;
-  
+
     });
 
     function mapCtrl($scope) {

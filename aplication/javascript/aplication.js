@@ -22,7 +22,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(5),
         foto: 'images1',
-        coordinates: [54.444312, 18.566630],
+        coords: {
+            latitude: 54.444312,
+            longitude: 18.566630
+        },
         type: 'Imprezy klubowe'
     },
     {
@@ -34,7 +37,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(5),
         foto: 'images2',
-        coordinates: [54.445232, 18.567916],
+        coords: {
+            latitude: 54.445232,
+            longitude: 18.567916
+        },
         type: 'Imprezy klubowe'
     },
     {
@@ -45,7 +51,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(5),
         foto: 'images3',
-        coordinates: [54.445872, 18.568486],
+        coords: {
+            latitude: 54.445872,
+            longitude: 18.568486
+        },
         type: 'Imprezy klubowe'
     },
     {
@@ -58,7 +67,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(5),
         foto: 'images4',
-        coordinates: [54.448544, 18.567314],
+        coords: {
+            latitude: 54.448544,
+            longitude: 18.567314
+        },
         type: 'Imprezy klubowe'
     },
 
@@ -72,7 +84,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(5),
         foto: 'images5',
-        coordinates: [54.347702, 18.656805],
+        coords: {
+            latitude: 54.347702,
+            longitude: 18.656805
+        },
         type: 'Imprezy klubowe'
     },
     {
@@ -86,7 +101,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(5),
         foto: 'images6',
-        coordinates: [54.351140, 18.649863],
+        coords: {
+            latitude: 54.351140,
+            longitude: 18.649863
+        },
         type: 'Imprezy klubowe'
     },
     {
@@ -99,7 +117,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(5),
         foto: 'images7',
-        coordinates: [54.348410, 18.653798],
+        coords: {
+            latitude: 54.348410,
+            longitude: 18.653798
+        },
         type: 'Imprezy klubowe'
     },
     {
@@ -111,7 +132,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(5),
         foto: 'images8',
-        coordinates: [54.350342, 18.647033],
+        coords: {
+            latitude: 54.350342,
+            longitude: 18.647033
+        },
         type: 'Imprezy klubowe'
     },
 
@@ -126,7 +150,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(5),
         foto: 'images9',
-        coordinates: [54.518653, 18.548150],
+        coords: {
+            latitude: 54.518653,
+            longitude: 18.548150
+        },
         type: 'Imprezy klubowe'
     },
     {
@@ -138,7 +165,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(5),
         foto: 'images10',
-        coordinates: [54.524461, 18.543094],
+        coords: {
+            latitude: 54.524461,
+            longitude: 18.543094
+        },
         type: 'Koncert'
     },
     {
@@ -149,7 +179,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(5),
         foto: 'images11',
-        coordinates: [54.519184, 18.535465],
+        coords: {
+            latitude: 54.519184,
+            longitude: 18.535465
+        },
         type: 'Imprezy klubowe'
     },
     {
@@ -161,7 +194,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(5),
         foto: 'images12',
-        coordinates: [54.518011, 18.540758],
+        coords: {
+            latitude: 54.518011,
+            longitude: 18.540758
+        },
         type: 'Koncert'
     },
     {
@@ -174,7 +210,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(5),
         foto: 'images13',
-        coordinates: [54.475543, 18.562205],
+        coords: {
+            latitude: 54.475543,
+            longitude: 18.562205
+        },
         type: 'Spektakl'
     },
     {
@@ -186,7 +225,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(5),
         foto: 'images14',
-        coordinates: [54.426855, 18.580577],
+        coords: {
+            latitude: 54.426855,
+            longitude: 18.580577
+        },
         type: 'Koncert'
     },
     {
@@ -199,7 +241,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(5),
         foto: 'images15',
-        coordinates: [54.516773, 18.545091],
+        coords: {
+            latitude: 54.516773,
+            longitude: 18.545091
+        },
         type: 'Koncert'
     },
     {
@@ -211,7 +256,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(5),
         foto: 'images16',
-        coordinates: [54.516773, 18.545091],
+        coords: {
+            latitude: 54.516773,
+            longitude: 18.545091
+        },
         type: 'Wydarzenie artystyczne'
     },
     {
@@ -224,7 +272,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(5),
         foto: 'images17',
-        coordinates: [54.351603, 18.648902],
+        coords: {
+            latitude: 54.351603,
+            longitude: 18.648902
+        },
         type: 'Spektakl'
     },
     {
@@ -237,7 +288,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(4),
         foto: 'images18',
-        coordinates: [54.348199, 18.647168],
+        coords: {
+            latitude: 54.348199,
+            longitude: 18.647168
+        },
         type: 'Spektakl'
     },
     {
@@ -250,7 +304,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(3),
         foto: 'images19',
-        coordinates: [54.361428, 18.649432],
+        coords: {
+            latitude: 54.361428,
+            longitude: 18.649432
+        },
         type: 'Wydarzenie artystyczne'
     },
     {
@@ -263,7 +320,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(5),
         foto: 'images20',
-        coordinates: [54.380989, 18.622520],
+        coords: {
+            latitude: 54.380989,
+            longitude: 18.622520
+        },
         type: 'Spektakl'
     },
     {
@@ -274,7 +334,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(5),
         foto: 'images21',
-        coordinates: [54.352512, 18.659656],
+        coords: {
+            latitude: 54.352512,
+            longitude: 18.659656
+        },
         type: 'Koncert'
     },
     {
@@ -289,7 +352,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(5),
         foto: 'images22',
-        coordinates: [54.387117, 18.592246],
+        coords: {
+            latitude: 54.387117,
+            longitude: 18.592246
+        },
         type: 'Wydarzenie artystyczne'
     },
     {
@@ -303,7 +369,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(5),
         foto: 'images23',
-        coordinates: [54.364764, 18.648509],
+        coords: {
+            latitude: 54.364764,
+            longitude: 18.648509
+        },
         type: 'Koncert'
     },
     {
@@ -320,7 +389,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(2),
         foto: 'images24',
-        coordinates: [54.511031, 18.539289],
+        coords: {
+            latitude: 54.511031,
+            longitude: 18.539289
+        },
         type: 'Spektakl'
     },
     {
@@ -333,7 +405,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(1),
         foto: 'images25',
-        coordinates: [54.519540, 18.535661],
+        coords: {
+            latitude: 54.519540,
+            longitude: 18.535661
+        },
         type: 'Imprezy klubowe'
     },
     {
@@ -350,7 +425,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(3),
         foto: 'images26',
-        coordinates: [54.444246, 18.544385],
+        coords: {
+            latitude: 54.444246,
+            longitude: 18.544385
+        },
         type: 'Koncert'
     },
     {
@@ -363,7 +441,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(5),
         foto: 'images27',
-        coordinates: [54.372863, 18.595490],
+        coords: {
+            latitude: 54.372863,
+            longitude: 18.595490
+        },
         type: 'Wydarzenie artystyczne'
     },
     {
@@ -376,7 +457,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(5),
         foto: 'images28',
-        coordinates: [54.349080, 18.652117],
+        coords: {
+            latitude: 54.349080,
+            longitude: 18.652117
+        },
         type: 'Spektakl'
     },
     {
@@ -390,8 +474,98 @@ var cityEvents = [
         dateVal: {},
         stars: stars(3),
         foto: 'images29',
-        coordinates: [54.341753, 18.658093],
+        coords: {
+            latitude: 54.341753,
+            longitude: 18.658093
+        },
         type: 'Wydarzenie artystyczne'
+    },
+    {
+        name: 'Teatr Miniatura',
+        address: 'Gdańsk, al. Grunwaldzka 16',
+        eventName: 'Zostań przyjacielem',
+        info: 'Muzyczną historię przyjaźni pingwinki, która uciekła z zoo i żółwia ' +
+        'porzuconego przez właścicielkę wyreżyserował sam autor Tomasz Man, ' +
+        'reżyser teatralny i radiowy, dramatopisarz, wykładowca na Wydziale ' +
+        'Lalkarskim we Wrocławiu Państwowej Wyższej Szkoły Teatralnej im. Ludwika Solskiego w Krakowie.',
+        dateVal: {},
+        stars: stars(1),
+        foto: 'images30',
+        coords: {
+            latitude: 54.375012,
+            longitude: 18.618389
+        },
+        type: 'Spektakl'
+    },
+    {
+        name: 'Akademia Muzyczna',
+        address: 'Gdańsk, ul. Ląkowa 1-2',
+        eventName: 'Koncert pianistyczny',
+        info: 'Dr Bogna Czerwińska-Szymula jest wszechstronnym muzykiem, ' +
+        'pedagogiem oraz propagatorem twórczości kompozytorów polskich. ' +
+        'W 2003 roku z wyróżnieniem ukończyła Akademię Muzyczną im. ' +
+        'Stanisława Moniuszki w Gdańsku w klasie fortepianu prof. Grażyny Fiedoruk-Sienkiewicz, ' +
+        'gdzie następnie podjęła działalność artystyczną, pedagogiczną i badawczą. ' +
+        'W 2012 roku, na macierzystej uczelni, uzyskała tytuł doktora sztuki w specjalności gry na fortepianie.',
+        dateVal: {},
+        stars: stars(5),
+        foto: 'images31',
+        coords: {
+            latitude: 54.346177,
+            longitude: 18.663851
+        },
+        type: 'Koncert'
+    },
+    {
+        name: 'Zbrojownia Sztuki',
+        address: 'Gdańsk, ul. Kołodziejska 2',
+        eventName: 'ASP 2016. Najlepsze dyplomy',
+        info: 'Już wkrótce poznamy najciekawsze dyplomy tegorocznych absolwentów polskich szkół artystycznych. ' +
+        'Prace prezentowane będą w Zbrojowni Sztuki oraz w Auli Akademii Sztuk Pięknych.',
+        dateVal: {},
+        stars: stars(3),
+        foto: 'images32',
+        coords: {
+            latitude: 54.350840,
+            longitude: 18.649206,
+        },
+        type: 'Wydarzenie artystyczne'
+    },
+    {
+        name: 'Bunkier Club',
+        address: 'Gdańsk, ul. Olejarna 3',
+        eventName: 'DJ Bobo dla helskich fok',
+        info: 'Schron wybudowano prawdopodobnie w 1941r, dla wykwalifikowanych pracowników przemysłu, ' +
+        'cywili oraz dla dowództwa sił zbrojnych i ich rodzin. ' +
+        'Od zwykłych schronów przeciwlotniczych, ukrytych z reguły pod ziemią, ' +
+        'wyróżniało go wyposażenie w agregaty prądotwórcze, wentylację, gabinety medyczne, ' +
+        'magazyny uzbrojenia a nawet prysznice oraz prawdziwe toalety. ' +
+        'Jak wygląda teraz? Przyjdź i przekonaj się sam!',
+        dateVal: {},
+        stars: stars(1),
+        foto: 'images33',
+        coords: {
+            latitude: 54.354688,
+            longitude: 18.654481
+        },
+        type: 'Imprezy klubowe'
+    },
+    {
+        name: 'Scena Kameralna',
+        address: 'Sopot, ul. Bohaterów Monte Cassino 30',
+        eventName: 'Murzyn Warszawski',
+        info: 'Pierwsza powojenna inscenizacja popularnej w międzywojniu komedii Antoniego Słonimskiego, ' +
+        'jednej z najbarwniejszych postaci polskiego życia artystycznego i intelektualnego. ' +
+        'Opowiedziana tu historia rozgrywa się w środowisku inteligencji pochodzenia żydowskiego, ' +
+        'w księgarni i mieszkaniu Konrada Hertmana vel Hertmańskiego, który choruje na polskość.',
+        dateVal: {},
+        stars: stars(5),
+        foto: 'images34',
+        coords: {
+            latitude: 54.443647,
+            longitude: 18.565829
+        },
+        type: 'Spektakl'
     }
 ];
 

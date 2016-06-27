@@ -285,12 +285,27 @@ span.logo-ikon {
     vertical-align: -2px;
 }
 
-.angular-google-map-container {
+#map {
     height: 500px;
     position: absolute;
     left: -100%;
     margin-bottom: 2%;
     width: 60%;
+}
+
+.active a {
+    color: pink;
+    text-decoration: none;
+}
+
+.infoWindowContent {
+    font-size:  14px;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+}
+h2 {
+    margin-bottom:0;
+    margin-top: 0;
 }
 
 .btn-success {

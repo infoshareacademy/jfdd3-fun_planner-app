@@ -10,10 +10,11 @@
     <title>Aplikacja FunPlanner</title>
 
 
+
+    <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
           integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link href="styles/bootstrap-datepicker3.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/loading-bar.css">
     <link href='https://fonts.googleapis.com/css?family=Ubuntu:400,300,300italic,400italic,500,500italic,700,700italic&subset=latin,latin-ext'
           rel='stylesheet' type='text/css'>
@@ -49,7 +50,7 @@
 
     </header>
 
-    <main ng-controller="uiGmapgoogle-mapsController">
+    <main>
         <div class="container-fluid">
             <div class="row input-group panel panel-body pull-right">
                 <form class="form-inline">
@@ -151,15 +152,13 @@
 
         </div>
 
-        <ui-gmap-google-map center='map.center' zoom='map.zoom'>
-            <ui-gmap-markers
-                    models='randomMarkers'
-
-                    coords="'self'"
-                    icon="'icon'">
-            </ui-gmap-markers>
-
-        </ui-gmap-google-map>
+        <div ng-app="mapsApp" ng-controller="MapCtrl">
+            <div id="map"></div>
+            <div ng-repeat="marker in markers"
+                 ng-class="{active: $index == markerId}">
+                <a href="#" ng-click="openInfoWindow($event, marker)">{{marker.title}}</a>
+            </div>
+        </div>
 
     </main>
 

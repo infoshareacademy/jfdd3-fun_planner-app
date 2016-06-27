@@ -3,8 +3,7 @@
  */
 
 (function () {
-    var app = angular.module('FunPlanner', ['uiGmapgoogle-maps', 'angular-loading-bar']);
-    app.controller('uiGmapgoogle-mapsController', mapCtrl);
+    var app = angular.module('FunPlanner', ['angular-loading-bar']);
     app.controller('loadingBar', loadingBarCtrl);
     app.controller('FunPlannerController', function ($scope) {
 
@@ -37,65 +36,84 @@
             });
         }
         window.signOut = signOut;
-  
+
     });
 
-    function mapCtrl($scope) {
-        $scope.map = {center: {
-            latitude: 54.432448,
-            longitude: 18.594874},
-            zoom: 11,
-            disableDefaultUI: true,
-            zoomControl: false,
-            scaleControl: true,
-            bounds: {}
-        };
-
-        var createRandomMarker = function(i, bounds, idKey) {
-            var lat_min = bounds.southwest.latitude,
-                lat_range = bounds.northeast.latitude - lat_min,
-                lng_min = bounds.southwest.longitude,
-                lng_range = bounds.northeast.longitude - lng_min;
-
-            if (idKey == null) {
-                idKey = "id";
-            }
-
-            var latitude = lat_min + (Math.random() * lat_range);
-            var longitude = lng_min + (Math.random() * lng_range);
-            var ret = {
-                latitude: latitude,
-                longitude: longitude,
-                title: 'm' + i
-            };
-            ret[idKey] = i;
-            return ret;
-        };
-        $scope.randomMarkers = [];
-        // Get the bounds from the map once it's loaded
-        $scope.$watch(function() {
-            return $scope.map.bounds;
-        }, function(nv, ov) {
-            // Only need to regenerate once
-            if (!ov.southwest && nv.southwest) {
-                var markers = [];
-                for (var i = 0; i < 50; i++) {
-                    markers.push(createRandomMarker(i, $scope.map.bounds))
-                }
-                $scope.randomMarkers = markers;
-            }
-        }, true);
-
-        window.updateMarkers = function (markers) {
-            $scope.markers = markers;
-            $scope.$apply();
-        };
-
-        window.map = $scope.map;
-    }
+    // function mapCtrl($scope) {
+    //     $scope.map = {center: {
+    //         latitude: 54.432448,
+    //         longitude: 18.594874},
+    //         zoom: 11,
+    //         disableDefaultUI: true,
+    //         zoomControl: false,
+    //         scaleControl: true,
+    //         bounds: {}
+    //     };
+    //     $scope.marker = {
+    //         id: 0,
+    //         coords: {
+    //             latitude: 54.443647,
+    //             longitude: 18.565829
+    //         },
+    //         options: { draggable: true },
+    //         icon: {
+    //             url: 'images/publicart.png',
+    //         },
+    //     };
+    // };
 
 
     function loadingBarCtrl () {
 
     }
 })();
+
+
+angular.module('mapsApp', []).controller('MapCtrl', function ($scope) {
+
+    var mapOptions = {
+        zoom: 11,
+        center: new google.maps.LatLng(54.432448, 18.594874),
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+    }
+
+        $scope.map = new google.maps.Map(document.getElementById('map'), mapOptions);
+
+        $scope.markers = [];
+
+        var infoWindow = new google.maps.InfoWindow();
+
+        var createMarker = function (x){
+
+            var image = 'images/publicart.png'
+            var marker = new google.maps.Marker({
+                map: $scope.map,
+                position: new google.maps.LatLng(x.latitude, x.longitude),
+                title: x.name,
+                icon: image
+            });
+            marker.content = '<div class="infoWindowContent">' + '<h>x.eventName</h>' + '<p>x.info</p>' + '</div>';
+
+
+            google.maps.event.addListener(marker, 'click', function(){
+                $scope.openInfoWindow(null, marker);
+                $scope.$digest();
+            });
+
+            $scope.markers.push(marker);
+
+        }
+
+        for (i = 0; i < cityEvents.length; i++){
+            createMarker(cityEvents[i]);
+        }
+
+        $scope.openInfoWindow = function(e, selectedMarker){
+            e && e.preventDefault();
+
+            infoWindow.setContent('<h2>' + selectedMarker.title + '</h2>' + selectedMarker.content);
+            infoWindow.open($scope.map, selectedMarker);
+            $scope.markerId = $scope.markers.indexOf(selectedMarker);
+
+        }
+    });

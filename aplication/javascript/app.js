@@ -20,15 +20,17 @@
         var infoWindow = new google.maps.InfoWindow();
 
         var createMarker = function (x){
+            console.log(x);
 
             var image = 'images/publicart.png';
             var marker = new google.maps.Marker({
                 map: $scope.map,
-                position: new google.maps.LatLng(x.latitude, x.longitude),
+                position: new google.maps.LatLng(x.coords.latitude, x.coords.longitude),
                 title: x.name,
-                icon: image
+                icon: image,
+                content: '<div class="infoWindowContent">' + '<h>'+ x.eventName + '</h>' + '<p>' + x.info + '</p>' + '</div>'
             });
-            marker.content = '<div class="infoWindowContent">' + '<h>x.eventName</h>' + '<p>x.info</p>' + '</div>';
+
 
 
             google.maps.event.addListener(marker, 'click', function(){

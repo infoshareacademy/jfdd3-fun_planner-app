@@ -18,7 +18,6 @@ function changeAgendaStorage(agendaEvent, spliceValue) {
     eventsInStorage.sort(function (a, b) {
         return a.orderId - b.orderId;
     });
-    console.log(eventsInStorage);
     localStorage.agenda = JSON.stringify(eventsInStorage);
 }
 

@@ -11,7 +11,7 @@
             zoom: 11,
             center: new google.maps.LatLng(54.432448, 18.594874),
             mapTypeId: google.maps.MapTypeId.ROADMAP
-        }
+        };
 
         $scope.map = new google.maps.Map(document.getElementById('map'), mapOptions);
 
@@ -20,7 +20,6 @@
         var infoWindow = new google.maps.InfoWindow();
 
         var createMarker = function (x){
-            console.log(x);
 
             var image = 'images/publicart.png';
             var marker = new google.maps.Marker({
@@ -40,7 +39,7 @@
 
             $scope.markers.push(marker);
 
-        }
+        };
 
         for (i = 0; i < cityEvents.length; i++){
             createMarker(cityEvents[i]);
@@ -72,6 +71,7 @@
             $scope.$apply();
             createDraggable();
             $('.drag').draggable('enable');
+            agendaFromStorage();
         }
 
 
@@ -84,6 +84,7 @@
                 window.signedIn = false;
                 $scope.$apply();
                 $('.drag').draggable('disable');
+                $('.event-sorting .list-element').remove();
             });
         }
         window.signOut = signOut;

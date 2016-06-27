@@ -13,23 +13,22 @@ function start() {
     for (var i = 0; i < 5; i++) {
         var $newColumn = $('<div class= "calendar-column">').attr('id', i);
         $parentDiv.append($newColumn);
-        showRandomCityEvents (i);
+        showRandomCityEvents(i);
     }
-    agendaFromStorage();
 }
 
 start();
 
 function left(time, multi) {
     for (var i = 0; i < multi; i += 1) {
-        if (first ) {
+        if (first) {
             (function () {
                 var $newColumn = $('<div class= "calendar-column">').attr('id', --first);
-                     $('.calendar-column').not('.pending').last().addClass('pending');
+                $('.calendar-column').not('.pending').last().addClass('pending');
 
                 last -= 1;
-                $parentDiv.prepend($newColumn).css('margin-left', -20 * (i+1) + '%');
-                showRandomCityEvents (first);
+                $parentDiv.prepend($newColumn).css('margin-left', -20 * (i + 1) + '%');
+                showRandomCityEvents(first);
             }())
 
         }
@@ -42,21 +41,24 @@ function left(time, multi) {
 }
 
 function right(time, multi) {
-    for (var i = 0; i < multi; i += 1) {
-        (function () {
-            var $newColumn = $('<div class= "calendar-column">').attr('id', ++last);
-                $('.calendar-column').not('.pending').first().addClass('pending');
+    if (last < 62) {
+        for (var i = 0; i < multi; i += 1) {
+            if (last < 62)
+                (function () {
+                    var $newColumn = $('<div class= "calendar-column">').attr('id', ++last);
+                    $('.calendar-column').not('.pending').first().addClass('pending');
 
-            first += 1;
-            $parentDiv.append($newColumn).css('margin-left', '0%');
-            showRandomCityEvents (last);
-        }())
+                    first += 1;
+                    $parentDiv.append($newColumn).css('margin-left', '0%');
+                    showRandomCityEvents(last);
+                }())
+        }
+
+        $parentDiv.animate({'margin-left': -20 * multi + '%'}, time, 'swing', function () {
+            $('.pending').remove();
+            $parentDiv.css('margin-left', '0%');
+        })
     }
-
-    $parentDiv.animate({'margin-left': -20 * multi + '%'}, time, 'swing', function () {
-       $('.pending').remove();
-        $parentDiv.css('margin-left', '0%');
-    })
 }
 
 $buttonLeftSingle.click(function () {

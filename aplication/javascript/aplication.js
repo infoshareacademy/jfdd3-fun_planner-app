@@ -668,8 +668,12 @@ $('#sandbox-container .input-daterange').datepicker({
 
 $('form').change(function () {
     var filterCheckboxValue = [];
+    var dateFrom = new Date($('#dateFrom').val().split('.').reverse().join('-'));
+    var dateTo = new Date($('#dateTo').val().split('.').reverse().join('-'));
 
-    function removeCheckboxValue(value) {
+
+
+    function removeCheckboxValue (value) {
         var pos = filterCheckboxValue.indexOf(value);
         filterCheckboxValue.splice(pos, 0);
     }
@@ -681,17 +685,29 @@ $('form').change(function () {
 
     $parentDiv.empty();
 
-    finalCalendarEventsTable = templateFinalCalendarEventsTable.map(function (itemCalendar) {
-        return {
-            calWeekday: itemCalendar.calWeekday,
-            calDate: itemCalendar.calDate,
-            calEvent: itemCalendar.calEvent.filter(function (itemEvent) {
+    finalCalendarEventsTable = templateFinalCalendarEventsTable
+        .filter(function (itemCalendar) {
+            var testDate = new Date((itemCalendar.calDate).split('.').reverse().join('-'));
+            if ($('#dateFrom').val() === "" || $('#dateTo').val() === "") {
+                return true;
+            }
 
-                if (filterCheckboxValue.length === 0) {
-                    return true;
-                }
-                return filterCheckboxValue.includes(itemEvent.type);
-            })
+            return dateFrom <= testDate && testDate <= dateTo;
+
+
+        })
+
+        .map(function (itemCalendar) {
+        return {
+           calWeekday: itemCalendar.calWeekday,
+           calDate: itemCalendar.calDate,
+           calEvent: itemCalendar.calEvent.filter(function (itemEvent) {
+
+               if (filterCheckboxValue.length === 0) {
+                   return true;
+               }
+               return filterCheckboxValue.includes(itemEvent.type);
+           })
         };
     });
 

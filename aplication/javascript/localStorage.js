@@ -1,45 +1,54 @@
-function sendToStorage(agendaEvents) {
-    var eventsToRemember = agendaFromStorage,
-        table = finalCalendarEventsTable;
+var eventsInStorage = localStorage.agenda ? JSON.parse(localStorage.agenda) : [];
 
-    agendaEvents.each(function () {
-        var eventId = $(this)[0].attributes[3].nodeValue,
-            eventOrderId = $(this)[0].attributes[2].nodeValue;
-
-        table.forEach(function (day) {
-            day.calEvent.forEach(function (event) {
-                if (event.eventId == eventId) {
-                    event.orderId = eventOrderId;
-                    eventsToRemember.push(event);
+function changeAgendaStorage(agendaEvent, spliceValue) {
+    var eventId = Number(agendaEvent.getAttribute('data-eventId')),
+        changedIndex = spliceValue ? findEvent(eventId) : 0,
+        orderId = agendaEvent.getAttribute('data-orderId');
+    
+    templateFinalCalendarEventsTable.forEach(function (day) {
+        day.calEvent.forEach(function (event) {
+            if (event.eventId === eventId)
+                if (spliceValue) eventsInStorage.splice(changedIndex, spliceValue);
+                else {
+                    event.orderId = orderId;
+                    eventsInStorage.splice(changedIndex, spliceValue, event)
                 }
-            });
-        })
+        });
     });
-    localStorage.agendaEvents = JSON.stringify(eventsToRemember);
+    eventsInStorage.sort(function (a, b) {
+        return a.orderId - b.orderId;
+    });
+    console.log(eventsInStorage);
+    localStorage.agenda = JSON.stringify(eventsInStorage);
 }
 
-function fromStorageToAgenda(table) {
-    table.forEach(function (event) {
-        var eventId = event.eventId,
-            orderId = event.orderId,
-            sortingData = event.datePl,
-            eventItem = $('<div class="list-element drag" data-date="' + sortingData + '" data-orderId="' + orderId + '" data-eventId="' + eventId + '" ' +
-                'data-toggle="popover" data-placement="bottom" data-trigger="hover manual"><h5>'
-                + event.name + '<button onclick="deleteEvent($(this))" type="button" ' +
-                'class="btn-trash pull-right" aria-label="Trash"><span class="glyphicon glyphicon-trash" ' +
-                'aria-hidden="false"></span></button></h5><div id="tooltiptext" style="display: none" ' +
-                'class="panel-body"><div class="media"><div class="media-body"><h3 class="media-heading">'
-                + event.name + '</h3><small>'
-                + event.address + '</small><div class="star">'
-                + event.stars + '</div>'
-                + event.info + '</div><div class="media-right">'
-                + event.datePl + '<img class="media-object" src="images/'
-                + event.foto + '.jpg"></div></div></div></div>'
-            );
-        $('.scrollAgenda').append(eventItem);
-    })
+function findEvent(id) {
+    var index = eventsInStorage.map(function (e) {
+        return e.eventId;
+    });
+    return index.indexOf(id);
 }
 
-function removeFromStorage (eventId) {
-    console.log(agendaFromStorage);
+function agendaFromStorage() {
+
+    eventsInStorage.forEach(function (event) {
+        var sortingData = event.datePl,
+            eventId = event.eventId,
+            orderId = event.orderId;
+
+        var eventItem = $('<div class="list-element" data-orderId="' + orderId + '" data-eventId="' + eventId + '" ' +
+            'data-toggle="popover" data-placement="bottom" data-trigger="hover manual" data-date="' + sortingData + '"><h5>'
+            + event.name + '<button onclick="deleteEvent($(this))" type="button" ' +
+            'class="btn-trash pull-right btn-trash-show" aria-label="Trash"><span class="glyphicon glyphicon-trash" ' +
+            'aria-hidden="true"></span></button></h5><div id="tooltiptext" style="display: none" class="panel-body">' +
+            '<div class="media"><div class="media-body"><h3 class="media-heading">'
+            + event.name + '</h3><small>'
+            + event.address + '</small><div class="star">'
+            + event.stars + '</div>'
+            + event.info + '</div><div class="media-right">'
+            + event.datePl + '<img class="media-object" src="images/'
+            + event.foto + '.jpg"></div></div></div></div>'
+        );
+        $('.event-sorting').append(eventItem);
+    });
 }

@@ -6,40 +6,30 @@ var $buttonLeftSingle = $('#navi-left-single'),
     $buttonLeftFifth = $('#navi-left-fifth'),
     $buttonRightFifth = $('#navi-right-fifth'),
     first = 0,
-    last = 4,
-    finalCalendarEventsTable,
-    agendaFromStorage;
+    last = 4;
 
-(function start() {
-    if (localStorage.calendar) {
-        finalCalendarEventsTable = JSON.parse(localStorage.calendar);
-    } else {
-        finalCalendarEventsTable = calendarTabs();
-    }
-    if (localStorage.agendaEvents) {
-        agendaFromStorage = JSON.parse(localStorage.agendaEvents);
-    } else {
-        agendaFromStorage = [];
-    }
+function start() {
+
     for (var i = 0; i < 5; i++) {
         var $newColumn = $('<div class= "calendar-column">').attr('id', i);
         $parentDiv.append($newColumn);
-        showRandomCityEvents(i);
+        showRandomCityEvents (i);
     }
+    agendaFromStorage();
+}
 
-    fromStorageToAgenda(agendaFromStorage);
-})();
-//start();
+start();
+
 function left(time, multi) {
     for (var i = 0; i < multi; i += 1) {
-        if (first) {
+        if (first ) {
             (function () {
                 var $newColumn = $('<div class= "calendar-column">').attr('id', --first);
-                $('.calendar-column').not('.pending').last().addClass('pending');
+                     $('.calendar-column').not('.pending').last().addClass('pending');
 
                 last -= 1;
-                $parentDiv.prepend($newColumn).css('margin-left', -20 * (i + 1) + '%');
-                showRandomCityEvents(first);
+                $parentDiv.prepend($newColumn).css('margin-left', -20 * (i+1) + '%');
+                showRandomCityEvents (first);
             }())
 
         }
@@ -55,16 +45,16 @@ function right(time, multi) {
     for (var i = 0; i < multi; i += 1) {
         (function () {
             var $newColumn = $('<div class= "calendar-column">').attr('id', ++last);
-            $('.calendar-column').not('.pending').first().addClass('pending');
+                $('.calendar-column').not('.pending').first().addClass('pending');
 
             first += 1;
             $parentDiv.append($newColumn).css('margin-left', '0%');
-            showRandomCityEvents(last);
+            showRandomCityEvents (last);
         }())
     }
 
     $parentDiv.animate({'margin-left': -20 * multi + '%'}, time, 'swing', function () {
-        $('.pending').remove();
+       $('.pending').remove();
         $parentDiv.css('margin-left', '0%');
     })
 }
@@ -84,8 +74,3 @@ $buttonRightSingle.click(function () {
 $buttonRightFifth.click(function () {
     right(500, 5);
 });
-
-$('.event-sorting').sortable({
-    cancel: '.list-element'
-});
-

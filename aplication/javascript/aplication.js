@@ -1,6 +1,5 @@
 'use strict';
 
-
 var formatter = new Intl.DateTimeFormat('pl', {
     day: '2-digit',
     month: '2-digit',
@@ -22,7 +21,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(5),
         foto: 'images1',
-        coordinates: [54.444312, 18.566630],
+        coords: {
+            latitude: 54.444312,
+            longitude: 18.566630
+        },
         type: 'Imprezy klubowe'
     },
     {
@@ -34,8 +36,11 @@ var cityEvents = [
         dateVal: {},
         stars: stars(5),
         foto: 'images2',
-        coordinates: [54.445232, 18.567916],
-        type: 'Imprezy Klubowe'
+        coords: {
+            latitude: 54.445232,
+            longitude: 18.567916
+        },
+        type: 'Imprezy klubowe'
     },
     {
         name: '3 Siostry',
@@ -45,8 +50,11 @@ var cityEvents = [
         dateVal: {},
         stars: stars(5),
         foto: 'images3',
-        coordinates: [54.445872, 18.568486],
-        type: 'Imprezy Klubowe'
+        coords: {
+            latitude: 54.445872,
+            longitude: 18.568486
+        },
+        type: 'Imprezy klubowe'
     },
     {
         name: 'Sfinks700',
@@ -58,8 +66,11 @@ var cityEvents = [
         dateVal: {},
         stars: stars(5),
         foto: 'images4',
-        coordinates: [54.448544, 18.567314],
-        type: 'Imprezy Klubowe'
+        coords: {
+            latitude: 54.448544,
+            longitude: 18.567314
+        },
+        type: 'Imprezy klubowe'
     },
 
 
@@ -72,8 +83,11 @@ var cityEvents = [
         dateVal: {},
         stars: stars(5),
         foto: 'images5',
-        coordinates: [54.347702, 18.656805],
-        type: 'Imprezy Klubowe'
+        coords: {
+            latitude: 54.347702,
+            longitude: 18.656805
+        },
+        type: 'Imprezy klubowe'
     },
     {
         name: 'Klub Muzyczny Parlament',
@@ -86,8 +100,11 @@ var cityEvents = [
         dateVal: {},
         stars: stars(5),
         foto: 'images6',
-        coordinates: [54.351140, 18.649863],
-        type: 'Imprezy Klubowe'
+        coords: {
+            latitude: 54.351140,
+            longitude: 18.649863
+        },
+        type: 'Imprezy klubowe'
     },
     {
         name: "Jack's Bar & Restaurant Fahrenheit",
@@ -99,8 +116,11 @@ var cityEvents = [
         dateVal: {},
         stars: stars(5),
         foto: 'images7',
-        coordinates: [54.348410, 18.653798],
-        type: 'Imprezy Klubowe'
+        coords: {
+            latitude: 54.348410,
+            longitude: 18.653798
+        },
+        type: 'Imprezy klubowe'
     },
     {
         name: 'Club Echo',
@@ -111,8 +131,11 @@ var cityEvents = [
         dateVal: {},
         stars: stars(5),
         foto: 'images8',
-        coordinates: [54.350342, 18.647033],
-        type: 'Imprezy Klubowe'
+        coords: {
+            latitude: 54.350342,
+            longitude: 18.647033
+        },
+        type: 'Imprezy klubowe'
     },
 
 
@@ -126,8 +149,11 @@ var cityEvents = [
         dateVal: {},
         stars: stars(5),
         foto: 'images9',
-        coordinates: [54.518653, 18.548150],
-        type: 'Imprezy Klubowe'
+        coords: {
+            latitude: 54.518653,
+            longitude: 18.548150
+        },
+        type: 'Imprezy klubowe'
     },
     {
         name: 'Blues Club',
@@ -138,7 +164,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(5),
         foto: 'images10',
-        coordinates: [54.524461, 18.543094],
+        coords: {
+            latitude: 54.524461,
+            longitude: 18.543094
+        },
         type: 'Koncert'
     },
     {
@@ -149,8 +178,11 @@ var cityEvents = [
         dateVal: {},
         stars: stars(5),
         foto: 'images11',
-        coordinates: [54.519184, 18.535465],
-        type: 'Imprezy Klubowe'
+        coords: {
+            latitude: 54.519184,
+            longitude: 18.535465
+        },
+        type: 'Imprezy klubowe'
     },
     {
         name: 'Klub Desdemona',
@@ -161,7 +193,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(5),
         foto: 'images12',
-        coordinates: [54.518011, 18.540758],
+        coords: {
+            latitude: 54.518011,
+            longitude: 18.540758
+        },
         type: 'Koncert'
     },
     {
@@ -174,7 +209,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(5),
         foto: 'images13',
-        coordinates: [54.475543, 18.562205],
+        coords: {
+            latitude: 54.475543,
+            longitude: 18.562205
+        },
         type: 'Spektakl'
     },
     {
@@ -186,7 +224,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(5),
         foto: 'images14',
-        coordinates: [54.426855, 18.580577],
+        coords: {
+            latitude: 54.426855,
+            longitude: 18.580577
+        },
         type: 'Koncert'
     },
     {
@@ -199,7 +240,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(5),
         foto: 'images15',
-        coordinates: [54.516773, 18.545091],
+        coords: {
+            latitude: 54.516773,
+            longitude: 18.545091
+        },
         type: 'Koncert'
     },
     {
@@ -211,7 +255,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(5),
         foto: 'images16',
-        coordinates: [54.516773, 18.545091],
+        coords: {
+            latitude: 54.516773,
+            longitude: 18.545091
+        },
         type: 'Wydarzenie artystyczne'
     },
     {
@@ -224,7 +271,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(5),
         foto: 'images17',
-        coordinates: [54.351603, 18.648902],
+        coords: {
+            latitude: 54.351603,
+            longitude: 18.648902
+        },
         type: 'Spektakl'
     },
     {
@@ -237,7 +287,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(4),
         foto: 'images18',
-        coordinates: [54.348199, 18.647168],
+        coords: {
+            latitude: 54.348199,
+            longitude: 18.647168
+        },
         type: 'Spektakl'
     },
     {
@@ -250,7 +303,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(3),
         foto: 'images19',
-        coordinates: [54.361428, 18.649432],
+        coords: {
+            latitude: 54.361428,
+            longitude: 18.649432
+        },
         type: 'Wydarzenie artystyczne'
     },
     {
@@ -263,7 +319,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(5),
         foto: 'images20',
-        coordinates: [54.380989, 18.622520],
+        coords: {
+            latitude: 54.380989,
+            longitude: 18.622520
+        },
         type: 'Spektakl'
     },
     {
@@ -274,7 +333,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(5),
         foto: 'images21',
-        coordinates: [54.352512, 18.659656],
+        coords: {
+            latitude: 54.352512,
+            longitude: 18.659656
+        },
         type: 'Koncert'
     },
     {
@@ -289,7 +351,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(5),
         foto: 'images22',
-        coordinates: [54.387117, 18.592246],
+        coords: {
+            latitude: 54.387117,
+            longitude: 18.592246
+        },
         type: 'Wydarzenie artystyczne'
     },
     {
@@ -303,7 +368,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(5),
         foto: 'images23',
-        coordinates: [54.364764, 18.648509],
+        coords: {
+            latitude: 54.364764,
+            longitude: 18.648509
+        },
         type: 'Koncert'
     },
     {
@@ -320,7 +388,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(2),
         foto: 'images24',
-        coordinates: [54.511031, 18.539289],
+        coords: {
+            latitude: 54.511031,
+            longitude: 18.539289
+        },
         type: 'Spektakl'
     },
     {
@@ -333,25 +404,181 @@ var cityEvents = [
         dateVal: {},
         stars: stars(1),
         foto: 'images25',
-        coordinates: [54.519540, 18.535661],
+        coords: {
+            latitude: 54.519540,
+            longitude: 18.535661
+        },
         type: 'Imprezy klubowe'
+    },
+    {
+        name: 'Opera Leśna',
+        address: 'Sopot, ul. Moniuszki 12',
+        eventName: 'Koncert Rodriguez',
+        info: 'Rodriguez to legendarny gitarzysta-samouk i wokalista. ' +
+        'Swoje pierwsze koncerty zagrał w latach 60. ubiegłego wieku w barach i klubach rodzinnego Detroit. ' +
+        'To właśnie w tym mieście Rodriguez zarejestrował dwa studyjne albumy – ' +
+        '„Cold Fact" (1969) i „Coming from Reality" (1971). ' +
+        'Niestety wydawnictwa przeszły wówczas bez zasłużonego bez echa, ' +
+        'a muzyk postanowił skoncentrować się na innych dziedzinach, ' +
+        'kończąc filozofię na Wayne State University.',
+        dateVal: {},
+        stars: stars(3),
+        foto: 'images26',
+        coords: {
+            latitude: 54.444246,
+            longitude: 18.544385
+        },
+        type: 'Koncert'
+    },
+    {
+        name: 'Teatr Leśny',
+        address: 'Gdańsk, ul. Jaśkowa Dolina 45',
+        eventName: 'Lato ludzi',
+        info: 'Projekt Kołakowski czyli cztery trójmiejskie teatry: Teatr Mimo To (Gdańsk), ' +
+        'Teatr Biuro Rzeczy Osobistych (Gdynia), TeatRazem (Gdańsk); ' +
+        'Teatr Kasablanka (Gdańsk) orupa muzyczna Remont Pomp.',
+        dateVal: {},
+        stars: stars(5),
+        foto: 'images27',
+        coords: {
+            latitude: 54.372863,
+            longitude: 18.595490
+        },
+        type: 'Wydarzenie artystyczne'
+    },
+    {
+        name: 'Teatr w Oknie',
+        address: 'Gdańsk, ul. Długa 50/51',
+        eventName: 'MONOTEATR: Być jak Charlie Chaplin',
+        info: 'Być jak Charlie Chaplin to brawurowa próba zmierzenia się z legendą. ' +
+        'Najsłynniejszy komik kina niemego stał się ikoną popkultury już bardzo dawno temu, ' +
+        'jednak do dziś nie wiemy, kim był z pochodzenia i gdzie się urodził ten genialny aktor, scenarzysta i reżyser.',
+        dateVal: {},
+        stars: stars(5),
+        foto: 'images28',
+        coords: {
+            latitude: 54.349080,
+            longitude: 18.652117
+        },
+        type: 'Spektakl'
+    },
+    {
+        name: 'Centrum Sztuki Współczesnej Łaźnia',
+        address: 'Gdańsk, ul. Jaskółcza 1',
+        eventName: 'In Out Festival',
+        info: 'Festiwal In Out jest cyklicznym projektem Centrum Sztuki Współczesnej Łaźnia ' +
+        'organizowany od 2005 roku. W 2015 roku CSW Łaźnia planuje jego jubileuszową 10 ' +
+        'już edycję poświęcić tematowi "teatralność". Celem Festiwalu jest przyjrzenie się ' +
+        'czym jest teatr i teatralność dla twórców wizualnych, a czym wideo i filmy dla twórców teatralnych.',
+        dateVal: {},
+        stars: stars(3),
+        foto: 'images29',
+        coords: {
+            latitude: 54.341753,
+            longitude: 18.658093
+        },
+        type: 'Wydarzenie artystyczne'
+    },
+    {
+        name: 'Teatr Miniatura',
+        address: 'Gdańsk, al. Grunwaldzka 16',
+        eventName: 'Zostań przyjacielem',
+        info: 'Muzyczną historię przyjaźni pingwinki, która uciekła z zoo i żółwia ' +
+        'porzuconego przez właścicielkę wyreżyserował sam autor Tomasz Man, ' +
+        'reżyser teatralny i radiowy, dramatopisarz, wykładowca na Wydziale ' +
+        'Lalkarskim we Wrocławiu Państwowej Wyższej Szkoły Teatralnej im. Ludwika Solskiego w Krakowie.',
+        dateVal: {},
+        stars: stars(1),
+        foto: 'images30',
+        coords: {
+            latitude: 54.375012,
+            longitude: 18.618389
+        },
+        type: 'Spektakl'
+    },
+    {
+        name: 'Akademia Muzyczna',
+        address: 'Gdańsk, ul. Ląkowa 1-2',
+        eventName: 'Koncert pianistyczny',
+        info: 'Dr Bogna Czerwińska-Szymula jest wszechstronnym muzykiem, ' +
+        'pedagogiem oraz propagatorem twórczości kompozytorów polskich. ' +
+        'W 2003 roku z wyróżnieniem ukończyła Akademię Muzyczną im. ' +
+        'Stanisława Moniuszki w Gdańsku w klasie fortepianu prof. Grażyny Fiedoruk-Sienkiewicz, ' +
+        'gdzie następnie podjęła działalność artystyczną, pedagogiczną i badawczą. ' +
+        'W 2012 roku, na macierzystej uczelni, uzyskała tytuł doktora sztuki w specjalności gry na fortepianie.',
+        dateVal: {},
+        stars: stars(5),
+        foto: 'images31',
+        coords: {
+            latitude: 54.346177,
+            longitude: 18.663851
+        },
+        type: 'Koncert'
+    },
+    {
+        name: 'Zbrojownia Sztuki',
+        address: 'Gdańsk, ul. Kołodziejska 2',
+        eventName: 'ASP 2016. Najlepsze dyplomy',
+        info: 'Już wkrótce poznamy najciekawsze dyplomy tegorocznych absolwentów polskich szkół artystycznych. ' +
+        'Prace prezentowane będą w Zbrojowni Sztuki oraz w Auli Akademii Sztuk Pięknych.',
+        dateVal: {},
+        stars: stars(3),
+        foto: 'images32',
+        coords: {
+            latitude: 54.350840,
+            longitude: 18.649206,
+        },
+        type: 'Wydarzenie artystyczne'
+    },
+    {
+        name: 'Bunkier Club',
+        address: 'Gdańsk, ul. Olejarna 3',
+        eventName: 'DJ Bobo dla helskich fok',
+        info: 'Schron wybudowano prawdopodobnie w 1941r, dla wykwalifikowanych pracowników przemysłu, ' +
+        'cywili oraz dla dowództwa sił zbrojnych i ich rodzin. ' +
+        'Od zwykłych schronów przeciwlotniczych, ukrytych z reguły pod ziemią, ' +
+        'wyróżniało go wyposażenie w agregaty prądotwórcze, wentylację, gabinety medyczne, ' +
+        'magazyny uzbrojenia a nawet prysznice oraz prawdziwe toalety. ' +
+        'Jak wygląda teraz? Przyjdź i przekonaj się sam!',
+        dateVal: {},
+        stars: stars(1),
+        foto: 'images33',
+        coords: {
+            latitude: 54.354688,
+            longitude: 18.654481
+        },
+        type: 'Imprezy klubowe'
+    },
+    {
+        name: 'Scena Kameralna',
+        address: 'Sopot, ul. Bohaterów Monte Cassino 30',
+        eventName: 'Murzyn Warszawski',
+        info: 'Pierwsza powojenna inscenizacja popularnej w międzywojniu komedii Antoniego Słonimskiego, ' +
+        'jednej z najbarwniejszych postaci polskiego życia artystycznego i intelektualnego. ' +
+        'Opowiedziana tu historia rozgrywa się w środowisku inteligencji pochodzenia żydowskiego, ' +
+        'w księgarni i mieszkaniu Konrada Hertmana vel Hertmańskiego, który choruje na polskość.',
+        dateVal: {},
+        stars: stars(5),
+        foto: 'images34',
+        coords: {
+            latitude: 54.443647,
+            longitude: 18.565829
+        },
+        type: 'Spektakl'
     }
-
 ];
 
-function randomValue(endOfrange) {
+function randomValue(endOfRange) {
 
-    return (Math.round(Math.random() * (endOfrange - 1)));
-
+    return (Math.round(Math.random() * (endOfRange - 1)));
 }
 
 function createDate() {
 
     var startDate = new Date().getTime();
-    var endDate = new Date(2016, 7, 0).getTime();
+    var endDate = new Date(2016, 8, 0).getTime();
 
     return new Date(startDate + Math.random() * (endDate - startDate));
-
 }
 
 function stars(size) {
@@ -366,16 +593,14 @@ function stars(size) {
         } else {
             stars.push('<span class="glyphicon glyphicon-star-empty"></span>');
         }
-
     }
-
     return stars = stars.toString().replace(/,/g, '');
-
 }
 
 function randomCityEvent(tableSize) {
 
-    var randomCityEventTable = [];
+    var randomCityEventTable = [],
+        eventId = 1;
 
     for (var i = 0; i < tableSize; i++) {
         var dateVal = createDate();
@@ -390,20 +615,17 @@ function randomCityEvent(tableSize) {
             datePl: formatter.format(new Date(dateVal)),
             stars: cityEvents[possibleValues].stars,
             foto: cityEvents[possibleValues].foto,
-            eventId: i
+            type: cityEvents[possibleValues].type,
+            eventId: eventId++
         });
     }
-
     return randomCityEventTable.sort(function (a, b) {
-
         return Date.parse(a.dateVal) - Date.parse(b.dateVal);
-
     });
-
 }
 
 function calendarTabs() {
-    var tableEvents = randomCityEvent(100);
+    var tableEvents = randomCityEvent(200);
     var tableCalendar = [];
     var nowDay = new Date().getTime();
     var lastDay = Date.parse(tableEvents[tableEvents.length - 1].dateVal);
@@ -417,7 +639,6 @@ function calendarTabs() {
         return formatterDay.format(new Date().setDate(new Date().getDay() + days - 2));
     }
 
-
     for (var i = 0; i < dDay; i++) {
         var tmpDate = addDate(i);
         tableCalendar.push({
@@ -428,9 +649,56 @@ function calendarTabs() {
             })
         });
     }
-    localStorage.calendar = JSON.stringify(tableCalendar);
+    //localStorage.calendar = JSON.stringify(tableCalendar);
     return tableCalendar;
 }
+
+//var templateFinalCalendarEventsTable = localStorage.calendar ? JSON.parse(localStorage.calendar) : calendarTabs();
+var templateFinalCalendarEventsTable = calendarTabs();
+var finalCalendarEventsTable = templateFinalCalendarEventsTable;
+
+$('#sandbox-container .input-daterange').datepicker({
+    format: "dd.mm.yyyy",
+    clearBtn: true,
+    language: "pl",
+    multidateSeparator: ".",
+    autoclose: true,
+    todayHighlight: true
+});
+
+$('form').change(function () {
+    var filterCheckboxValue = [];
+
+    function removeCheckboxValue(value) {
+        var pos = filterCheckboxValue.indexOf(value);
+        filterCheckboxValue.splice(pos, 0);
+    }
+
+    $('#clubParty').is(':checked') ? filterCheckboxValue.push('Imprezy klubowe') : removeCheckboxValue('Imprezy klubowe');
+    $('#concert').is(':checked') ? filterCheckboxValue.push('Koncert') : removeCheckboxValue('Koncert');
+    $('#artisticEvent').is(':checked') ? filterCheckboxValue.push('Wydarzenie artystyczne') : removeCheckboxValue('Wydarzenie artystyczne');
+    $('#spectacle').is(':checked') ? filterCheckboxValue.push('Spektakl') : removeCheckboxValue('Spektakl');
+
+    $parentDiv.empty();
+
+    finalCalendarEventsTable = templateFinalCalendarEventsTable.map(function (itemCalendar) {
+        return {
+            calWeekday: itemCalendar.calWeekday,
+            calDate: itemCalendar.calDate,
+            calEvent: itemCalendar.calEvent.filter(function (itemEvent) {
+
+                if (filterCheckboxValue.length === 0) {
+                    return true;
+                }
+                return filterCheckboxValue.includes(itemEvent.type);
+            })
+        };
+    });
+
+    first = 0;
+    last = 4;
+    start();
+});
 
 function showRandomCityEvents(element) {
 
@@ -442,16 +710,13 @@ function showRandomCityEvents(element) {
         table[element].calDate + '</small></h4></div><div id="event' + element + '" class="calendar-event"></div></div>');
 
     if (table[element].calEvent.length > 0) {
-
         for (var index in table[element].calEvent) {
             createEventItem(index, table, element);
             addPopover();
         }
         signedNo();
         signedYes();
-
     }
-
 }
 function signedYes() {
     if (window.signedIn == true) {
@@ -465,12 +730,12 @@ function signedNo() {
     }
 }
 
-
 function createEventItem(index, table, element) {
 
-    var eventId = table[element].calEvent[index].eventId;
-    var sortingData = table[element].calEvent[index].datePl;
-    var eventItem = $('<div class="list-element drag" data-date="sortingData" data-orderId="' + element + '-' + index + '" data-eventId="' + eventId + '" data-toggle="popover" data-placement="bottom" data-trigger="hover manual"><h5>'
+    var sortingData = table[element].calEvent[index].datePl,
+        eventId = table[element].calEvent[index].eventId;
+
+    var eventItem = $('<div class="list-element drag" data-orderId="' + element +  index + '" data-eventId="' + eventId + '" data-toggle="popover" data-placement="bottom" data-trigger="hover manual"><h5>'
         + table[element].calEvent[index].name + '<button onclick="deleteEvent($(this))" type="button" class="btn-trash pull-right" aria-label="Trash"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></h5><div id="tooltiptext" style="display: none" class="panel-body"><div class="media"><div class="media-body"><h3 class="media-heading">'
         + table[element].calEvent[index].name + '</h3><small>'
         + table[element].calEvent[index].address + '</small><div class="star">'
@@ -494,7 +759,6 @@ function addPopover() {
     });
 }
 
-
 function createDraggable() {
 
     $('.drag').draggable({
@@ -504,44 +768,43 @@ function createDraggable() {
         connectToSortable: '.event-sorting',
         zIndex: 20,
         stop: function (event) {
-            var $sortedEvents = $('.event-sorting .list-element');
+            if(($('.event-sorting .list-element[data-orderid=' + this.getAttribute('data-orderId') + ']').length)===1)
+                changeAgendaStorage(this, 0);
+
             $('.event-sorting div').css({
                 width: '100%',
                 height: '9%'
             }).removeClass('drag');
             $('.event-sorting button').addClass('btn-trash-show');
 
-            $sortedEvents.sort(function (a, b) {
+            $('.event-sorting .list-element').sort(function (a, b) {
                 return new Date($(a).attr('data-date').split('.').reverse().join('-')) - new Date($(b).attr('data-date').split('.').reverse().join('-'));
             }).filter(function () {
 
                 var item = this;
 
                 if ($('.event-sorting .list-element[data-orderid=' + $(item).attr('data-orderid') + ']').length === 1) {
-
                     return true;
                 }
                 $(item).remove();
                 return false;
             }).appendTo('.event-sorting');
-            sendToStorage($sortedEvents);
+
         }
     });
 
     $('.event-sorting').sortable({
         cancel: '.list-element'
     });
-
 }
-
 
 function deleteEvent(value) {
     var element = value.parent().parent();
     $('.list-element').popover('hide');
+    changeAgendaStorage(element[0], 1);
     element.remove();
-    removeFromStorage(element[0].attributes[3].nodeValue);
 }
 
 setTimeout(function () {
-    $('.abcRioButtonLightBlue').css('background-color', '#8cc63f').css('color', 'white')
-}, 700);
+    $('.abcRioButtonLightBlue').css('background-color', '#8cc63f').css('color', 'white').css('width', '100px').css('border-radius', '4px')
+}, 500);

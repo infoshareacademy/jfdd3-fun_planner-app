@@ -2,11 +2,31 @@
 
 $(document).ready(function () {
 
-    var $ButtonMap = $('#button-map');
+    var $ShowMap = $('#button-map');
+    var $ShowCalendarAgain = $('#hide-button-map');
 
-    $ButtonMap.on('click', function () {
-        $('.angular-google-map-container').css({display: "block"});
-        });
+    $ShowMap.on('click', function () {
+        $('.calendar-position').hide();
+        $('.pull-right').css({'visibility': 'hidden'});
+        $('#button-map').hide();
+        $('#hide-button-map').show();
+        $('.hide-button-map').css({"display": "inline"});
+        $('#map').css({"left": "35%", 'display': 'block'});
+
+    });
+
+    $ShowCalendarAgain.on('click', function () {
+        $('#map').css({'display': 'none'});
+        $('.pull-right').css({'visibility': 'visible'});
+        $('.calendar-position').show();
+        $('.pull-right').show();
+        $('.pull-right').css({'visibility': 'visible'});
+        $('#button-map').show();
+        $('#hide-button-map').hide();
+    });
+
+
+
 
 
 

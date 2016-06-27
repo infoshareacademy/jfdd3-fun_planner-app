@@ -20,7 +20,6 @@
         var infoWindow = new google.maps.InfoWindow();
 
         var createMarker = function (x){
-            console.log(x);
 
             var image = 'images/publicart.png';
             var marker = new google.maps.Marker({
@@ -30,7 +29,6 @@
                 icon: image,
                 content: '<div class="infoWindowContent">' + '<h>'+ x.eventName + '</h>' + '<p>' + x.info + '</p>' + '</div>'
             });
-
 
 
             google.maps.event.addListener(marker, 'click', function(){
@@ -54,7 +52,9 @@
             $scope.markerId = $scope.markers.indexOf(selectedMarker);
 
         }
-    });
+        google.maps.event.addDomListener(window, 'load', initialize);
+
+        });
 
     app.controller('FunPlannerController', function ($scope) {
 
@@ -63,10 +63,7 @@
 
         function onSignIn(googleUser) {
             var profile = googleUser.getBasicProfile();
-            // console.log('ID: ' + profile.getId());
-            // console.log('Name: ' + profile.getName());
-            // console.log('Image URL: ' + profile.getImageUrl());
-            // console.log('Email: ' + profile.getEmail());
+
             $scope.signedIn = true;
             window.signedIn = true;
             $scope.$apply();
@@ -89,8 +86,6 @@
         window.signOut = signOut;
 
     });
-
-
 
     function loadingBarCtrl () {
 

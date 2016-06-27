@@ -30,7 +30,7 @@ function findEvent(id) {
 }
 
 function agendaFromStorage() {
-    console.log(eventsInStorage);
+
     eventsInStorage.forEach(function (event) {
         var sortingData = event.datePl,
             eventId = event.eventId,

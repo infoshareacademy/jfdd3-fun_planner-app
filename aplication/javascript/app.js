@@ -11,7 +11,7 @@
             zoom: 11,
             center: new google.maps.LatLng(54.432448, 18.594874),
             mapTypeId: google.maps.MapTypeId.ROADMAP
-        }
+        };
 
         $scope.map = new google.maps.Map(document.getElementById('map'), mapOptions);
 
@@ -19,7 +19,7 @@
 
         var infoWindow = new google.maps.InfoWindow();
 
-        var createMarker = function (x){
+        var createMarker = function (x) {
 
             var image = 'images/publicart.png';
             var marker = new google.maps.Marker({
@@ -27,34 +27,32 @@
                 position: new google.maps.LatLng(x.coords.latitude, x.coords.longitude),
                 title: x.name,
                 icon: image,
-                content: '<div class="infoWindowContent">' + '<h>'+ x.eventName + '</h>' + '<p>' + x.info + '</p>' + '</div>'
+                content: '<div class="infoWindowContent">' + '<h>' + x.eventName + '</h>' + '<p>' + x.info + '</p>' + '</div>'
             });
 
 
-            google.maps.event.addListener(marker, 'click', function(){
+            google.maps.event.addListener(marker, 'click', function () {
                 $scope.openInfoWindow(null, marker);
                 $scope.$digest();
             });
 
             $scope.markers.push(marker);
 
-        }
+        };
 
-        for (i = 0; i < cityEvents.length; i++){
+        for (i = 0; i < cityEvents.length; i++) {
             createMarker(cityEvents[i]);
         }
 
-        $scope.openInfoWindow = function(e, selectedMarker){
+        $scope.openInfoWindow = function (e, selectedMarker) {
             e && e.preventDefault();
 
             infoWindow.setContent('<h2>' + selectedMarker.title + '</h2>' + selectedMarker.content);
             infoWindow.open($scope.map, selectedMarker);
             $scope.markerId = $scope.markers.indexOf(selectedMarker);
 
-        }
-        google.maps.event.addDomListener(window, 'load', initialize);
-
-        });
+        };
+    });
 
     app.controller('FunPlannerController', function ($scope) {
 
@@ -69,6 +67,7 @@
             $scope.$apply();
             createDraggable();
             $('.drag').draggable('enable');
+            agendaFromStorage();
         }
 
 
@@ -81,13 +80,15 @@
                 window.signedIn = false;
                 $scope.$apply();
                 $('.drag').draggable('disable');
+                $('.event-sorting .list-element').remove();
             });
         }
+
         window.signOut = signOut;
 
     });
 
-    function loadingBarCtrl () {
+    function loadingBarCtrl() {
 
     }
 })();

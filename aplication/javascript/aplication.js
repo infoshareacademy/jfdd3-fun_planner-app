@@ -649,11 +649,12 @@ function calendarTabs() {
             })
         });
     }
-    localStorage.calendar = JSON.stringify(tableCalendar);
+    //localStorage.calendar = JSON.stringify(tableCalendar);
     return tableCalendar;
 }
 
-var templateFinalCalendarEventsTable = localStorage.calendar ? JSON.parse(localStorage.calendar) : calendarTabs();
+//var templateFinalCalendarEventsTable = localStorage.calendar ? JSON.parse(localStorage.calendar) : calendarTabs();
+var templateFinalCalendarEventsTable = calendarTabs();
 var finalCalendarEventsTable = templateFinalCalendarEventsTable;
 
 $('#sandbox-container .input-daterange').datepicker({
@@ -704,18 +705,21 @@ function showRandomCityEvents(element) {
     var table = finalCalendarEventsTable;
     var $divCalendar = $('#' + element);
 
-    $divCalendar.append('<div><h3><strong class="text-uppercase weekday">' +
-        table[element].calWeekday + '</strong></h3><h4><small><div class="data" >' +
-        table[element].calDate + '</small></h4></div><div id="event' + element + '" class="calendar-event"></div></div>');
+    if (table[element] !== undefined) {
 
-    if (table[element].calEvent.length > 0) {
-        for (var index in table[element].calEvent) {
-            createEventItem(index, table, element);
-            addPopover();
+        $divCalendar.append('<div><h3><strong class="text-uppercase weekday">' +
+            table[element].calWeekday + '</strong></h3><h4><small><div class="data" >' +
+            table[element].calDate + '</small></h4></div><div id="event' + element + '" class="calendar-event"></div></div>');
+
+        if (table[element].calEvent.length > 0) {
+            for (var index in table[element].calEvent) {
+                createEventItem(index, table, element);
+                addPopover();
+            }
+            signedNo();
+            signedYes();
         }
-        signedNo();
-        signedYes();
-    }
+    } else return false;
 }
 function signedYes() {
     if (window.signedIn == true) {
@@ -734,7 +738,7 @@ function createEventItem(index, table, element) {
     var sortingData = table[element].calEvent[index].datePl,
         eventId = table[element].calEvent[index].eventId;
 
-    var eventItem = $('<div class="list-element drag" data-orderId="' + element +  index + '" data-eventId="' + eventId + '" data-toggle="popover" data-placement="bottom" data-trigger="hover manual"><h5>'
+    var eventItem = $('<div class="list-element drag" data-orderId="' + element + index + '" data-eventId="' + eventId + '" data-toggle="popover" data-placement="bottom" data-trigger="hover manual"><h5>'
         + table[element].calEvent[index].name + '<button onclick="deleteEvent($(this))" type="button" class="btn-trash pull-right" aria-label="Trash"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></h5><div id="tooltiptext" style="display: none" class="panel-body"><div class="media"><div class="media-body"><h3 class="media-heading">'
         + table[element].calEvent[index].name + '</h3><small>'
         + table[element].calEvent[index].address + '</small><div class="star">'
@@ -767,8 +771,6 @@ function createDraggable() {
         connectToSortable: '.event-sorting',
         zIndex: 20,
         stop: function (event) {
-            if(($('.event-sorting .list-element[data-orderid=' + this.getAttribute('data-orderId') + ']').length)===1)
-                changeAgendaStorage(this, 0);
 
             $('.event-sorting div').css({
                 width: '100%',
@@ -776,24 +778,33 @@ function createDraggable() {
             }).removeClass('drag');
             $('.event-sorting button').addClass('btn-trash-show');
 
-            $('.event-sorting .list-element').sort(function (a, b) {
-                return new Date($(a).attr('data-date').split('.').reverse().join('-')) - new Date($(b).attr('data-date').split('.').reverse().join('-'));
-            }).filter(function () {
+            $($('.event-sorting .list-element').get().reverse()).filter(function () {
+
 
                 var item = this;
+
 
                 if ($('.event-sorting .list-element[data-orderid=' + $(item).attr('data-orderid') + ']').length === 1) {
                     return true;
                 }
                 $(item).remove();
                 return false;
+
+
+            }).sort(function (a, b) {
+                return new Date($(a).attr('data-date').split('.').reverse().join('-')) - new Date($(b).attr('data-date').split('.').reverse().join('-'));
             }).appendTo('.event-sorting');
 
         }
     });
 
     $('.event-sorting').sortable({
-        cancel: '.list-element'
+        cancel: '.list-element',
+        receive: function (event, ui) {
+            if (($('.event-sorting .list-element[data-orderid=' + ui.item[0].attributes[1].value + ']').length) === 1) {
+                changeAgendaStorage(ui.item[0], 0);
+            }
+        }
     });
 }
 

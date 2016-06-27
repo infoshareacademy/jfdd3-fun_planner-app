@@ -31,7 +31,6 @@
             });
 
 
-
             google.maps.event.addListener(marker, 'click', function(){
                 $scope.openInfoWindow(null, marker);
                 $scope.$digest();
@@ -53,7 +52,9 @@
             $scope.markerId = $scope.markers.indexOf(selectedMarker);
 
         }
-    });
+        google.maps.event.addDomListener(window, 'load', initialize);
+
+        });
 
     app.controller('FunPlannerController', function ($scope) {
 
@@ -62,10 +63,7 @@
 
         function onSignIn(googleUser) {
             var profile = googleUser.getBasicProfile();
-            // console.log('ID: ' + profile.getId());
-            // console.log('Name: ' + profile.getName());
-            // console.log('Image URL: ' + profile.getImageUrl());
-            // console.log('Email: ' + profile.getEmail());
+
             $scope.signedIn = true;
             window.signedIn = true;
             $scope.$apply();
@@ -90,8 +88,6 @@
         window.signOut = signOut;
 
     });
-
-
 
     function loadingBarCtrl () {
 

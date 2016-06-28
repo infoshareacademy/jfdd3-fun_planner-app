@@ -808,7 +808,7 @@ function createDraggable() {
 
 
             }).sort(function (a, b) {
-                return new Date($(a).attr('data-date').split('.').reverse().join('-')) - new Date($(b).attr('data-date').split('.').reverse().join('-'));
+                return $(a)[0].attributes[1].value - $(b)[0].attributes[1].value;
             }).appendTo('.event-sorting');
 
         }

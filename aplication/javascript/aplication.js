@@ -21,7 +21,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(5),
         foto: 'images1',
-        coordinates: [54.444312, 18.566630],
+        coords: {
+            latitude: 54.444312,
+            longitude: 18.566630
+        },
         type: 'Imprezy klubowe'
     },
     {
@@ -33,7 +36,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(5),
         foto: 'images2',
-        coordinates: [54.445232, 18.567916],
+        coords: {
+            latitude: 54.445232,
+            longitude: 18.567916
+        },
         type: 'Imprezy klubowe'
     },
     {
@@ -44,7 +50,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(5),
         foto: 'images3',
-        coordinates: [54.445872, 18.568486],
+        coords: {
+            latitude: 54.445872,
+            longitude: 18.568486
+        },
         type: 'Imprezy klubowe'
     },
     {
@@ -57,7 +66,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(5),
         foto: 'images4',
-        coordinates: [54.448544, 18.567314],
+        coords: {
+            latitude: 54.448544,
+            longitude: 18.567314
+        },
         type: 'Imprezy klubowe'
     },
 
@@ -71,7 +83,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(5),
         foto: 'images5',
-        coordinates: [54.347702, 18.656805],
+        coords: {
+            latitude: 54.347702,
+            longitude: 18.656805
+        },
         type: 'Imprezy klubowe'
     },
     {
@@ -85,7 +100,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(5),
         foto: 'images6',
-        coordinates: [54.351140, 18.649863],
+        coords: {
+            latitude: 54.351140,
+            longitude: 18.649863
+        },
         type: 'Imprezy klubowe'
     },
     {
@@ -98,7 +116,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(5),
         foto: 'images7',
-        coordinates: [54.348410, 18.653798],
+        coords: {
+            latitude: 54.348410,
+            longitude: 18.653798
+        },
         type: 'Imprezy klubowe'
     },
     {
@@ -110,7 +131,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(5),
         foto: 'images8',
-        coordinates: [54.350342, 18.647033],
+        coords: {
+            latitude: 54.350342,
+            longitude: 18.647033
+        },
         type: 'Imprezy klubowe'
     },
 
@@ -125,7 +149,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(5),
         foto: 'images9',
-        coordinates: [54.518653, 18.548150],
+        coords: {
+            latitude: 54.518653,
+            longitude: 18.548150
+        },
         type: 'Imprezy klubowe'
     },
     {
@@ -137,7 +164,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(5),
         foto: 'images10',
-        coordinates: [54.524461, 18.543094],
+        coords: {
+            latitude: 54.524461,
+            longitude: 18.543094
+        },
         type: 'Koncert'
     },
     {
@@ -148,7 +178,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(5),
         foto: 'images11',
-        coordinates: [54.519184, 18.535465],
+        coords: {
+            latitude: 54.519184,
+            longitude: 18.535465
+        },
         type: 'Imprezy klubowe'
     },
     {
@@ -160,7 +193,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(5),
         foto: 'images12',
-        coordinates: [54.518011, 18.540758],
+        coords: {
+            latitude: 54.518011,
+            longitude: 18.540758
+        },
         type: 'Koncert'
     },
     {
@@ -173,7 +209,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(5),
         foto: 'images13',
-        coordinates: [54.475543, 18.562205],
+        coords: {
+            latitude: 54.475543,
+            longitude: 18.562205
+        },
         type: 'Spektakl'
     },
     {
@@ -185,7 +224,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(5),
         foto: 'images14',
-        coordinates: [54.426855, 18.580577],
+        coords: {
+            latitude: 54.426855,
+            longitude: 18.580577
+        },
         type: 'Koncert'
     },
     {
@@ -198,7 +240,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(5),
         foto: 'images15',
-        coordinates: [54.516773, 18.545091],
+        coords: {
+            latitude: 54.516773,
+            longitude: 18.545091
+        },
         type: 'Koncert'
     },
     {
@@ -210,7 +255,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(5),
         foto: 'images16',
-        coordinates: [54.516773, 18.545091],
+        coords: {
+            latitude: 54.516773,
+            longitude: 18.545091
+        },
         type: 'Wydarzenie artystyczne'
     },
     {
@@ -223,7 +271,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(5),
         foto: 'images17',
-        coordinates: [54.351603, 18.648902],
+        coords: {
+            latitude: 54.351603,
+            longitude: 18.648902
+        },
         type: 'Spektakl'
     },
     {
@@ -236,7 +287,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(4),
         foto: 'images18',
-        coordinates: [54.348199, 18.647168],
+        coords: {
+            latitude: 54.348199,
+            longitude: 18.647168
+        },
         type: 'Spektakl'
     },
     {
@@ -249,7 +303,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(3),
         foto: 'images19',
-        coordinates: [54.361428, 18.649432],
+        coords: {
+            latitude: 54.361428,
+            longitude: 18.649432
+        },
         type: 'Wydarzenie artystyczne'
     },
     {
@@ -262,7 +319,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(5),
         foto: 'images20',
-        coordinates: [54.380989, 18.622520],
+        coords: {
+            latitude: 54.380989,
+            longitude: 18.622520
+        },
         type: 'Spektakl'
     },
     {
@@ -273,7 +333,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(5),
         foto: 'images21',
-        coordinates: [54.352512, 18.659656],
+        coords: {
+            latitude: 54.352512,
+            longitude: 18.659656
+        },
         type: 'Koncert'
     },
     {
@@ -288,7 +351,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(5),
         foto: 'images22',
-        coordinates: [54.387117, 18.592246],
+        coords: {
+            latitude: 54.387117,
+            longitude: 18.592246
+        },
         type: 'Wydarzenie artystyczne'
     },
     {
@@ -302,7 +368,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(5),
         foto: 'images23',
-        coordinates: [54.364764, 18.648509],
+        coords: {
+            latitude: 54.364764,
+            longitude: 18.648509
+        },
         type: 'Koncert'
     },
     {
@@ -319,7 +388,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(2),
         foto: 'images24',
-        coordinates: [54.511031, 18.539289],
+        coords: {
+            latitude: 54.511031,
+            longitude: 18.539289
+        },
         type: 'Spektakl'
     },
     {
@@ -332,7 +404,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(1),
         foto: 'images25',
-        coordinates: [54.519540, 18.535661],
+        coords: {
+            latitude: 54.519540,
+            longitude: 18.535661
+        },
         type: 'Imprezy klubowe'
     },
     {
@@ -349,7 +424,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(3),
         foto: 'images26',
-        coordinates: [54.444246, 18.544385],
+        coords: {
+            latitude: 54.444246,
+            longitude: 18.544385
+        },
         type: 'Koncert'
     },
     {
@@ -362,7 +440,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(5),
         foto: 'images27',
-        coordinates: [54.372863, 18.595490],
+        coords: {
+            latitude: 54.372863,
+            longitude: 18.595490
+        },
         type: 'Wydarzenie artystyczne'
     },
     {
@@ -375,7 +456,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(5),
         foto: 'images28',
-        coordinates: [54.349080, 18.652117],
+        coords: {
+            latitude: 54.349080,
+            longitude: 18.652117
+        },
         type: 'Spektakl'
     },
     {
@@ -389,7 +473,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(3),
         foto: 'images29',
-        coordinates: [54.341753, 18.658093],
+        coords: {
+            latitude: 54.341753,
+            longitude: 18.658093
+        },
         type: 'Wydarzenie artystyczne'
     },
     {
@@ -403,7 +490,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(1),
         foto: 'images30',
-        coordinates: [54.375012, 18.618389],
+        coords: {
+            latitude: 54.375012,
+            longitude: 18.618389
+        },
         type: 'Spektakl'
     },
     {
@@ -419,7 +509,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(5),
         foto: 'images31',
-        coordinates: [54.346177, 18.663851],
+        coords: {
+            latitude: 54.346177,
+            longitude: 18.663851
+        },
         type: 'Koncert'
     },
     {
@@ -431,7 +524,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(3),
         foto: 'images32',
-        coordinates: [54.350840, 18.649206],
+        coords: {
+            latitude: 54.350840,
+            longitude: 18.649206,
+        },
         type: 'Wydarzenie artystyczne'
     },
     {
@@ -447,7 +543,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(1),
         foto: 'images33',
-        coordinates: [54.354688, 18.654481],
+        coords: {
+            latitude: 54.354688,
+            longitude: 18.654481
+        },
         type: 'Imprezy klubowe'
     },
     {
@@ -461,7 +560,10 @@ var cityEvents = [
         dateVal: {},
         stars: stars(5),
         foto: 'images34',
-        coordinates: [54.443647, 18.565829],
+        coords: {
+            latitude: 54.443647,
+            longitude: 18.565829
+        },
         type: 'Spektakl'
     }
 ];
@@ -547,11 +649,12 @@ function calendarTabs() {
             })
         });
     }
-    localStorage.calendar = JSON.stringify(tableCalendar);
+    //localStorage.calendar = JSON.stringify(tableCalendar);
     return tableCalendar;
 }
 
-var templateFinalCalendarEventsTable = localStorage.calendar ? JSON.parse(localStorage.calendar) : calendarTabs();
+//var templateFinalCalendarEventsTable = localStorage.calendar ? JSON.parse(localStorage.calendar) : calendarTabs();
+var templateFinalCalendarEventsTable = calendarTabs();
 var finalCalendarEventsTable = templateFinalCalendarEventsTable;
 
 $('#sandbox-container .input-daterange').datepicker({
@@ -565,8 +668,12 @@ $('#sandbox-container .input-daterange').datepicker({
 
 $('form').change(function () {
     var filterCheckboxValue = [];
+    var dateFrom = new Date($('#dateFrom').val().split('.').reverse().join('-'));
+    var dateTo = new Date($('#dateTo').val().split('.').reverse().join('-'));
 
-    function removeCheckboxValue(value) {
+
+
+    function removeCheckboxValue (value) {
         var pos = filterCheckboxValue.indexOf(value);
         filterCheckboxValue.splice(pos, 0);
     }
@@ -578,17 +685,29 @@ $('form').change(function () {
 
     $parentDiv.empty();
 
-    finalCalendarEventsTable = templateFinalCalendarEventsTable.map(function (itemCalendar) {
-        return {
-            calWeekday: itemCalendar.calWeekday,
-            calDate: itemCalendar.calDate,
-            calEvent: itemCalendar.calEvent.filter(function (itemEvent) {
+    finalCalendarEventsTable = templateFinalCalendarEventsTable
+        .filter(function (itemCalendar) {
+            var testDate = new Date((itemCalendar.calDate).split('.').reverse().join('-'));
+            if ($('#dateFrom').val() === "" || $('#dateTo').val() === "") {
+                return true;
+            }
 
-                if (filterCheckboxValue.length === 0) {
-                    return true;
-                }
-                return filterCheckboxValue.includes(itemEvent.type);
-            })
+            return dateFrom <= testDate && testDate <= dateTo;
+
+
+        })
+
+        .map(function (itemCalendar) {
+        return {
+           calWeekday: itemCalendar.calWeekday,
+           calDate: itemCalendar.calDate,
+           calEvent: itemCalendar.calEvent.filter(function (itemEvent) {
+
+               if (filterCheckboxValue.length === 0) {
+                   return true;
+               }
+               return filterCheckboxValue.includes(itemEvent.type);
+           })
         };
     });
 
@@ -602,18 +721,21 @@ function showRandomCityEvents(element) {
     var table = finalCalendarEventsTable;
     var $divCalendar = $('#' + element);
 
-    $divCalendar.append('<div><h3><strong class="text-uppercase weekday">' +
-        table[element].calWeekday + '</strong></h3><h4><small><div class="data" >' +
-        table[element].calDate + '</small></h4></div><div id="event' + element + '" class="calendar-event"></div></div>');
+    if (table[element] !== undefined) {
 
-    if (table[element].calEvent.length > 0) {
-        for (var index in table[element].calEvent) {
-            createEventItem(index, table, element);
-            addPopover();
+        $divCalendar.append('<div><h3><strong class="text-uppercase weekday">' +
+            table[element].calWeekday + '</strong></h3><h4><small><div class="data" >' +
+            table[element].calDate + '</small></h4></div><div id="event' + element + '" class="calendar-event"></div></div>');
+
+        if (table[element].calEvent.length > 0) {
+            for (var index in table[element].calEvent) {
+                createEventItem(index, table, element);
+                addPopover();
+            }
+            signedNo();
+            signedYes();
         }
-        signedNo();
-        signedYes();
-    }
+    } else return false;
 }
 function signedYes() {
     if (window.signedIn == true) {
@@ -632,7 +754,7 @@ function createEventItem(index, table, element) {
     var sortingData = table[element].calEvent[index].datePl,
         eventId = table[element].calEvent[index].eventId;
 
-    var eventItem = $('<div class="list-element drag" data-orderId="' + element +  index + '" data-eventId="' + eventId + '" data-toggle="popover" data-placement="bottom" data-trigger="hover manual"><h5>'
+    var eventItem = $('<div class="list-element drag" data-orderId="' + element + index + '" data-eventId="' + eventId + '" data-toggle="popover" data-placement="bottom" data-trigger="hover manual"><h5>'
         + table[element].calEvent[index].name + '<button onclick="deleteEvent($(this))" type="button" class="btn-trash pull-right" aria-label="Trash"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></h5><div id="tooltiptext" style="display: none" class="panel-body"><div class="media"><div class="media-body"><h3 class="media-heading">'
         + table[element].calEvent[index].name + '</h3><small>'
         + table[element].calEvent[index].address + '</small><div class="star">'
@@ -665,8 +787,6 @@ function createDraggable() {
         connectToSortable: '.event-sorting',
         zIndex: 20,
         stop: function (event) {
-            if(($('.event-sorting .list-element[data-orderid=' + this.getAttribute('data-orderId') + ']').length)===1)
-                changeAgendaStorage(this, 0);
 
             $('.event-sorting div').css({
                 width: '100%',
@@ -674,24 +794,33 @@ function createDraggable() {
             }).removeClass('drag');
             $('.event-sorting button').addClass('btn-trash-show');
 
-            $('.event-sorting .list-element').sort(function (a, b) {
-                return new Date($(a).attr('data-date').split('.').reverse().join('-')) - new Date($(b).attr('data-date').split('.').reverse().join('-'));
-            }).filter(function () {
+            $($('.event-sorting .list-element').get().reverse()).filter(function () {
+
 
                 var item = this;
+
 
                 if ($('.event-sorting .list-element[data-orderid=' + $(item).attr('data-orderid') + ']').length === 1) {
                     return true;
                 }
                 $(item).remove();
                 return false;
+
+
+            }).sort(function (a, b) {
+                return new Date($(a).attr('data-date').split('.').reverse().join('-')) - new Date($(b).attr('data-date').split('.').reverse().join('-'));
             }).appendTo('.event-sorting');
 
         }
     });
 
     $('.event-sorting').sortable({
-        cancel: '.list-element'
+        cancel: '.list-element',
+        receive: function (event, ui) {
+            if (($('.event-sorting .list-element[data-orderid=' + ui.item[0].attributes[1].value + ']').length) === 1) {
+                changeAgendaStorage(ui.item[0], 0);
+            }
+        }
     });
 }
 

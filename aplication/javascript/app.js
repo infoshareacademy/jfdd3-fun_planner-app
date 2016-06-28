@@ -40,9 +40,22 @@
 
         };
 
-        for (i = 0; i < cityEvents.length; i++) {
-            createMarker(cityEvents[i]);
+        eventsToDisplay = localStorage.agenda ? JSON.parse(localStorage.agenda) : [];
+
+        function createMarkers(events) {
+            console.log(events);
+            $scope.markers.forEach(function (marker) {
+                marker.setMap(null);
+            });
+            $scope.markers = [];
+            for (i = 0; i < events.length; i++) {
+
+                createMarker(events[i]);
+            }
         }
+        window.createMarkers = createMarkers;
+
+        createMarkers(eventsToDisplay);
 
         $scope.openInfoWindow = function (e, selectedMarker) {
             e && e.preventDefault();

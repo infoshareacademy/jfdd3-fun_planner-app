@@ -19,6 +19,8 @@ function changeAgendaStorage(agendaEvent, spliceValue) {
         return a.orderId - b.orderId;
     });
     localStorage.agenda = JSON.stringify(eventsInStorage);
+    eventsToDisplay = JSON.parse(localStorage.agenda);
+    window.createMarkers(eventsToDisplay);
 }
 
 function findEvent(id) {

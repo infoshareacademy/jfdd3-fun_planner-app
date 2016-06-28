@@ -1,4 +1,5 @@
 'use strict';
+var eventsToDisplay;
 
 var formatter = new Intl.DateTimeFormat('pl', {
     day: '2-digit',
@@ -616,6 +617,7 @@ function randomCityEvent(tableSize) {
             stars: cityEvents[possibleValues].stars,
             foto: cityEvents[possibleValues].foto,
             type: cityEvents[possibleValues].type,
+            coords: cityEvents[possibleValues].coords,
             eventId: eventId++
         });
     }
@@ -810,6 +812,8 @@ function createDraggable() {
             }).sort(function (a, b) {
                 return $(a)[0].attributes[1].value - $(b)[0].attributes[1].value;
             }).appendTo('.event-sorting');
+
+
 
         }
     });

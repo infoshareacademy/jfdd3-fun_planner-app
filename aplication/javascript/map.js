@@ -17,10 +17,8 @@ $(document).ready(function () {
 
     $ShowCalendarAgain.on('click', function () {
         $('#map').css({'display': 'none'});
-        $('.pull-right').css({'visibility': 'visible'});
         $('.calendar-position').show();
         $('.pull-right').show();
-        $('.pull-right').css({'visibility': 'visible'});
         $('#button-map').show();
         $('#hide-button-map').hide();
     });

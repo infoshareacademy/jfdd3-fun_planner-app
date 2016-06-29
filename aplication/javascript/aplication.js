@@ -76,7 +76,7 @@ var cityEvents = [
 
 
     {
-        name: 'Miasto Aniołów Club & Restaurant',
+        name: 'Miasto Aniołów Club',
         address: 'Gdańsk, Chmielna 26',
         eventName: 'Twisted by Angels',
         info: 'Impreza, gdzie będziemy jak zwykle bawić się w klimacie mashup, funk, rnb, house, deep i latino house oraz oczywiście ' +
@@ -108,7 +108,7 @@ var cityEvents = [
         type: 'Imprezy klubowe'
     },
     {
-        name: "Jack's Bar & Restaurant Fahrenheit",
+        name: "Fahrenheit",
         address: 'Gdańsk, Długi Targ 39/40',
         eventName: 'Funky Splendor',
         info: 'HEJ TY! Nie bądź zły tylko wpadaj na FUNKY SPLENDOR !!! Odgonimy pecha gorącym brzmieniem żywych instrumentów !' +

@@ -286,7 +286,7 @@ var cityEvents = [
         'Spektakl na scenie elżbietańskiej Teatru Szekspirowskiego. ' +
         'Zdrada. Zazdrość. Komedia omyłek.',
         dateVal: {},
-        stars: stars(4),
+        stars: stars(5),
         foto: 'images18',
         coords: {
             latitude: 54.348199,
@@ -302,7 +302,7 @@ var cityEvents = [
         'festiwal ALL ABOUT FREEDOM FESTIVAL, ' +
         'jedną z najbardziej znanych imprez realizowanych przez ECS.',
         dateVal: {},
-        stars: stars(3),
+        stars: stars(5),
         foto: 'images19',
         coords: {
             latitude: 54.361428,
@@ -387,7 +387,7 @@ var cityEvents = [
         'szuka pomysłu na nadchodzący dzień: higiena, jedzenie, praca, dzieci, ' +
         'jedzenie, drzemka, praca, jedzenie, praca, palenie, proszki, sen... ',
         dateVal: {},
-        stars: stars(2),
+        stars: stars(5),
         foto: 'images24',
         coords: {
             latitude: 54.511031,
@@ -403,7 +403,7 @@ var cityEvents = [
         'miejsce zlokalizowane w podziemiach kamienicy w centrum Gdyni. ' +
         'Klub kusi niesamowitą atmosferą i niskimi cenami.',
         dateVal: {},
-        stars: stars(1),
+        stars: stars(5),
         foto: 'images25',
         coords: {
             latitude: 54.519540,
@@ -423,7 +423,7 @@ var cityEvents = [
         'a muzyk postanowił skoncentrować się na innych dziedzinach, ' +
         'kończąc filozofię na Wayne State University.',
         dateVal: {},
-        stars: stars(3),
+        stars: stars(5),
         foto: 'images26',
         coords: {
             latitude: 54.444246,
@@ -472,7 +472,7 @@ var cityEvents = [
         'już edycję poświęcić tematowi "teatralność". Celem Festiwalu jest przyjrzenie się ' +
         'czym jest teatr i teatralność dla twórców wizualnych, a czym wideo i filmy dla twórców teatralnych.',
         dateVal: {},
-        stars: stars(3),
+        stars: stars(5),
         foto: 'images29',
         coords: {
             latitude: 54.341753,
@@ -489,7 +489,7 @@ var cityEvents = [
         'reżyser teatralny i radiowy, dramatopisarz, wykładowca na Wydziale ' +
         'Lalkarskim we Wrocławiu Państwowej Wyższej Szkoły Teatralnej im. Ludwika Solskiego w Krakowie.',
         dateVal: {},
-        stars: stars(1),
+        stars: stars(5),
         foto: 'images30',
         coords: {
             latitude: 54.375012,
@@ -523,7 +523,7 @@ var cityEvents = [
         info: 'Już wkrótce poznamy najciekawsze dyplomy tegorocznych absolwentów polskich szkół artystycznych. ' +
         'Prace prezentowane będą w Zbrojowni Sztuki oraz w Auli Akademii Sztuk Pięknych.',
         dateVal: {},
-        stars: stars(3),
+        stars: stars(5),
         foto: 'images32',
         coords: {
             latitude: 54.350840,
@@ -542,7 +542,7 @@ var cityEvents = [
         'magazyny uzbrojenia a nawet prysznice oraz prawdziwe toalety. ' +
         'Jak wygląda teraz? Przyjdź i przekonaj się sam!',
         dateVal: {},
-        stars: stars(1),
+        stars: stars(5),
         foto: 'images33',
         coords: {
             latitude: 54.354688,

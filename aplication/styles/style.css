@@ -99,6 +99,7 @@ span.logo-ikon {
     padding: 0 10px;
     box-shadow: 0 0 6px #8cc63f;
     min-width: 50%;
+
 }
 
 .list-element:hover {
@@ -228,8 +229,12 @@ span.logo-ikon {
 .btn-trash-show {
     visibility: visible;
 }
+.eventText {
+    font-size: 1vw;
+    margin-top: 10px;
 
-.hedAgenda{
+}
+.agendaRwd{
     font-size: 2vw;
 }
 .agenda {
@@ -333,13 +338,13 @@ h2 {
         font-size: 3.3vw;
     }
     h3{
-        font-size: 1.5vw;
+        font-size: 3vw;
     }
     h5{
         font-size: 1.2vw;
     }
     .dabble-arrow {
-        display: none;
+        visibility: hidden;
     }
     #startDate {
         margin-right: 50px;
@@ -347,6 +352,9 @@ h2 {
     .agenda {
         width: 25%;
         margin-left: 2%;
+    }
+    .agendaRwd{
+        font-size: 3vw;
     }
 
 }

@@ -38,10 +38,10 @@ function agendaFromStorage() {
             orderId = event.orderId;
 
         var eventItem = $('<div class="list-element" data-orderId="' + orderId + '" data-eventId="' + eventId + '" ' +
-            'data-toggle="popover" data-placement="bottom" data-trigger="hover manual" data-date="' + sortingData + '"><h5>'
+            'data-toggle="popover" data-placement="bottom" data-trigger="hover manual" data-date="' + sortingData + '"><p class="eventText">'
             + event.name + '<button onclick="deleteEvent($(this))" type="button" ' +
             'class="btn-trash pull-right btn-trash-show" aria-label="Trash"><span class="glyphicon glyphicon-trash" ' +
-            'aria-hidden="true"></span></button></h5><div id="tooltiptext" style="display: none" class="panel-body">' +
+            'aria-hidden="true"></span></button></p><div id="tooltiptext" style="display: none" class="panel-body">' +
             '<div class="media"><div class="media-body"><h3 class="media-heading">'
             + event.name + '</h3><small>'
             + event.address + '</small><div class="star">'

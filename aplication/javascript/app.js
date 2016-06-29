@@ -3,8 +3,7 @@
  */
 
 (function () {
-    var app = angular.module('FunPlanner', ['angular-loading-bar']);
-    app.controller('loadingBar', loadingBarCtrl);
+    var app = angular.module('FunPlanner', []);
     app.controller('MapCtrl', function ($scope) {
 
         var mapOptions = {
@@ -109,9 +108,6 @@
 
     });
 
-    function loadingBarCtrl() {
-
-    }
 })();
 
 

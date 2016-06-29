@@ -111,7 +111,7 @@ span.logo-ikon {
 }
 
 .list-box {
-    min-height: 500px;
+    min-height: 850px;
     overflow: hidden;
     position: relative;
 }
@@ -120,7 +120,7 @@ span.logo-ikon {
     overflow: hidden;
     width: 90%;
     float: left;
-    max-height: 500px;
+    max-height: 656px;
 }
 
 .weekday {
@@ -243,10 +243,10 @@ span.logo-ikon {
     border-right: dashed 1px #828282;
     float: left;
     position: absolute;
-    width: 20%;
+    width: 23%;
     text-align: center;
     padding: 15px 15px 70px 15px;
-    max-height: 500px;
+    max-height: 850px;
 
     font-size: 1.2vw;
     margin-left: 6%;
@@ -315,22 +315,26 @@ h2 {
 }
 
 .btn-success {
-    margin-bottom: 0;
+    margin-bottom: 9px;
+    margin-top: 11px;
     background-color: #8cc63f;
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:767px) {
     .right-navi {
-        width: 20%;
+        width: 9%;
     }
     .left-navi {
         width: 20%;
+        margin-left: 9px;
+        padding-left: 37px;
     }
     .calendar-column {
         width: 49%;
+        border: none;
     }
     #week-columns {
-        width: 50%;
+        width: 67%;
     }
     .rightArrow {
         margin-right: 40px;
@@ -351,7 +355,7 @@ h2 {
         margin-right: 50px;
     }
     .agenda {
-        width: 27%;
+        width: 38%;
         margin-left: 2%;
     }
     .agendaRwd{
@@ -363,10 +367,14 @@ h2 {
     .arrow {
         font-size: 150%;
     }
+    #button-map{
+        width: 90px!important;
+        /*font-size: 2vw !important;*/
+    }
 
 }
 
-@media screen and (min-width:769px) and (max-width: 1200px) {
+@media screen and (min-width:768px) and (max-width: 1200px) {
     .calendar-column {
         width: 16.5%;
     }
@@ -382,4 +390,5 @@ h2 {
     .dabble-arrow{
         font-size: 110%;
     }
+
 }

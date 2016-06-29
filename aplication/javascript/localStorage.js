@@ -19,7 +19,10 @@ function changeAgendaStorage(agendaEvent, spliceValue) {
         return a.orderId - b.orderId;
     });
     localStorage.agenda = JSON.stringify(eventsInStorage);
-    eventsToDisplay = JSON.parse(localStorage.agenda);
+    eventsToDisplay = localStorage.agenda.length > 2 ? JSON.parse(localStorage.agenda) :
+        Array.prototype.concat.apply([], templateFinalCalendarEventsTable.map(function (day) {
+            return day.calEvent;
+        }));
     window.createMarkers(eventsToDisplay);
 }
 

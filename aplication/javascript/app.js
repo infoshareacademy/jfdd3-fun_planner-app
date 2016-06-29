@@ -48,7 +48,11 @@
 
         };
 
-        eventsToDisplay = localStorage.agenda ? JSON.parse(localStorage.agenda) : [];
+        eventsToDisplay = localStorage.agenda.length > 2 ?
+            JSON.parse(localStorage.agenda) :
+            Array.prototype.concat.apply([], templateFinalCalendarEventsTable.map(function (day) {
+                return day.calEvent;
+            }));
 
         function createMarkers(events) {
             $scope.markers.forEach(function (marker) {

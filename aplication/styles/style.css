@@ -111,7 +111,7 @@ span.logo-ikon {
 }
 
 .list-box {
-    min-height: 850px;
+    min-height: 765px;
     overflow: hidden;
     position: relative;
 }
@@ -144,7 +144,9 @@ span.logo-ikon {
     font-size: 1.5vw;
 }
 
-
+.main {
+    min-height: 765px;
+}
 
 .calendar-column:last-child {
     border-right: dashed 1px #828282;

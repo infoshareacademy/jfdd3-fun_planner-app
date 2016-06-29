@@ -347,6 +347,7 @@ h2 {
     .agenda {
         width: 38%;
         margin-left: 2%;
+        z-index: 1000;
     }
     .agendaRwd{
         font-size: 3vw;

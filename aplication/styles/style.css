@@ -319,7 +319,7 @@ h2 {
     margin-top: 11px;
     background-color: #8cc63f;
 }
-#button-map{
+#button-map, #hide-button-map{
     width: 150px;
 }
 
@@ -370,7 +370,7 @@ h2 {
     .arrow {
         font-size: 150%;
     }
-    #button-map{
+    #button-map, #hide-button-map{
         width: 90px;
         font-size: 2vw;
     }

@@ -27,7 +27,8 @@
                 position: new google.maps.LatLng(x.coords.latitude, x.coords.longitude),
                 title: x.name,
                 icon: image,
-                content: '<div class="infoWindowContent">' + '<h>' + x.eventName + '</h>' + '<p>' + x.info + '</p>' + '</div>'
+                content: '<div class="infoWindowContent">'+ '<img style="float: left; margin-right:20px" src="images/'
+                + x.foto + '.jpg">' + '<h style="font-weight: bold;float: left">' + x.eventName + '</h>' + '<br>' + '<p style="text-align: justify">' + x.info + '</p>' + '</div>'
             });
 
 
@@ -43,7 +44,6 @@
         eventsToDisplay = localStorage.agenda ? JSON.parse(localStorage.agenda) : [];
 
         function createMarkers(events) {
-            console.log(events);
             $scope.markers.forEach(function (marker) {
                 marker.setMap(null);
             });
@@ -60,7 +60,7 @@
         $scope.openInfoWindow = function (e, selectedMarker) {
             e && e.preventDefault();
 
-            infoWindow.setContent('<h2>' + selectedMarker.title + '</h2>' + selectedMarker.content);
+            infoWindow.setContent('<h1>' + selectedMarker.title + '</h1>' + selectedMarker.content);
             infoWindow.open($scope.map, selectedMarker);
             $scope.markerId = $scope.markers.indexOf(selectedMarker);
 

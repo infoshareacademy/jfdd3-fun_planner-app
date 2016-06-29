@@ -53,10 +53,6 @@ body {
     margin-bottom: 20px;
     border: 1px solid transparent;
 }
-.logo-container {
-    position: absolute;
-    margin-left: 15%;
-}
 
 span.logo-planner {
     font-family: 'Oswald', sans-serif;
@@ -171,12 +167,7 @@ span.logo-ikon {
     margin-bottom: 13px;
     float: right;
 }
-.navigation {
-    min-height: 320px;
-    width: 5%;
-    z-index: 1000;
-    position: relative;
-}
+
 
 .left-navi {
     text-align: center;
@@ -262,7 +253,7 @@ span.logo-ikon {
 .event-sorting {
     width: 100%;
     min-height: 430px;
-    padding: 0 0px;
+    padding: 0 0;
     color: black;
 }
 
@@ -277,10 +268,6 @@ span.logo-ikon {
     font-size: 30px;
     color: #8cc63f;
     margin-right: 10px;
-}
-
-.fa-facebook {
-    float: left;
 }
 
 .fa-twitter {
@@ -356,9 +343,7 @@ h2 {
     .dabble-arrow {
         visibility: hidden;
     }
-    #startDate {
-        margin-right: 50px;
-    }
+
     .agenda {
         width: 38%;
         margin-left: 2%;
@@ -387,7 +372,7 @@ h2 {
         margin-right: 40px;
     }
     .padingArrow {
-        padding: 0px;
+        padding: 0;
     }
     .arrow {
         font-size: 200%;

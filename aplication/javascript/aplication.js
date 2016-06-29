@@ -74,7 +74,6 @@ function calendarTabs() {
             })
         });
     }
-    //localStorage.calendar = JSON.stringify(tableCalendar);
     return tableCalendar;
 }
 

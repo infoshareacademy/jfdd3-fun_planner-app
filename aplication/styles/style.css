@@ -319,6 +319,9 @@ h2 {
     margin-top: 11px;
     background-color: #8cc63f;
 }
+#button-map{
+    width: 150px;
+}
 
 @media screen and (max-width:767px) {
     .right-navi {
@@ -368,8 +371,8 @@ h2 {
         font-size: 150%;
     }
     #button-map{
-        width: 90px!important;
-        /*font-size: 2vw !important;*/
+        width: 90px;
+        font-size: 2vw;
     }
 
 }

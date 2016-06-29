@@ -260,7 +260,7 @@ span.logo-ikon {
 .event-sorting {
     width: 100%;
     min-height: 430px;
-    padding: 0 15px;
+    padding: 0 0px;
     color: black;
 }
 
@@ -351,11 +351,17 @@ h2 {
         margin-right: 50px;
     }
     .agenda {
-        width: 25%;
+        width: 27%;
         margin-left: 2%;
     }
     .agendaRwd{
         font-size: 3vw;
+    }
+    .eventText {
+        font-size: 1.9vw;
+    }
+    .arrow {
+        font-size: 150%;
     }
 
 }

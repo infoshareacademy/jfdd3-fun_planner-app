@@ -2,7 +2,7 @@ body {
     font-family: 'Ubuntu', sans-serif;
     font-weight: 400;
     font-size: 1.5em;
-    height: 60vw;
+    /*height: 60vw;*/
 }
 
 .btn-fp,
@@ -91,6 +91,10 @@ span.logo-ikon {
     color: #ffa400;
 }
 
+.main-height {
+    min-height: 750px;
+}
+
 .list-element {
     text-align: center;
     background-color: #fafafa;
@@ -120,7 +124,7 @@ span.logo-ikon {
     overflow: hidden;
     width: 90%;
     float: left;
-    max-height: 656px;
+    max-height: 753px;
 }
 
 .weekday {
@@ -142,10 +146,6 @@ span.logo-ikon {
     padding: 15px;
     min-height: 1000px;
     font-size: 1.5vw;
-}
-
-.main {
-    min-height: 765px;
 }
 
 .calendar-column:last-child {
@@ -242,21 +242,16 @@ span.logo-ikon {
     position: absolute;
     width: 23%;
     text-align: center;
-    padding: 15px 15px 70px 15px;
-    max-height: 850px;
-
+    padding: 15px 15px 0 15px;
+    max-height: 754px;
     font-size: 1.2vw;
     margin-left: 6%;
     color: #8cc63f;
 }
 
-.scrollAgenda{
-
-    max-height: 400px;
-}
 .event-sorting {
     width: 100%;
-    min-height: 430px;
+    min-height: 570px;
     padding: 0 0;
     color: black;
 }

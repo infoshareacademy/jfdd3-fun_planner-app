@@ -88,7 +88,7 @@ function calendarTabs() {
 var templateFinalCalendarEventsTable = calendarTabs();
 var finalCalendarEventsTable = templateFinalCalendarEventsTable;
 
-$('#sandbox-container .input-daterange').datepicker({
+$(".input-daterange").datepicker({
     format: "dd.mm.yyyy",
     clearBtn: true,
     language: "pl",
@@ -155,8 +155,8 @@ function showRandomCityEvents(element) {
     if (table[element] !== undefined) {
 
         $divCalendar.append('<div><h3><strong class="text-uppercase weekday">' +
-            table[element].calWeekday + '</strong></h3><h4><small><div class="data" >' +
-            table[element].calDate + '</small></h4></div><div id="event' + element + '" class="calendar-event"></div></div>');
+            table[element].calWeekday + '</strong></h3><h4 class="data" ><small>' +
+            table[element].calDate + '</small></h4><div id="event' + element + '" class="calendar-event"></div></div>');
 
         if (table[element].calEvent.length > 0) {
             for (var index in table[element].calEvent) {

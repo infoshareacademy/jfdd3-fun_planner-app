@@ -11,6 +11,12 @@ var formatterDay = new Intl.DateTimeFormat('pl', {
     weekday: 'long'
 });
 
+var formatterTime = new Intl.DateTimeFormat('pl', {
+    hour: '2-digit',
+    minute: '2-digit'
+});
+
+
 
 function createDate() {
 
@@ -41,6 +47,7 @@ function randomCityEvent(tableSize) {
             foto: cityEvents[possibleValues].foto,
             type: cityEvents[possibleValues].type,
             coords: cityEvents[possibleValues].coords,
+            time: formatterTime.format(new Date(dateVal)),
             eventId: eventId++
         });
     }
@@ -178,15 +185,20 @@ function createEventItem(index, table, element) {
     var sortingData = table[element].calEvent[index].datePl,
         eventId = table[element].calEvent[index].eventId;
 
-    var eventItem = $('<div class="list-element drag" data-orderId="' + element + index + '" data-eventId="' + eventId + '" data-toggle="popover" data-placement="bottom" data-trigger="hover manual"><p class="eventText">'
-        + table[element].calEvent[index].name + '<button onclick="deleteEvent($(this))" type="button" class="btn-trash pull-right" aria-label="Trash"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></p><div id="tooltiptext" style="display: none" class="panel-body"><div class="media"><div class="media-body"><h3 class="media-heading">'
-        + table[element].calEvent[index].name + '</h3><small>'
-        + table[element].calEvent[index].address + '</small><div class="star">'
-        + table[element].calEvent[index].stars + '</div>'
-        + table[element].calEvent[index].info + '</div><div class="media-right">'
-        + table[element].calEvent[index].datePl + '<img class="media-object" src="images/'
-        + table[element].calEvent[index].foto + '.jpg"></div></div></div></div>'
+    var eventItem = $('<div class="list-element drag" data-orderId="' + element + index + '" data-eventId="'
+        + eventId + '" data-toggle="popover" data-placement="bottom" title="' + table[element].calEvent[index].type + '" data-trigger="hover manual"><h5>'
+        + table[element].calEvent[index].name + '<button onclick="deleteEvent($(this))" type="button" class="btn-trash pull-right" '
+        + 'aria-label="Trash"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></h5><div id="tooltiptext" '
+        + 'style="display: none" class="panel-body"><div class="media"><h3>'
+        + table[element].calEvent[index].name + '</h3><div class="media-body"><h3 class="media-heading"><small>'
+        + table[element].calEvent[index].datePl + '</small><br/><span class="label label-primary">'
+        + table[element].calEvent[index].time + '</span></h3><h4><small>'
+        + table[element].calEvent[index].address + '</small></h4><div class="star">'
+        + table[element].calEvent[index].stars + '</div></div><div class="media-right"><img class="media-object" src="images/'
+        + table[element].calEvent[index].foto + '.jpg"></div><div class="media-info">'
+        + table[element].calEvent[index].info + '</div></div></div></div>'
     );
+
     eventItem.attr('data-date', sortingData);
     $('#event' + element).append(eventItem);
 }

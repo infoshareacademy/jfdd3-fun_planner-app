@@ -569,7 +569,7 @@ function stars(size) {
             stars.push('<span class="glyphicon glyphicon-star-empty"></span>');
         }
     }
-    return stars = stars.toString().replace(/,/g, '');
+    return stars.toString().replace(/,/g, '');
 }
 
 function randomValue(endOfRange) {

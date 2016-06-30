@@ -76,33 +76,37 @@
             $scope.markerId = $scope.markers.indexOf(selectedMarker);
 
         };
+
+
+        var route;
+
+        function calcRoute(x) {
+            var start = x.position[0];
+            var end = x.position;
+            var request = {
+                origin:start,
+                destination:end,
+                travelMode: google.maps.DirectionsTravelMode.DRIVING
+            };
+            directionsService.route(request, function(result, status) {
+                if (status == google.maps.DirectionsStatus.OK) {
+                    if( route != null ) route.setMap(null) ;
+                    polylineOptions = {
+                        map: $scope.map,
+                        strokeColor: "blue",
+                        strokeOpacity: 0.7,
+                        strokeWeight: 5,
+                        path: result.routes[0].overview_path,
+                    }
+                    route = new google.maps.Polyline(polylineOptions);
+                    map.fitBounds(result.routes[0].bounds);
+                }
+            });
+        }
+
     });
 
-    var route;
 
-    function calcRoute() {
-        var start = document.getElementById("start").value;
-        var end = document.getElementById("end").value;
-        var request = {
-            origin:start,
-            destination:end,
-            travelMode: google.maps.DirectionsTravelMode.DRIVING
-        };
-        directionsService.route(request, function(result, status) {
-            if (status == google.maps.DirectionsStatus.OK) {
-                if( route != null ) route.setMap(null) ;
-                polylineOptions = {
-                    map: map,
-                    strokeColor: "blue",
-                    strokeOpacity: 0.7,
-                    strokeWeight: 5,
-                    path: result.routes[0].overview_path,
-                }
-                trasa = new google.maps.Polyline(polylineOptions);
-                map.fitBounds(result.routes[0].bounds);
-            }
-        });
-    }
 
     app.controller('FunPlannerController', function ($scope) {
 

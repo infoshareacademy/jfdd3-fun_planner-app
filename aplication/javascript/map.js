@@ -11,7 +11,7 @@ $(document).ready(function () {
         $('#hide-button-map').show();
         $('.hide-button-map').css({"display": "inline"});
         $('#map').css({"left": "35%", 'display': 'block'});
-
+        if($('.scrollAgenda .list-element').length) showRoute();
     });
 
     $ShowCalendarAgain.on('click', function () {

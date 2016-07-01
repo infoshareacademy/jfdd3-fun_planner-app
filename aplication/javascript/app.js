@@ -29,13 +29,13 @@
                 date: x.datePl,
                 stars: x.stars,
                 icon: image,
-                content: '<div class="infoWindowContent">'+
-                            '<img style="float: left; margin-right:20px" src="images/' + x.foto + '.jpg">' +
-                            '<h style="font-weight: bold;float: left">' + x.eventName + '</h>' +
-                            '<br>' +
-                            '<h style="font-weight: bold;float: left">' + x.datePl + '</h>' +
-                            '<br>' +
-                            '<p style="text-align: justify">' + x.info + '</p>' + '</div>'
+                content: '<div class="infoWindowContent">' +
+                '<img style="float: left; margin-right:20px" src="images/' + x.foto + '.jpg">' +
+                '<h style="font-weight: bold;float: left">' + x.eventName + '</h>' +
+                '<br>' +
+                '<h style="font-weight: bold;float: left">' + x.datePl + '</h>' +
+                '<br>' +
+                '<p style="text-align: justify">' + x.info + '</p>' + '</div>'
             });
 
 
@@ -47,8 +47,8 @@
         };
 
         eventsToDisplay = Array.prototype.concat.apply([], templateFinalCalendarEventsTable.map(function (day) {
-                return day.calEvent;
-            }));
+            return day.calEvent;
+        }));
 
         function createMarkers(events) {
             $scope.markers.forEach(function (marker) {
@@ -60,6 +60,7 @@
                 createMarker(events[i]);
             }
         }
+
         window.createMarkers = createMarkers;
 
         createMarkers(eventsToDisplay);
@@ -67,56 +68,57 @@
         $scope.openInfoWindow = function (e, selectedMarker) {
             e && e.preventDefault();
 
-            infoWindow.setContent('<h1>' + selectedMarker.title + '</h1>' + '<p>' + selectedMarker.address +'</p>' + selectedMarker.stars +'</p>' + selectedMarker.content);
+            infoWindow.setContent('<h1>' + selectedMarker.title + '</h1>' + '<p>' + selectedMarker.address + '</p>' + selectedMarker.stars + '</p>' + selectedMarker.content);
             infoWindow.open($scope.map, selectedMarker);
             $scope.markerId = $scope.markers.indexOf(selectedMarker);
 
         };
 
-        https://developers.google.com/maps/documentation/javascript/examples/directions-waypoints#try-it-yourself
+        function showRoute() {
 
-        function showRoute () {
+            var directionsService = new google.maps.DirectionsService;
+            var directionsDisplay = new google.maps.DirectionsRenderer;
 
-            $scope.markers = [];
-            for (var i = 0; i < events.length; i++) {
+            directionsDisplay.setMap($scope.map);
 
-                var start = new google.maps.LatLng(x.coords.latitude, x.coords.longitude);
-                var end = new google.maps.LatLng(x.coords.latitude, x.coords.longitude);
-
-                var request = {
-                    origin: start,
-                    destination: end,
-                    breaks:
-                    travelMode: google.maps.TravelMode.DRIVING
-                };
-
-                var rendererOptions = {
-                    preserveViewport: true,
-                    suppressMarkers: true,
-                    routeIndex: i
-                };
-
-
-                directionsDisplay = new google.maps.DirectionsRenderer(rendererOptions);
-                directionsDisplay.setMap(map);
-
-                var directionsService = new google.maps.DirectionsService();
-                directionsService.route(request, function (result, status) {
-                    console.log(result);
-
-                    if (status == google.maps.DirectionsStatus.OK) {
-                        directionsDisplay.setDirections(result);
-                    }
-                });
-
-            }
+            calculateAndDisplayRoute(directionsService, directionsDisplay);
         }
-                window.showRoute = showRoute;
-                showRoute(events[i]);
+
+        function calculateAndDisplayRoute(directionsService, directionsDisplay) {
+            var waypts = [];
+
+            for (var i = 1; i<=eventsToDisplay.length-2;i++) {
+                waypts.push({
+                    location: {
+                        lat: eventsToDisplay[i].coords.latitude,
+                        lng: eventsToDisplay[i].coords.longitude
+                    },
+                    stopover: true
+                })
+            }
+            console.log(waypts);
+
+            directionsService.route({
+                origin: {lat: eventsToDisplay[0].coords.latitude, lng: eventsToDisplay[0].coords.longitude},
+                destination: {lat: eventsToDisplay[eventsToDisplay.length-1].coords.latitude, lng: eventsToDisplay[eventsToDisplay.length-1].coords.longitude},
+                waypoints: waypts,
+                optimizeWaypoints: true,
+                travelMode: google.maps.TravelMode.DRIVING
+            }, function (response, status) {
+                if (status === google.maps.DirectionsStatus.OK) {
+                    directionsDisplay.setDirections(response);
+                    var route = response.routes[0];
+                    //console.log(route);
+                    directionsDisplay.setDirections(response);
+
+                } else {
+                    window.alert('Directions request failed due to ' + status);
+                }
+            })
+        }
+
+        window.showRoute = showRoute;
     });
-
-
-
 
 
     app.controller('FunPlannerController', function ($scope) {
@@ -152,6 +154,7 @@
                 showEventsOnMap();
             });
         }
+
         window.signOut = signOut;
     });
 })();

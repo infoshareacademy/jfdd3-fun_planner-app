@@ -43,14 +43,10 @@
                 $scope.openInfoWindow(null, marker);
                 $scope.$digest();
             });
-
             $scope.markers.push(marker);
-
         };
 
-        eventsToDisplay = localStorage.agenda.length > 2 ?
-            JSON.parse(localStorage.agenda) :
-            Array.prototype.concat.apply([], templateFinalCalendarEventsTable.map(function (day) {
+        eventsToDisplay = Array.prototype.concat.apply([], templateFinalCalendarEventsTable.map(function (day) {
                 return day.calEvent;
             }));
 
@@ -94,12 +90,13 @@
             $scope.$apply();
             createDraggable();
             $('.drag').draggable('enable');
-            agendaFromStorage();
+            agendaFromStorage(profile);
         }
-
 
         window.onSignIn = onSignIn;
         function signOut() {
+            userId = '';
+
             var auth2 = gapi.auth2.getAuthInstance();
             auth2.signOut().then(function () {
                 $scope.signedIn = false;
@@ -107,13 +104,9 @@
                 $scope.$apply();
                 $('.drag').draggable('disable');
                 $('.event-sorting .list-element').remove();
+                showEventsOnMap();
             });
         }
-
         window.signOut = signOut;
-
     });
-
 })();
-
-

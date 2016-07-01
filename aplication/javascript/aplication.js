@@ -16,8 +16,6 @@ var formatterTime = new Intl.DateTimeFormat('pl', {
     minute: '2-digit'
 });
 
-
-
 function createDate() {
 
     var startDate = new Date().getTime();
@@ -25,7 +23,6 @@ function createDate() {
 
     return new Date(startDate + Math.random() * (endDate - startDate));
 }
-
 
 function randomCityEvent(tableSize) {
 
@@ -81,11 +78,11 @@ function calendarTabs() {
             })
         });
     }
+    localStorage.calendar = JSON.stringify(tableCalendar);
     return tableCalendar;
 }
 
-//var templateFinalCalendarEventsTable = localStorage.calendar ? JSON.parse(localStorage.calendar) : calendarTabs();
-var templateFinalCalendarEventsTable = calendarTabs();
+var templateFinalCalendarEventsTable = localStorage.calendar ? JSON.parse(localStorage.calendar) : calendarTabs();
 var finalCalendarEventsTable = templateFinalCalendarEventsTable;
 
 $(".input-daterange").datepicker({
@@ -101,8 +98,6 @@ $('form').change(function () {
     var filterCheckboxValue = [];
     var dateFrom = new Date($('#dateFrom').val().split('.').reverse().join('-'));
     var dateTo = new Date($('#dateTo').val().split('.').reverse().join('-'));
-
-
 
     function removeCheckboxValue (value) {
         var pos = filterCheckboxValue.indexOf(value);
@@ -122,10 +117,7 @@ $('form').change(function () {
             if ($('#dateFrom').val() === "" || $('#dateTo').val() === "") {
                 return true;
             }
-
             return dateFrom <= testDate && testDate <= dateTo;
-
-
         })
 
         .map(function (itemCalendar) {
@@ -223,32 +215,21 @@ function createDraggable() {
         connectToSortable: '.event-sorting',
         zIndex: 20,
         stop: function (event) {
-
             $('.event-sorting div').css({
                 width: '100%',
                 height: '9%'
             }).removeClass('drag');
             $('.event-sorting button').addClass('btn-trash-show');
-
             $($('.event-sorting .list-element').get().reverse()).filter(function () {
-
-
                 var item = this;
-
-
                 if ($('.event-sorting .list-element[data-orderid=' + $(item).attr('data-orderid') + ']').length === 1) {
                     return true;
                 }
                 $(item).remove();
                 return false;
-
-
             }).sort(function (a, b) {
                 return $(a)[0].attributes[1].value - $(b)[0].attributes[1].value;
             }).appendTo('.event-sorting');
-
-
-
         }
     });
 

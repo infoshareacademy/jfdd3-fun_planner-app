@@ -1,4 +1,5 @@
-var eventsInStorage = localStorage.agenda ? JSON.parse(localStorage.agenda) : [];
+var eventsInStorage;
+var userId;
 
 function changeAgendaStorage(agendaEvent, spliceValue) {
     var eventId = Number(agendaEvent.getAttribute('data-eventId')),
@@ -18,12 +19,8 @@ function changeAgendaStorage(agendaEvent, spliceValue) {
     eventsInStorage.sort(function (a, b) {
         return a.orderId - b.orderId;
     });
-    localStorage.agenda = JSON.stringify(eventsInStorage);
-    eventsToDisplay = localStorage.agenda.length > 2 ? JSON.parse(localStorage.agenda) :
-        Array.prototype.concat.apply([], templateFinalCalendarEventsTable.map(function (day) {
-            return day.calEvent;
-        }));
-    window.createMarkers(eventsToDisplay);
+    localStorage['agenda' + userId] = JSON.stringify(eventsInStorage);
+    showEventsOnMap();
 }
 
 function findEvent(id) {
@@ -33,7 +30,10 @@ function findEvent(id) {
     return index.indexOf(id);
 }
 
-function agendaFromStorage() {
+function agendaFromStorage(user) {
+
+    userId = user.Ka;
+    eventsInStorage = localStorage['agenda' + userId] ? JSON.parse(localStorage['agenda'+userId]) : [];
 
     eventsInStorage.forEach(function (event) {
         var sortingData = event.datePl,
@@ -55,4 +55,13 @@ function agendaFromStorage() {
         );
         $('.event-sorting').append(eventItem);
     });
+    showEventsOnMap();
+}
+
+function showEventsOnMap() {
+    eventsToDisplay = localStorage['agenda' + userId] && localStorage['agenda'+userId].length > 2 ? JSON.parse(localStorage['agenda'+userId]) :
+        Array.prototype.concat.apply([], templateFinalCalendarEventsTable.map(function (day) {
+            return day.calEvent;
+        }));
+    window.createMarkers(eventsToDisplay);
 }

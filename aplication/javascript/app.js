@@ -73,6 +73,8 @@
 
         };
 
+        https://developers.google.com/maps/documentation/javascript/examples/directions-waypoints#try-it-yourself
+
         function showRoute () {
 
             $scope.markers = [];

@@ -78,11 +78,11 @@ function calendarTabs() {
             })
         });
     }
+    localStorage.calendar = JSON.stringify(tableCalendar);
     return tableCalendar;
 }
 
-//var templateFinalCalendarEventsTable = localStorage.calendar ? JSON.parse(localStorage.calendar) : calendarTabs();
-var templateFinalCalendarEventsTable = calendarTabs();
+var templateFinalCalendarEventsTable = localStorage.calendar ? JSON.parse(localStorage.calendar) : calendarTabs();
 var finalCalendarEventsTable = templateFinalCalendarEventsTable;
 
 $(".input-daterange").datepicker({

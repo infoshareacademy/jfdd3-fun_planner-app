@@ -2,7 +2,7 @@ body {
     font-family: 'Ubuntu', sans-serif;
     font-weight: 400;
     font-size: 1.5em;
-    /*height: 60vw;*/
+    overflow-y: scroll;
 }
 
 .btn-fp,
@@ -90,7 +90,9 @@ span.logo-ikon {
 .star-fill {
     color: #ffa400;
 }
-
+.main {
+    min-height: 861px;
+}
 .main-height {
     min-height: 750px;
 }

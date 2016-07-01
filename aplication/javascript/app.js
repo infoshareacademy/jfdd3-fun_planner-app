@@ -77,34 +77,47 @@
 
         };
 
+        function showRoute () {
 
-        var route;
+            $scope.markers = [];
+            for (var i = 0; i < events.length; i++) {
 
-        function calcRoute(x) {
-            var start = x.position[0];
-            var end = x.position;
-            var request = {
-                origin:start,
-                destination:end,
-                travelMode: google.maps.DirectionsTravelMode.DRIVING
-            };
-            directionsService.route(request, function(result, status) {
-                if (status == google.maps.DirectionsStatus.OK) {
-                    if( route != null ) route.setMap(null) ;
-                    polylineOptions = {
-                        map: $scope.map,
-                        strokeColor: "blue",
-                        strokeOpacity: 0.7,
-                        strokeWeight: 5,
-                        path: result.routes[0].overview_path,
+                var start = new google.maps.LatLng(x.coords.latitude, x.coords.longitude);
+                var end = new google.maps.LatLng(x.coords.latitude, x.coords.longitude);
+
+                var request = {
+                    origin: start,
+                    destination: end,
+                    breaks:
+                    travelMode: google.maps.TravelMode.DRIVING
+                };
+
+                var rendererOptions = {
+                    preserveViewport: true,
+                    suppressMarkers: true,
+                    routeIndex: i
+                };
+
+
+                directionsDisplay = new google.maps.DirectionsRenderer(rendererOptions);
+                directionsDisplay.setMap(map);
+
+                var directionsService = new google.maps.DirectionsService();
+                directionsService.route(request, function (result, status) {
+                    console.log(result);
+
+                    if (status == google.maps.DirectionsStatus.OK) {
+                        directionsDisplay.setDirections(result);
                     }
-                    route = new google.maps.Polyline(polylineOptions);
-                    map.fitBounds(result.routes[0].bounds);
-                }
-            });
-        }
+                });
 
+            }
+        }
+                window.showRoute = showRoute;
+                showRoute(events[i]);
     });
+
+
 
 
 

@@ -77,7 +77,7 @@
         function showRoute() {
 
             var directionsService = new google.maps.DirectionsService;
-            var directionsDisplay = new google.maps.DirectionsRenderer;
+            var directionsDisplay = new google.maps.DirectionsRenderer({suppressMarkers: true});
 
             directionsDisplay.setMap($scope.map);
 
@@ -93,11 +93,11 @@
                         lat: eventsToDisplay[i].coords.latitude,
                         lng: eventsToDisplay[i].coords.longitude
                     },
-                    stopover: true
+                    stopover: true,
                 })
             }
             console.log(waypts);
-
+            
             directionsService.route({
                 origin: {lat: eventsToDisplay[0].coords.latitude, lng: eventsToDisplay[0].coords.longitude},
                 destination: {lat: eventsToDisplay[eventsToDisplay.length-1].coords.latitude, lng: eventsToDisplay[eventsToDisplay.length-1].coords.longitude},

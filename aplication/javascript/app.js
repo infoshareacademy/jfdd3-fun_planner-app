@@ -27,11 +27,12 @@
                 title: x.name,
                 address: x.address,
                 date: x.datePl,
+                time:x.time,
                 stars: x.stars,
                 icon: image,
                 content: '<div class="infoWindowContent">'+
                             '<img style="float: left; margin-right:20px" src="images/' + x.foto + '.jpg">' +
-                            '<h style="font-weight: bold;float: left">' + x.eventName + '</h>' +
+                            '<h style="font-weight: bold;float: left">' +  x.eventName + '</h>' +
                             '<br>' +
                             '<h style="font-weight: bold;float: left">' + x.datePl + '</h>' +
                             '<br>' +
@@ -67,7 +68,9 @@
         $scope.openInfoWindow = function (e, selectedMarker) {
             e && e.preventDefault();
 
-            infoWindow.setContent('<h1>' + selectedMarker.title + '</h1>' + '<p>' + selectedMarker.address +'</p>' + selectedMarker.stars +'</p>' + selectedMarker.content);
+            infoWindow.setContent('<h1>' + selectedMarker.title + '</h1>' + '<p>' + selectedMarker.address +'</p>' 
+                + selectedMarker.stars +'</p>' + '<h4>' + '<span class="label label-primary" style=float: "left">'
+            + selectedMarker.time + '</span>' + '</h4>' + selectedMarker.content);
             infoWindow.open($scope.map, selectedMarker);
             $scope.markerId = $scope.markers.indexOf(selectedMarker);
 

@@ -96,7 +96,6 @@
                     stopover: true,
                 })
             }
-            console.log(waypts);
             
             directionsService.route({
                 origin: {lat: eventsToDisplay[0].coords.latitude, lng: eventsToDisplay[0].coords.longitude},
@@ -108,7 +107,6 @@
                 if (status === google.maps.DirectionsStatus.OK) {
                     directionsDisplay.setDirections(response);
                     var route = response.routes[0];
-                    //console.log(route);
                     directionsDisplay.setDirections(response);
 
                 } else {

@@ -75,19 +75,19 @@
         };
 
             function showRoute() {
-
+            
                 var directionsService = new google.maps.DirectionsService;
                 var directionsDisplay = new google.maps.DirectionsRenderer({suppressMarkers: true});
 
                 directionsDisplay.setMap($scope.map);
-
+            
                 calculateAndDisplayRoute(directionsService, directionsDisplay);
             }
-
+            
             function calculateAndDisplayRoute(directionsService, directionsDisplay) {
                 var waypts = [];
-
-
+            
+            
                 for (var i = 1; i <= eventsToDisplay.length - 2; i++) {
                     waypts.push({
                         location: {
@@ -97,8 +97,8 @@
                         stopover: true,
                     })
                 }
-
-
+            
+            
                 directionsService.route({
                     origin: {lat: eventsToDisplay[0].coords.latitude, lng: eventsToDisplay[0].coords.longitude},
                     destination: {
@@ -113,15 +113,15 @@
                         directionsDisplay.setDirections(response);
                         var route = response.routes[0];
                         directionsDisplay.setDirections(response);
-
+            
                     } else {
                         window.alert('Directions request failed due to ' + status);
                     }
                 })
             }
-
+            
             window.showRoute = showRoute;
-        
+
     });
 
 

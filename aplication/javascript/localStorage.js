@@ -21,6 +21,7 @@ function changeAgendaStorage(agendaEvent, spliceValue) {
     });
     localStorage['agenda' + userId] = JSON.stringify(eventsInStorage);
     showEventsOnMap();
+    
 }
 
 function findEvent(id) {

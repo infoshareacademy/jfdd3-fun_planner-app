@@ -74,48 +74,54 @@
 
         };
 
-        function showRoute() {
+            function showRoute() {
 
-            var directionsService = new google.maps.DirectionsService;
-            var directionsDisplay = new google.maps.DirectionsRenderer({suppressMarkers: true});
+                var directionsService = new google.maps.DirectionsService;
+                var directionsDisplay = new google.maps.DirectionsRenderer({suppressMarkers: true});
 
-            directionsDisplay.setMap($scope.map);
+                directionsDisplay.setMap($scope.map);
 
-            calculateAndDisplayRoute(directionsService, directionsDisplay);
-        }
+                calculateAndDisplayRoute(directionsService, directionsDisplay);
+            }
 
-        function calculateAndDisplayRoute(directionsService, directionsDisplay) {
-            var waypts = [];
+            function calculateAndDisplayRoute(directionsService, directionsDisplay) {
+                var waypts = [];
 
-            for (var i = 1; i<=eventsToDisplay.length-2;i++) {
-                waypts.push({
-                    location: {
-                        lat: eventsToDisplay[i].coords.latitude,
-                        lng: eventsToDisplay[i].coords.longitude
+
+                for (var i = 1; i <= eventsToDisplay.length - 2; i++) {
+                    waypts.push({
+                        location: {
+                            lat: eventsToDisplay[i].coords.latitude,
+                            lng: eventsToDisplay[i].coords.longitude
+                        },
+                        stopover: true,
+                    })
+                }
+
+
+                directionsService.route({
+                    origin: {lat: eventsToDisplay[0].coords.latitude, lng: eventsToDisplay[0].coords.longitude},
+                    destination: {
+                        lat: eventsToDisplay[eventsToDisplay.length - 1].coords.latitude,
+                        lng: eventsToDisplay[eventsToDisplay.length - 1].coords.longitude
                     },
-                    stopover: true,
+                    waypoints: waypts,
+                    optimizeWaypoints: true,
+                    travelMode: google.maps.TravelMode.DRIVING
+                }, function (response, status) {
+                    if (status === google.maps.DirectionsStatus.OK) {
+                        directionsDisplay.setDirections(response);
+                        var route = response.routes[0];
+                        directionsDisplay.setDirections(response);
+
+                    } else {
+                        window.alert('Directions request failed due to ' + status);
+                    }
                 })
             }
-            
-            directionsService.route({
-                origin: {lat: eventsToDisplay[0].coords.latitude, lng: eventsToDisplay[0].coords.longitude},
-                destination: {lat: eventsToDisplay[eventsToDisplay.length-1].coords.latitude, lng: eventsToDisplay[eventsToDisplay.length-1].coords.longitude},
-                waypoints: waypts,
-                optimizeWaypoints: true,
-                travelMode: google.maps.TravelMode.DRIVING
-            }, function (response, status) {
-                if (status === google.maps.DirectionsStatus.OK) {
-                    directionsDisplay.setDirections(response);
-                    var route = response.routes[0];
-                    directionsDisplay.setDirections(response);
 
-                } else {
-                    window.alert('Directions request failed due to ' + status);
-                }
-            })
-        }
-
-        window.showRoute = showRoute;
+            window.showRoute = showRoute;
+        
     });
 
 
